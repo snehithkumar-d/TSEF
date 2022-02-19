@@ -9,20 +9,22 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preload" href="/assets/css/app.css?v=6726deec57" as="style" />
-    <link rel="preload" href="/assets/js/manifest.js?v=6726deec57" as="script" />
-    <link rel="preload" href="/assets/js/vendor/content-api.min.js?v=6726deec57" as="script" />
-    <link rel="preload" href="/assets/js/vendor.js?v=6726deec57" as="script" />
-    <link rel="preload" href="/assets/js/app.js?v=6726deec57" as="script" />
-    <link rel="preconnect" href="https://polyfill.io">
-    <link rel="dns-prefetch" href="https://polyfill.io">
+    <link rel="preload" href="https://snehithkumar-d.github.io/TSEF/Assets/css/app.css?v=6726deec57" as="style" />
+    <link rel="preload" href="https://snehithkumar-d.github.io/TSEF/Assets/js/manifest.js?v=6726deec57" as="script" />
+    <link rel="preload" href="https://snehithkumar-d.github.io/TSEF/Assets/js/vendor/content-api.min.js?v=6726deec57" as="script" />
+    <link rel="preload" href="https://snehithkumar-d.github.io/TSEF/Assets/js/vendor.js?v=6726deec57" as="script" />
+    <link rel="preload" href="https://snehithkumar-d.github.io/TSEF/Assets/js/app.js?v=6726deec57" as="script" />
+    <link rel="preload" href="https://snehithkumar-d.github.io/TSEF/Assets/css/home.css?v=6726deec57" as="style" />
+    <link rel="preload" href="https://snehithkumar-d.github.io/TSEF/Assets/css/listing.css?v=6726deec57" as="style" />
+    <link rel="preload" href="https://snehithkumar-d.github.io/TSEF/Assets/js/home.js?v=6726deec57" as="script" />
+    <link href="https://snehithkumar-d.github.io/TSEF/Assets/css/footer.css" rel="stylesheet" type="text/css" />
+    <link href="https://snehithkumar-d.github.io/TSEF/Assets/css/app.css" rel="stylesheet" type="text/css" />
+    <script src="https://snehithkumar-d.github.io/TSEF/Assets/js/manifest.js"></script>
+    <script src="https://snehithkumar-d.github.io/TSEF/Components/header.js"></script>
+    <script src="https://snehithkumar-d.github.io/TSEF/Components/footer.js"></script>
 
-    <link rel="preload" href="/assets/css/home.css?v=6726deec57" as="style" />
-    <link rel="preload" href="/assets/css/listing.css?v=6726deec57" as="style" />
-    <link rel="preload" href="/assets/js/home.js?v=6726deec57" as="script" />
-    <link href="/Assets/css/footer.css" rel="stylesheet" type="text/css" />
-    <script defer src="Components/header.js" type="text/javascript"></script>
-    <script defer src="Components/footer.js" type="text/javascript"></script>
+
+    
     <style>
         /* These font-faces are here to make fonts work if the Ghost instance is installed in a subdirectory */
 
@@ -33,8 +35,8 @@
             font-weight: 400;
             font-display: swap;
             src: local('SourceSansPro-Regular'),
-            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff2?v=6726deec57") format('woff2'),
-            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff?v=6726deec57") format('woff');
+            url("https://snehithkumar-d.github.io/TSEF/Assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff2?v=6726deec57") format('woff2'),
+            url("https://snehithkumar-d.github.io/TSEF/Assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff?v=6726deec57") format('woff');
         }
 
         /* source-sans-pro-600 */
@@ -44,8 +46,8 @@
             font-weight: 600;
             font-display: swap;
             src: local('SourceSansPro-SemiBold'),
-            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff2?v=6726deec57") format('woff2'),
-            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff?v=6726deec57") format('woff');
+            url("https://snehithkumar-d.github.io/TSEF/Assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff2?v=6726deec57") format('woff2'),
+            url("https://snehithkumar-d.github.io/TSEF/Assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff?v=6726deec57") format('woff');
         }
 
         /* source-sans-pro-700 */
@@ -55,8 +57,8 @@
             font-weight: 700;
             font-display: swap;
             src: local('SourceSansPro-Bold'),
-            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff2?v=6726deec57") format('woff2'),
-            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff?v=6726deec57") format('woff');
+            url("https://snehithkumar-d.github.io/TSEF/Assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff2?v=6726deec57") format('woff2'),
+            url("https://snehithkumar-d.github.io/TSEF/Assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff?v=6726deec57") format('woff');
         }
 
         /* iconmoon */
@@ -65,18 +67,18 @@
             font-weight: normal;
             font-style: normal;
             font-display: swap;
-            src: url("/assets/fonts/icomoon/icomoon.eot?101fc3?v=6726deec57");
-            src: url("/assets/fonts/icomoon/icomoon.eot?101fc3#iefix?v=6726deec57") format('embedded-opentype'),
-            url("/assets/fonts/icomoon/icomoon.ttf?101fc3?v=6726deec57") format('truetype'),
-            url("/assets/fonts/icomoon/icomoon.woff?101fc3?v=6726deec57") format('woff'),
-            url("/assets/fonts/icomoon/icomoon.svg?101fc3#icomoon?v=6726deec57") format('svg');
+            src: url("https://snehithkumar-d.github.io/TSEF/Assets/fonts/icomoon/icomoon.eot?101fc3?v=6726deec57");
+            src: url("https://snehithkumar-d.github.io/TSEF/Assets/fonts/icomoon/icomoon.eot?101fc3#iefix?v=6726deec57") format('embedded-opentype'),
+            url("https://snehithkumar-d.github.io/TSEF/Assets/fonts/icomoon/icomoon.ttf?101fc3?v=6726deec57") format('truetype'),
+            url("https://snehithkumar-d.github.io/TSEF/Assets/fonts/icomoon/icomoon.woff?101fc3?v=6726deec57") format('woff'),
+            url("https://snehithkumar-d.github.io/TSEF/Assets/fonts/icomoon/icomoon.svg?101fc3#icomoon?v=6726deec57") format('svg');
         }
     </style>
 
-    <link rel="stylesheet" type="text/css" href="/assets/css/app.css?v=6726deec57" media="screen" />
+    <link rel="stylesheet" type="text/css" href="https://snehithkumar-d.github.io/TSEF/Assets/css/app.css?v=6726deec57" media="screen" />
 
-    <link rel="stylesheet" type="text/css" href="/assets/css/home.css?v=6726deec57" media="screen" />
-    <link rel="stylesheet" type="text/css" href="/assets/css/listing.css?v=6726deec57" media="screen" />
+    <link rel="stylesheet" type="text/css" href="https://snehithkumar-d.github.io/TSEF/Assets/css/home.css?v=6726deec57" media="screen" />
+    <link rel="stylesheet" type="text/css" href="https://snehithkumar-d.github.io/TSEF/Assets/css/listing.css?v=6726deec57" media="screen" />
 
 
 
@@ -2586,10 +2588,10 @@
 <footer-component></footer-component>
 
 <script src="script.js" type="text/javascript"></script>
-<script defer src="/assets/js/manifest.js?v=6726deec57"></script>
-<script defer src="/assets/js/vendor/content-api.min.js?v=6726deec57"></script>
-<script defer src="/assets/js/vendor.js?v=6726deec57"></script>
-<script defer src="/assets/js/app.js?v=6726deec57"></script>
+<script defer src="https://snehithkumar-d.github.io/TSEF/Assets/js/manifest.js?v=6726deec57"></script>
+<script defer src="https://snehithkumar-d.github.io/TSEF/Assets/js/vendor/content-api.min.js?v=6726deec57"></script>
+<script defer src="https://snehithkumar-d.github.io/TSEF/Assets/js/vendor.js?v=6726deec57"></script>
+<script defer src="https://snehithkumar-d.github.io/TSEF/Assets/js/app.js?v=6726deec57"></script>
 
 </body>
 </html>
