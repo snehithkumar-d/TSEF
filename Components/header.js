@@ -1,7 +1,7 @@
 const headerTemplate = document.createElement('template');
 
 headerTemplate.innerHTML = `
-
+<html lang="en" data-theme="light">
     
     <link href="       https://snehithkumar-d.github.io/TSEF/Assets/css/app.css" rel="stylesheet" type="text/css" />
     
