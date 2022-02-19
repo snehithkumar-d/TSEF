@@ -2,21 +2,34 @@ const headerTemplate = document.createElement('template');
 
 headerTemplate.innerHTML = `
 
- <link rel="preload" href="/assets/css/app.css?v=6726deec57" as="style" />
-    <link rel="preload" href="/assets/js/manifest.js?v=6726deec57" as="script" />
-    <link rel="preload" href="/assets/js/vendor/content-api.min.js?v=6726deec57" as="script" />
-    <link rel="preload" href="/assets/js/vendor.js?v=6726deec57" as="script" />
-    <link rel="preload" href="/assets/js/app.js?v=6726deec57" as="script" />
+    
+    <link href="       https://snehithkumar-d.github.io/TSEF/Assets/css/app.css" rel="stylesheet" type="text/css" />
+    
+   
+    <script src="       https://snehithkumar-d.github.io/TSEF/Assets/js/manifest.js       "></script>
+    
+    
+   <script src="       https://snehithkumar-d.github.io/TSEF/Assets/js/vendor/content-api.min.js       "></script>
+    
+  
+    <script src="       https://snehithkumar-d.github.io/TSEF/Assets/js/vendor.js       "></script>
+    
+   
+    <script src="       https://snehithkumar-d.github.io/TSEF/Assets/js/app.js       "></script>
+    
 
-
-    <link rel="preload" href="/assets/css/home.css?v=6726deec57" as="style" />
-    <link rel="preload" href="/assets/css/listing.css?v=6726deec57" as="style" />
-    <link rel="preload" href="/assets/js/home.js?v=6726deec57" as="script" />
-
-    <link rel="stylesheet" type="text/css" href="/assets/css/app.css?v=6726deec57" media="screen" />
-
-    <link rel="stylesheet" type="text/css" href="/assets/css/home.css?v=6726deec57" media="screen" />
-    <link rel="stylesheet" type="text/css" href="/assets/css/listing.css?v=6726deec57" media="screen" />
+   
+     <link href="       https://snehithkumar-d.github.io/TSEF/Assets/css/home.css     " rel="stylesheet" type="text/css" />
+     
+   
+     <link href="       https://snehithkumar-d.github.io/TSEF/Assets/css/listing.css     " rel="stylesheet" type="text/css" />
+     
+   
+    <script src="       https://snehithkumar-d.github.io/TSEF/Assets/js/home.js       "></script>
+    
+     <link href="       https://snehithkumar-d.github.io/TSEF/Assets/css/home.css     " rel="stylesheet" type="text/css" />
+     
+   
 
 
 
