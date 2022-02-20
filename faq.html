@@ -1,0 +1,3691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+
+    <title>FAQ&#x27;s</title>
+    <meta content="True" name="HandheldFriendly"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+
+    <link as="style" href="https://snehithkumar-d.github.io/TSEF/Assets/css/app.css?v=6726deec57" rel="preload"/>
+    <link as="script" href="https://snehithkumar-d.github.io/TSEF/Assets/js/manifest.js?v=6726deec57" rel="preload"/>
+    <link as="script" href="https://snehithkumar-d.github.io/TSEF/Assets/js/vendor/content-api.min.js?v=6726deec57"
+          rel="preload"/>
+    <link as="script" href="https://snehithkumar-d.github.io/TSEF/Assets/js/vendor.js?v=6726deec57" rel="preload"/>
+    <link as="script" href="https://snehithkumar-d.github.io/TSEF/Assets/js/app.js?v=6726deec57" rel="preload"/>
+    <link as="style" href="https://snehithkumar-d.github.io/TSEF/Assets/css/home.css?v=6726deec57" rel="preload"/>
+    <link as="style" href="https://snehithkumar-d.github.io/TSEF/Assets/css/listing.css?v=6726deec57" rel="preload"/>
+    <link as="style" href="https://snehithkumar-d.github.io/TSEF/Assets/css/post.css?v=6726deec57" rel="preload"/>
+    <link as="script" href="https://snehithkumar-d.github.io/TSEF/Assets/js/home.js?v=6726deec57" rel="preload"/>
+    <link href="https://snehithkumar-d.github.io/TSEF/Assets/css/footer.css" rel="stylesheet" type="text/css"/>
+    <link href="https://snehithkumar-d.github.io/TSEF/Assets/css/app.css" rel="stylesheet" type="text/css"/>
+    <script src="https://snehithkumar-d.github.io/TSEF/Assets/js/manifest.js"></script>
+    <script src="https://snehithkumar-d.github.io/TSEF/Components/header.js"></script>
+    <script src="https://snehithkumar-d.github.io/TSEF/Components/footer.js"></script>
+
+    <style>
+        .kg-audio-card, .kg-audio-card * {
+            box-sizing: border-box
+        }
+
+        .kg-audio-card {
+            display: flex;
+            width: 100%;
+            min-height: 96px;
+            border-radius: 3px;
+            box-shadow: inset 0 0 0 1px rgba(124, 139, 154, .25)
+        }
+
+        .kg-audio-card + .kg-audio-card {
+            margin-top: 1em
+        }
+
+        .kg-audio-thumbnail {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80px;
+            min-width: 80px;
+            margin: 8px;
+            background: 0 0;
+            object-fit: cover;
+            aspect-ratio: 1/1;
+            border-radius: 2px
+        }
+
+        .kg-audio-thumbnail.placeholder {
+            background: var(--ghost-accent-color)
+        }
+
+        .kg-audio-thumbnail.placeholder svg {
+            width: 24px;
+            height: 24px;
+            fill: #fff
+        }
+
+        .kg-audio-player-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            --seek-before-width: 0%;
+            --volume-before-width: 100%;
+            --buffered-width: 0%
+        }
+
+        .kg-audio-title {
+            width: 100%;
+            margin: 8px 0 0;
+            padding: 8px 12px;
+            border: 0;
+            font-family: inherit;
+            font-size: 1.15em;
+            font-weight: 700;
+            line-height: 1.15em;
+            background: 0 0
+        }
+
+        .kg-audio-player {
+            display: flex;
+            flex-grow: 1;
+            align-items: center;
+            padding: 8px 12px
+        }
+
+        .kg-audio-current-time, .kg-audio-time {
+            font-family: inherit;
+            font-size: .85em;
+            font-weight: 500;
+            line-height: 1.4em;
+            white-space: nowrap
+        }
+
+        .kg-audio-current-time {
+            min-width: 38px;
+            padding: 0 4px
+        }
+
+        .kg-audio-time {
+            width: 56px;
+            color: #ababab
+        }
+
+        .kg-audio-duration {
+            padding: 0 4px
+        }
+
+        .kg-audio-pause-icon, .kg-audio-play-icon {
+            position: relative;
+            bottom: 1px;
+            padding: 0 4px 0 0;
+            font-size: 0;
+            background: 0 0
+        }
+
+        .kg-audio-hide {
+            display: none !important
+        }
+
+        .kg-audio-pause-icon svg, .kg-audio-play-icon svg {
+            width: 14px;
+            height: 14px;
+            fill: currentColor
+        }
+
+        .kg-audio-seek-slider {
+            flex-grow: 1;
+            margin: 0 4px
+        }
+
+        @media (max-width: 640px) {
+            .kg-audio-seek-slider {
+                display: none
+            }
+        }
+
+        .kg-audio-playback-rate {
+            min-width: 37px;
+            padding: 0 4px;
+            font-family: inherit;
+            font-size: .85em;
+            font-weight: 600;
+            line-height: 1.4em;
+            text-align: left;
+            background: 0 0;
+            white-space: nowrap
+        }
+
+        @media (max-width: 640px) {
+            .kg-audio-playback-rate {
+                padding-left: 8px
+            }
+        }
+
+        .kg-audio-mute-icon, .kg-audio-unmute-icon {
+            position: relative;
+            bottom: -1px;
+            padding: 0 4px;
+            font-size: 0;
+            background: 0 0
+        }
+
+        @media (max-width: 640px) {
+            .kg-audio-mute-icon, .kg-audio-unmute-icon {
+                margin-left: auto
+            }
+        }
+
+        .kg-audio-mute-icon svg, .kg-audio-unmute-icon svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor
+        }
+
+        .kg-audio-volume-slider {
+            width: 80px
+        }
+
+        @media (max-width: 400px) {
+            .kg-audio-volume-slider {
+                display: none
+            }
+        }
+
+        .kg-audio-seek-slider::before, .kg-audio-volume-slider::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: var(--seek-before-width) !important;
+            height: 4px;
+            cursor: pointer;
+            background-color: currentColor;
+            border-radius: 2px
+        }
+
+        .kg-audio-volume-slider::before {
+            width: var(--volume-before-width) !important
+        }
+
+        .kg-audio-player-container input[type=range] {
+            position: relative;
+            -webkit-appearance: none;
+            background: 0 0;
+            height: auto;
+            padding: 0;
+            border: 0
+        }
+
+        .kg-audio-player-container input[type=range]:focus, .kg-video-card input[type=range]:focus {
+            outline: 0
+        }
+
+        .kg-audio-player-container input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none
+        }
+
+        .kg-audio-player-container button, .kg-video-card button {
+            display: flex;
+            align-items: center;
+            border: 0;
+            cursor: pointer
+        }
+
+        .kg-audio-player-container input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: rgba(124, 139, 154, .25);
+            border-radius: 2px
+        }
+
+        .kg-audio-player-container input[type=range]::-webkit-slider-thumb {
+            position: relative;
+            box-sizing: content-box;
+            width: 13px;
+            height: 13px;
+            margin: -5px 0 0;
+            border: 0;
+            cursor: pointer;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, .08), 0 1px 4px rgba(0, 0, 0, .24)
+        }
+
+        .kg-audio-player-container input[type=range]:active::-webkit-slider-thumb {
+            transform: scale(1.2)
+        }
+
+        .kg-audio-player-container input[type=range]::-moz-range-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: rgba(124, 139, 154, .25);
+            border-radius: 2px
+        }
+
+        .kg-audio-player-container input[type=range]::-moz-range-progress {
+            background: currentColor;
+            border-radius: 2px
+        }
+
+        .kg-audio-player-container input[type=range]::-moz-range-thumb {
+            box-sizing: content-box;
+            width: 13px;
+            height: 13px;
+            border: 0;
+            cursor: pointer;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, .08), 0 1px 4px rgba(0, 0, 0, .24)
+        }
+
+        .kg-audio-player-container input[type=range]:active::-moz-range-thumb {
+            transform: scale(1.2)
+        }
+
+        .kg-audio-player-container input[type=range]::-ms-track {
+            width: 100%;
+            height: 3px;
+            border: solid transparent;
+            color: transparent;
+            cursor: pointer;
+            background: 0 0
+        }
+
+        .kg-audio-player-container input[type=range]::-ms-fill-lower {
+            background: #fff
+        }
+
+        .kg-audio-player-container input[type=range]::-ms-fill-upper {
+            background: currentColor
+        }
+
+        .kg-audio-player-container input[type=range]::-ms-thumb {
+            box-sizing: content-box;
+            width: 13px;
+            height: 13px;
+            border: 0;
+            cursor: pointer;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, .08), 0 1px 4px rgba(0, 0, 0, .24)
+        }
+
+        .kg-audio-player-container input[type=range]:active::-ms-thumb {
+            transform: scale(1.2)
+        }
+
+        .kg-before-after-card > div {
+            position: relative;
+            margin: 0 auto
+        }
+
+        .kg-before-after-card-image-before {
+            position: absolute;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            height: 100%
+        }
+
+        .kg-before-after-card .kg-before-after-card-image-after img {
+            width: 100%
+        }
+
+        .kg-before-after-card .kg-before-after-card-image-before img {
+            max-width: none;
+            object-fit: cover
+        }
+
+        .kg-before-after-card input {
+            position: absolute;
+            top: 0;
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 100%;
+            background: 0 0;
+            outline: 0;
+            margin: 0
+        }
+
+        .kg-before-after-card input::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 5px;
+            height: 100%;
+            background: #fff;
+            cursor: pointer
+        }
+
+        .kg-before-after-card input::-moz-range-thumb {
+            width: 5px;
+            height: 100%;
+            background: #fff;
+            cursor: pointer
+        }
+
+        .kg-before-after-card-slider-handle {
+            pointer-events: none;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #fff;
+            left: calc(50% - 18px);
+            top: calc(50% - 18px);
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+
+        .kg-before-after-card-slider-handle:after, .kg-before-after-card-slider-handle:before {
+            transform: rotate(-45deg);
+            content: '';
+            padding: 3px;
+            display: inline-block;
+            border: solid #5d5d5d;
+            border-width: 0 2px 2px 0
+        }
+
+        .kg-before-after-card-slider-handle:before {
+            transform: rotate(135deg)
+        }
+
+        .kg-blockquote-alt {
+            font-size: 1.5em;
+            font-style: italic;
+            line-height: 1.7em;
+            text-align: center;
+            padding: 0 2.5em
+        }
+
+        @media (max-width: 800px) {
+            .kg-blockquote-alt {
+                font-size: 1.4em;
+                padding-left: 2em;
+                padding-right: 2em
+            }
+        }
+
+        @media (max-width: 600px) {
+            .kg-blockquote-alt {
+                font-size: 1.2em;
+                padding-left: 1.75em;
+                padding-right: 1.75em
+            }
+        }
+
+        .kg-button-card, .kg-button-card * {
+            box-sizing: border-box
+        }
+
+        .kg-button-card, .kg-button-card a.kg-btn {
+            display: flex;
+            position: static;
+            align-items: center
+        }
+
+        .kg-button-card {
+            width: 100%;
+            justify-content: center
+        }
+
+        .kg-button-card.kg-align-left {
+            justify-content: flex-start
+        }
+
+        .kg-button-card a.kg-btn {
+            padding: 0 1.2em;
+            height: 2.4em;
+            line-height: 1em;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+            font-size: .95em;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: opacity .2s ease-in-out
+        }
+
+        .kg-button-card a.kg-btn:hover {
+            opacity: .85
+        }
+
+        .kg-button-card a.kg-btn-accent {
+            background-color: var(--ghost-accent-color);
+            color: #fff
+        }
+
+        .kg-callout-card, .kg-callout-card * {
+            box-sizing: border-box
+        }
+
+        .kg-callout-card {
+            display: flex;
+            padding: 1.2em 1.6em;
+            border-radius: 3px
+        }
+
+        .kg-callout-card-grey {
+            background: rgba(124, 139, 154, .13)
+        }
+
+        .kg-callout-card-white {
+            background: 0 0;
+            box-shadow: inset 0 0 0 1px rgba(124, 139, 154, .25)
+        }
+
+        .kg-callout-card-blue {
+            background: rgba(33, 172, 232, .12)
+        }
+
+        .kg-callout-card-green {
+            background: rgba(52, 183, 67, .12)
+        }
+
+        .kg-callout-card-yellow {
+            background: rgba(240, 165, 15, .13)
+        }
+
+        .kg-callout-card-red {
+            background: rgba(209, 46, 46, .11)
+        }
+
+        .kg-callout-card-pink {
+            background: rgba(225, 71, 174, .11)
+        }
+
+        .kg-callout-card-purple {
+            background: rgba(135, 85, 236, .12)
+        }
+
+        .kg-callout-card-accent {
+            background: var(--ghost-accent-color);
+            color: #fff
+        }
+
+        .kg-callout-card.kg-callout-card-accent a {
+            color: #fff;
+            text-decoration: underline
+        }
+
+        .kg-callout-card div.kg-callout-emoji {
+            padding-right: .8em;
+            line-height: 1.25em;
+            font-size: 1.15em
+        }
+
+        .kg-callout-card div.kg-callout-text {
+            font-size: .95em;
+            line-height: 1.5em
+        }
+
+        .kg-callout-card + .kg-callout-card {
+            margin-top: 1em
+        }
+
+        .kg-file-card, .kg-file-card * {
+            box-sizing: border-box
+        }
+
+        .kg-file-card {
+            display: flex
+        }
+
+        .kg-file-card a.kg-file-card-container {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            color: inherit;
+            padding: 6px;
+            min-height: 92px;
+            border: 1px solid rgb(124 139 154/25%);
+            border-radius: 3px;
+            transition: all ease-in-out .35s;
+            text-decoration: none;
+            width: 100%
+        }
+
+        .kg-file-card a.kg-file-card-container:hover {
+            border: 1px solid rgb(124 139 154/35%)
+        }
+
+        .kg-file-card-contents {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 4px 8px;
+            width: 100%
+        }
+
+        .kg-file-card-title {
+            font-size: 1.15em;
+            font-weight: 700;
+            line-height: 1.3em
+        }
+
+        .kg-file-card-caption {
+            font-size: .95em;
+            line-height: 1.3em;
+            opacity: .6
+        }
+
+        .kg-file-card-title + .kg-file-card-caption {
+            margin-top: -3px
+        }
+
+        .kg-file-card-metadata {
+            display: inline;
+            font-size: .825em;
+            line-height: 1.3em;
+            margin-top: 2px
+        }
+
+        .kg-file-card-filename {
+            display: inline;
+            font-weight: 500
+        }
+
+        .kg-file-card-filesize {
+            display: inline-block;
+            font-size: .925em;
+            opacity: .6
+        }
+
+        .kg-file-card-filesize:before {
+            display: inline-block;
+            content: "\2022";
+            margin-right: 4px
+        }
+
+        .kg-file-card-icon {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            min-width: 80px;
+            height: 100%
+        }
+
+        .kg-file-card-icon:before, .kg-header-card.kg-style-image::before {
+            position: absolute;
+            display: block;
+            content: "";
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0
+        }
+
+        .kg-file-card-icon:before {
+            background: currentColor;
+            opacity: .06;
+            transition: opacity ease-in-out .35s;
+            border-radius: 2px
+        }
+
+        .kg-file-card a.kg-file-card-container:hover .kg-file-card-icon:before {
+            opacity: .08
+        }
+
+        .kg-file-card-icon svg {
+            width: 24px;
+            height: 24px;
+            color: var(--ghost-accent-color)
+        }
+
+        .kg-file-card-medium a.kg-file-card-container {
+            min-height: 72px
+        }
+
+        .kg-file-card-medium .kg-file-card-caption {
+            opacity: 1;
+            font-weight: 500
+        }
+
+        .kg-file-card-small a.kg-file-card-container {
+            align-items: center;
+            min-height: 52px
+        }
+
+        .kg-file-card-small .kg-file-card-metadata {
+            font-size: 1em;
+            margin-top: 0
+        }
+
+        .kg-file-card-small .kg-file-card-icon svg {
+            width: 20px;
+            height: 20px
+        }
+
+        .kg-file-card + .kg-file-card {
+            margin-top: 1em
+        }
+
+        .kg-header-card, .kg-header-card * {
+            box-sizing: border-box
+        }
+
+        .kg-header-card {
+            padding: 12vmin 4em;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center
+        }
+
+        .kg-header-card.kg-size-small {
+            padding-top: 14vmin;
+            padding-bottom: 14vmin;
+            min-height: 40vh
+        }
+
+        .kg-header-card.kg-size-large {
+            padding-top: 18vmin;
+            padding-bottom: 18vmin;
+            min-height: 80vh
+        }
+
+        .kg-header-card.kg-align-left {
+            text-align: left;
+            align-items: flex-start
+        }
+
+        .kg-header-card.kg-style-dark {
+            background: #151515;
+            color: #fff
+        }
+
+        .kg-header-card.kg-style-light {
+            background-color: #fafafa
+        }
+
+        .kg-header-card.kg-style-accent {
+            background-color: var(--ghost-accent-color)
+        }
+
+        .kg-header-card.kg-style-image {
+            position: relative;
+            background-color: #e7e7e7;
+            background-size: cover;
+            background-position: center
+        }
+
+        .kg-header-card.kg-style-image::before {
+            background: linear-gradient(0deg, transparent, rgba(0, 0, 0, .2))
+        }
+
+        .kg-header-card h2.kg-header-card-header {
+            font-size: 5em;
+            font-weight: 700;
+            line-height: 1.1em;
+            letter-spacing: -.01em;
+            margin: 0
+        }
+
+        .kg-header-card h2.kg-header-card-header strong {
+            font-weight: 800
+        }
+
+        .kg-header-card.kg-size-small h2.kg-header-card-header {
+            font-size: 4em
+        }
+
+        .kg-header-card.kg-size-large h2.kg-header-card-header {
+            font-size: 6em
+        }
+
+        .kg-header-card h3.kg-header-card-subheader {
+            font-size: 1.5em;
+            font-weight: 500;
+            line-height: 1.4em;
+            margin: 0;
+            max-width: 40em
+        }
+
+        .kg-header-card h2 + h3.kg-header-card-subheader {
+            margin: .35em 0 0
+        }
+
+        .kg-header-card h3.kg-header-card-subheader strong {
+            font-weight: 600
+        }
+
+        .kg-header-card.kg-size-small h3.kg-header-card-subheader {
+            font-size: 1.25em
+        }
+
+        .kg-header-card.kg-size-large h3.kg-header-card-subheader {
+            font-size: 1.75em
+        }
+
+        .kg-header-card:not(.kg-style-light) h2.kg-header-card-header, .kg-header-card:not(.kg-style-light) h3.kg-header-card-subheader {
+            color: #fff
+        }
+
+        .kg-header-card.kg-style-accent h3.kg-header-card-subheader, .kg-header-card.kg-style-image h3.kg-header-card-subheader, .kg-product-card-rating-active.kg-product-card-rating-star svg {
+            opacity: 1
+        }
+
+        .kg-header-card.kg-style-image a.kg-header-card-button, .kg-header-card.kg-style-image h2.kg-header-card-header, .kg-header-card.kg-style-image h3.kg-header-card-subheader {
+            z-index: 999
+        }
+
+        .kg-header-card h2.kg-header-card-header a, .kg-header-card h3.kg-header-card-subheader a {
+            color: var(--ghost-accent-color)
+        }
+
+        .kg-header-card.kg-style-accent h2.kg-header-card-header a, .kg-header-card.kg-style-accent h3.kg-header-card-subheader a, .kg-header-card.kg-style-image h2.kg-header-card-header a, .kg-header-card.kg-style-image h3.kg-header-card-subheader a {
+            color: #fff
+        }
+
+        .kg-header-card a.kg-header-card-button {
+            display: flex;
+            position: static;
+            align-items: center;
+            fill: #fff;
+            background: #fff;
+            border-radius: 3px;
+            outline: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+            font-size: 1.05em;
+            font-weight: 600;
+            line-height: 1em;
+            text-align: center;
+            text-decoration: none;
+            letter-spacing: .2px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            color: #151515;
+            height: 2.7em;
+            padding: 0 1.2em;
+            transition: opacity .2s ease
+        }
+
+        .kg-header-card h2 + a.kg-header-card-button, .kg-header-card h3 + a.kg-header-card-button {
+            margin: 1.75em 0 0
+        }
+
+        .kg-header-card a.kg-header-card-button:hover {
+            opacity: .85
+        }
+
+        .kg-header-card.kg-size-large a.kg-header-card-button {
+            font-size: 1.1em;
+            height: 2.9em
+        }
+
+        .kg-header-card.kg-size-large h2 + a.kg-header-card-button, .kg-header-card.kg-size-large h3 + a.kg-header-card-button {
+            margin-top: 2em
+        }
+
+        .kg-header-card.kg-size-small a.kg-header-card-button {
+            height: 2.4em;
+            font-size: 1em
+        }
+
+        .kg-header-card.kg-size-small h2 + a.kg-header-card-button, .kg-header-card.kg-size-small h3 + a.kg-header-card-button {
+            margin-top: 1.5em
+        }
+
+        .kg-header-card.kg-style-dark a.kg-header-card-button, .kg-header-card.kg-style-image a.kg-header-card-button {
+            background: #fff;
+            color: #151515
+        }
+
+        .kg-header-card.kg-style-light a.kg-header-card-button {
+            background: var(--ghost-accent-color);
+            color: #fff
+        }
+
+        .kg-header-card.kg-style-accent a.kg-header-card-button {
+            background: #fff;
+            color: #151515
+        }
+
+        @media (max-width: 640px) {
+            .kg-header-card {
+                padding-left: 1em;
+                padding-right: 1em
+            }
+
+            .kg-header-card h2.kg-header-card-header {
+                font-size: 3.5em
+            }
+
+            .kg-header-card.kg-size-large h2.kg-header-card-header {
+                font-size: 4em
+            }
+
+            .kg-header-card.kg-size-small h2.kg-header-card-header {
+                font-size: 3em
+            }
+
+            .kg-header-card h3.kg-header-card-subheader {
+                font-size: 1.25em
+            }
+
+            .kg-header-card.kg-size-large h3.kg-header-card-subheader {
+                font-size: 1.5em
+            }
+
+            .kg-header-card.kg-size-small h3.kg-header-card-subheader {
+                font-size: 1em
+            }
+        }
+
+        .kg-nft-card, .kg-nft-card * {
+            box-sizing: border-box
+        }
+
+        .kg-nft-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .kg-nft-card a.kg-nft-card-container {
+            position: static;
+            display: flex;
+            flex: auto;
+            flex-direction: column;
+            text-decoration: none;
+            font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            box-shadow: 0 2px 6px -2px rgb(0 0 0/10%), 0 0 1px rgb(0 0 0/40%);
+            width: 100%;
+            max-width: 512px;
+            color: #222;
+            background: #fff;
+            border-radius: 5px;
+            transition: none
+        }
+
+        .kg-nft-card * {
+            position: static
+        }
+
+        .kg-nft-metadata {
+            padding: 20px;
+            width: 100%
+        }
+
+        .kg-nft-image {
+            border-radius: 5px 5px 0 0;
+            width: 100%
+        }
+
+        .kg-nft-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px
+        }
+
+        .kg-nft-header h4.kg-nft-title {
+            font-family: inherit;
+            font-size: 19px;
+            font-weight: 700;
+            line-height: 1.3em;
+            min-width: unset;
+            max-width: unset;
+            margin: 0;
+            color: #222
+        }
+
+        .kg-nft-opensea-logo {
+            margin-top: 2px;
+            width: 100px;
+            object-fit: scale-down
+        }
+
+        .kg-nft-card p.kg-nft-description, .kg-nft-creator {
+            font-family: inherit;
+            line-height: 1.4em;
+            margin: 4px 0 0;
+            color: #ababab
+        }
+
+        .kg-nft-creator span {
+            font-weight: 500;
+            color: #222
+        }
+
+        .kg-nft-card p.kg-nft-description {
+            font-size: 14px;
+            margin: 20px 0 0;
+            color: #222
+        }
+
+        .kg-product-card, .kg-product-card * {
+            box-sizing: border-box
+        }
+
+        .kg-product-card {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100%
+        }
+
+        .kg-product-card-container {
+            display: grid;
+            grid-template-columns:auto min-content;
+            align-items: center;
+            grid-row-gap: 16px;
+            background: 0 0;
+            max-width: 550px;
+            padding: 20px;
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: inset 0 0 0 1px rgb(124 139 154/25%)
+        }
+
+        .kg-product-card-image {
+            grid-column: 1/3;
+            justify-self: center
+        }
+
+        .kg-product-card-title-container {
+            grid-column: 1/2
+        }
+
+        .kg-product-card h4.kg-product-card-title {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.4em;
+            margin-top: 0;
+            margin-bottom: 0;
+            line-height: 1.15em
+        }
+
+        .kg-product-card-description {
+            grid-column: 1/3
+        }
+
+        .kg-product-card .kg-product-card-description ol, .kg-product-card .kg-product-card-description p, .kg-product-card .kg-product-card-description ul {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+            font-size: .95em;
+            line-height: 1.5em;
+            opacity: .7;
+            margin-bottom: 0
+        }
+
+        .kg-product-card .kg-product-card-description p:first-of-type {
+            margin-top: -4px
+        }
+
+        .kg-product-card .kg-product-card-description ol, .kg-product-card .kg-product-card-description p:not(:first-of-type), .kg-product-card .kg-product-card-description ul {
+            margin-top: .95em
+        }
+
+        .kg-product-card .kg-product-card-description li + li, .kg-toggle-card li + li {
+            margin-top: .5em
+        }
+
+        .kg-product-card-rating {
+            display: flex;
+            align-items: center;
+            grid-column: 2/3;
+            align-self: start;
+            justify-self: end;
+            padding-left: 16px
+        }
+
+        @media (max-width: 400px) {
+            .kg-product-card-title-container {
+                grid-column: 1/3
+            }
+
+            .kg-product-card-rating {
+                grid-column: 1/3;
+                justify-self: start;
+                margin-top: -15px;
+                padding-left: 0
+            }
+        }
+
+        .kg-product-card-rating-star {
+            height: 28px;
+            width: 20px
+        }
+
+        .kg-product-card-rating-star svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+            opacity: .15
+        }
+
+        .kg-product-card a.kg-product-card-button {
+            justify-content: center;
+            grid-column: 1/3;
+            display: flex;
+            position: static;
+            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+            font-size: .95em;
+            font-weight: 600;
+            line-height: 1em;
+            text-decoration: none;
+            width: 100%;
+            height: 2.4em;
+            border-radius: 5px;
+            padding: 0 1.2em;
+            transition: opacity .2s ease-in-out
+        }
+
+        .kg-product-card a.kg-product-card-btn-accent {
+            background-color: var(--ghost-accent-color);
+            color: #fff
+        }
+
+        .kg-toggle-card, .kg-toggle-card * {
+            box-sizing: border-box;
+        }
+
+        .kg-toggle-card {
+            background: 0 0;
+            box-shadow: inset 0 0 0 1px rgba(124, 139, 154, .25);
+            border-radius: 4px;
+            padding: 1.2em
+        }
+
+        .kg-toggle-card[data-kg-toggle-state=close] .kg-toggle-content {
+            height: 0;
+            overflow: hidden;
+            transition: opacity .5s ease, top .35s ease;
+            opacity: 0;
+            top: -.5em;
+            position: relative
+        }
+
+        .kg-toggle-content {
+            height: auto;
+            opacity: 1;
+            transition: opacity 1s ease, top .35s ease;
+            top: 0;
+            position: relative
+        }
+
+        .kg-toggle-card[data-kg-toggle-state=close] svg {
+            transform: unset
+        }
+
+        .kg-toggle-heading {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start
+        }
+
+        .kg-toggle-card h4.kg-toggle-heading-text {
+            font-size: 1.15em;
+            font-weight: 700;
+            line-height: 1.3em;
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        .kg-toggle-content p:first-of-type {
+            margin-top: .5em
+        }
+
+        .kg-toggle-card .kg-toggle-content ol, .kg-toggle-card .kg-toggle-content p, .kg-toggle-card .kg-toggle-content ul {
+            font-size: .95em;
+            line-height: 1.5em;
+            margin-top: .95em;
+            margin-bottom: 0
+        }
+
+        .kg-toggle-card-icon {
+            height: 24px;
+            width: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 1em;
+            background: 0 0;
+            border: 0
+        }
+
+        .kg-toggle-heading svg {
+            width: 14px;
+            color: rgba(124, 139, 154, .5);
+            transition: all .3s;
+            transform: rotate(-180deg)
+        }
+
+        .kg-toggle-heading path {
+            fill: none;
+            stroke: currentcolor;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 1.5;
+            fill-rule: evenodd
+        }
+
+        .kg-toggle-card + .kg-toggle-card {
+            margin-top: 1em
+        }
+
+        .kg-video-card, .kg-video-card * {
+            box-sizing: border-box
+        }
+
+        .kg-video-card {
+            position: relative;
+            --seek-before-width: 0%;
+            --volume-before-width: 100%;
+            --buffered-width: 0%
+        }
+
+        .kg-video-card video {
+            display: block;
+            max-width: 100%;
+            height: auto
+        }
+
+        .kg-video-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center
+        }
+
+        .kg-video-large-play-icon, .kg-video-overlay {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity .2s ease-in-out
+        }
+
+        .kg-video-overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, .3) 0, transparent 70%, transparent 100%);
+            z-index: 999
+        }
+
+        .kg-video-large-play-icon {
+            width: 72px;
+            height: 72px;
+            padding: 0;
+            background: rgba(0, 0, 0, .5);
+            border-radius: 50%
+        }
+
+        .kg-video-large-play-icon svg {
+            width: 20px;
+            height: auto;
+            margin-left: 2px;
+            fill: #fff
+        }
+
+        .kg-video-player-container {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 80px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, .5));
+            z-index: 999;
+            transition: opacity .2s ease-in-out
+        }
+
+        .kg-video-player {
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            z-index: 9999;
+            padding: 12px 16px
+        }
+
+        .kg-video-current-time, .kg-video-time {
+            font-family: inherit;
+            font-size: .85em;
+            font-weight: 500;
+            line-height: 1.4em;
+            white-space: nowrap
+        }
+
+        .kg-video-current-time {
+            min-width: 38px;
+            padding: 0 4px;
+            color: #fff
+        }
+
+        .kg-video-time {
+            color: rgba(255, 255, 255, .6)
+        }
+
+        .kg-video-duration {
+            padding: 0 4px
+        }
+
+        .kg-video-pause-icon, .kg-video-play-icon {
+            position: relative;
+            padding: 0 4px 0 0;
+            font-size: 0;
+            background: 0 0
+        }
+
+        .kg-video-hide {
+            display: none !important
+        }
+
+        .kg-video-hide-animated {
+            opacity: 0 !important;
+            transition: opacity .2s ease-in-out;
+            cursor: initial
+        }
+
+        .kg-video-pause-icon svg, .kg-video-play-icon svg {
+            width: 14px;
+            height: 14px;
+            fill: #fff
+        }
+
+        .kg-video-seek-slider {
+            flex-grow: 1;
+            margin: 0 4px
+        }
+
+        @media (max-width: 520px) {
+            .kg-video-seek-slider {
+                display: none
+            }
+        }
+
+        .kg-video-playback-rate {
+            min-width: 37px;
+            padding: 0 4px;
+            color: #fff;
+            font-family: inherit;
+            font-size: .85em;
+            font-weight: 600;
+            line-height: 1.4em;
+            text-align: left;
+            background: 0 0;
+            white-space: nowrap
+        }
+
+        @media (max-width: 520px) {
+            .kg-video-playback-rate {
+                padding-left: 8px
+            }
+        }
+
+        .kg-video-mute-icon, .kg-video-unmute-icon {
+            position: relative;
+            bottom: -1px;
+            padding: 0 4px;
+            font-size: 0;
+            background: 0 0
+        }
+
+        @media (max-width: 520px) {
+            .kg-video-mute-icon, .kg-video-unmute-icon {
+                margin-left: auto
+            }
+        }
+
+        .kg-video-mute-icon svg, .kg-video-unmute-icon svg {
+            width: 16px;
+            height: 16px;
+            fill: #fff
+        }
+
+        .kg-video-volume-slider {
+            width: 80px
+        }
+
+        @media (max-width: 300px) {
+            .kg-video-volume-slider {
+                display: none
+            }
+        }
+
+        .kg-video-seek-slider::before, .kg-video-volume-slider::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: var(--seek-before-width) !important;
+            height: 4px;
+            cursor: pointer;
+            background-color: #ebeef0;
+            border-radius: 2px
+        }
+
+        .kg-video-volume-slider::before {
+            width: var(--volume-before-width) !important
+        }
+
+        .kg-video-card input[type=range] {
+            position: relative;
+            -webkit-appearance: none;
+            background: 0 0;
+            height: auto;
+            padding: 0;
+            border: 0
+        }
+
+        .kg-video-card input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none
+        }
+
+        .kg-video-card input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: rgba(255, 255, 255, .2);
+            border-radius: 2px
+        }
+
+        .kg-video-card input[type=range]::-webkit-slider-thumb {
+            position: relative;
+            box-sizing: content-box;
+            width: 13px;
+            height: 13px;
+            margin: -5px 0 0;
+            border: 0;
+            cursor: pointer;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, .08), 0 1px 4px rgba(0, 0, 0, .24)
+        }
+
+        .kg-video-card input[type=range]:active::-webkit-slider-thumb {
+            transform: scale(1.2)
+        }
+
+        .kg-video-card input[type=range]::-moz-range-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: rgba(255, 255, 255, .2);
+            border-radius: 2px
+        }
+
+        .kg-video-card input[type=range]::-moz-range-progress {
+            background: #ebeef0;
+            border-radius: 2px
+        }
+
+        .kg-video-card input[type=range]::-moz-range-thumb {
+            box-sizing: content-box;
+            width: 13px;
+            height: 13px;
+            border: 0;
+            cursor: pointer;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, .08), 0 1px 4px rgba(0, 0, 0, .24)
+        }
+
+        .kg-video-card input[type=range]:active::-moz-range-thumb {
+            transform: scale(1.2)
+        }
+
+        .kg-video-card input[type=range]::-ms-track {
+            width: 100%;
+            height: 3px;
+            border: solid transparent;
+            color: transparent;
+            cursor: pointer;
+            background: 0 0
+        }
+
+        .kg-video-card input[type=range]::-ms-fill-lower {
+            background: #fff
+        }
+
+        .kg-video-card input[type=range]::-ms-fill-upper {
+            background: #ebeef0
+        }
+
+        .kg-video-card input[type=range]::-ms-thumb {
+            box-sizing: content-box;
+            width: 13px;
+            height: 13px;
+            border: 0;
+            cursor: pointer;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, .08), 0 1px 4px rgba(0, 0, 0, .24)
+        }
+
+        .kg-video-card input[type=range]:active::-ms-thumb {
+            transform: scale(1.2)
+        }
+    </style>
+
+    <style>
+        /* These font-faces are here to make fonts work if the Ghost instance is installed in a subdirectory */
+
+        /* source-sans-pro-regular */
+        @font-face {
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: local('SourceSansPro-Regular'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff2?v=6726deec57") format('woff2'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff?v=6726deec57") format('woff');
+        }
+
+        /* source-sans-pro-600 */
+        @font-face {
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: local('SourceSansPro-SemiBold'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff2?v=6726deec57") format('woff2'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff?v=6726deec57") format('woff');
+        }
+
+        /* source-sans-pro-700 */
+        @font-face {
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: local('SourceSansPro-Bold'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff2?v=6726deec57") format('woff2'),
+            url("/assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff?v=6726deec57") format('woff');
+        }
+
+        /* iconmoon */
+        @font-face {
+            font-family: 'icomoon';
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+            src: url("/assets/fonts/icomoon/icomoon.eot?101fc3?v=6726deec57");
+            src: url("/assets/fonts/icomoon/icomoon.eot?101fc3#iefix?v=6726deec57") format('embedded-opentype'),
+            url("/assets/fonts/icomoon/icomoon.ttf?101fc3?v=6726deec57") format('truetype'),
+            url("/assets/fonts/icomoon/icomoon.woff?101fc3?v=6726deec57") format('woff'),
+            url("/assets/fonts/icomoon/icomoon.svg?101fc3#icomoon?v=6726deec57") format('svg');
+        }
+    </style>
+
+    <link href="/assets/css/app.css?v=6726deec57" media="screen" rel="stylesheet" type="text/css"/>
+
+    <link href="/assets/css/post.css?v=6726deec57" media="screen" rel="stylesheet" type="text/css"/>
+    <style>
+
+    </style>
+
+
+    <link href="/favicon.png" rel="icon" type="image/png"/>
+    <link href="http://137.184.211.5/contact-us/" rel="canonical"/>
+    <meta content="no-referrer-when-downgrade" name="referrer"/>
+
+    <meta content="TopShelf Equity Partners" property="og:site_name"/>
+    <meta content="website" property="og:type"/>
+    <meta content="FAQ&#x27;s" property="og:title"/>
+    <meta content="What is your Minimum Investment Size ?                                                            Our minimum investment varies with each fund introduction.                        How are the Investments Structured?                                                            Investors are members of a fund (organized as an LLC) that purchase a specific company’s shares or the economic interests in shares. Most funds we introduce will have a manager"
+          property="og:description"/>
+    <meta content="http://137.184.211.5/contact-us/" property="og:url"/>
+    <meta content="http://137.184.211.5/content/images/2022/01/Bck.png" property="og:image"/>
+    <meta content="2022-01-23T06:22:20.000Z" property="article:published_time"/>
+    <meta content="2022-01-25T17:43:35.000Z" property="article:modified_time"/>
+    <meta content="https://www.facebook.com/ghost" property="article:publisher"/>
+    <meta content="summary_large_image" name="twitter:card"/>
+    <meta content="FAQ&#x27;s" name="twitter:title"/>
+    <meta content="What is your Minimum Investment Size ?                                                            Our minimum investment varies with each fund introduction.                        How are the Investments Structured?                                                            Investors are members of a fund (organized as an LLC) that purchase a specific company’s shares or the economic interests in shares. Most funds we introduce will have a manager"
+          name="twitter:description"/>
+    <meta content="http://137.184.211.5/contact-us/" name="twitter:url"/>
+    <meta content="http://137.184.211.5/content/images/2022/01/Bck.png" name="twitter:image"/>
+    <meta content="Written by" name="twitter:label1"/>
+    <meta content="Snehith" name="twitter:data1"/>
+    <meta content="@ghost" name="twitter:site"/>
+    <meta content="1920" property="og:image:width"/>
+    <meta content="1080" property="og:image:height"/>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "publisher": {
+                "@type": "Organization",
+                "name": "TopShelf Equity Partners",
+                "url": "http://137.184.211.5/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "http://137.184.211.5/content/images/2022/01/Basic-Logo-1.png"
+                }
+            },
+            "author": {
+                "@type": "Person",
+                "name": "Snehith",
+                "image": {
+                    "@type": "ImageObject",
+                    "url": "http://137.184.211.5/content/images/2022/01/Email-Logo-1.png",
+                    "width": 150,
+                    "height": 150
+                },
+                "url": "http://137.184.211.5/author/snehith/",
+                "sameAs": []
+            },
+            "headline": "FAQ&#x27;s",
+            "url": "http://137.184.211.5/contact-us/",
+            "datePublished": "2022-01-23T06:22:20.000Z",
+            "dateModified": "2022-01-25T17:43:35.000Z",
+            "image": {
+                "@type": "ImageObject",
+                "url": "http://137.184.211.5/content/images/2022/01/Bck.png",
+                "width": 1920,
+                "height": 1080
+            },
+            "description": " What is your Minimum Investment Size ?\nOur minimum investment varies with each fund introduction.\n\nHow are the Investments Structured?\nInvestors are members of a fund (organized as an LLC) that purchase a specific\ncompany’s shares or the economic interests in shares. Most funds we introduce\nwill have a manager that will establish a Series of Interests for the purpose of\nmaking a separate and distinct investment in a specific company or companies\nidentified by the manager; purchasing securities ",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "http://137.184.211.5/"
+            }
+        }
+    </script>
+
+    <meta content="Ghost 4.33" name="generator"/>
+    <link href="http://137.184.211.5/rss/" rel="alternate" title="TopShelf Equity Partners" type="application/rss+xml"/>
+    <script crossorigin="anonymous" data-ghost="http://137.184.211.5/" defer
+            src="https://unpkg.com/@tryghost/portal@~1.14.0/umd/portal.min.js"></script>
+    <style id="gh-members-styles">.gh-post-upgrade-cta-content,
+    .gh-post-upgrade-cta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        text-align: center;
+        width: 100%;
+        color: #ffffff;
+        font-size: 16px;
+    }
+
+    .gh-post-upgrade-cta-content {
+        border-radius: 8px;
+        padding: 40px 4vw;
+    }
+
+    .gh-post-upgrade-cta h2 {
+        color: #ffffff;
+        font-size: 28px;
+        letter-spacing: -0.2px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .gh-post-upgrade-cta p {
+        margin: 20px 0 0;
+        padding: 0;
+    }
+
+    .gh-post-upgrade-cta small {
+        font-size: 16px;
+        letter-spacing: -0.2px;
+    }
+
+    .gh-post-upgrade-cta a {
+        color: #ffffff;
+        cursor: pointer;
+        font-weight: 500;
+        box-shadow: none;
+        text-decoration: underline;
+    }
+
+    .gh-post-upgrade-cta a:hover {
+        color: #ffffff;
+        opacity: 0.8;
+        box-shadow: none;
+        text-decoration: underline;
+    }
+
+    .gh-post-upgrade-cta a.gh-btn {
+        display: block;
+        background: #ffffff;
+        text-decoration: none;
+        margin: 28px 0 0;
+        padding: 8px 18px;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .gh-post-upgrade-cta a.gh-btn:hover {
+        opacity: 0.92;
+    }</style>
+    <style>
+        @charset "UTF-8";
+        .hide {
+            display: none
+        }
+
+        .sr-only {
+            clip: rect(0 0 0 0);
+            -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            white-space: nowrap
+        }
+
+        .focusable:focus, .l-post-content .kg-button-card a.kg-btn:focus, .l-post-content .kg-header-card .kg-header-card-button:focus, .l-post-content .kg-product-card .kg-product-card-button:focus, .l-post-content button:focus:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-button:focus {
+            box-shadow: 0 0 0 2px var(--primary-subtle-color) !important
+        }
+
+        .content-centered {
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .l-post-content .kg-button-card a.kg-btn, .l-post-content .kg-header-card .kg-header-card-button, .l-post-content .kg-product-card .kg-product-card-button, .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content input:not(.kg-video-card input):not(.kg-audio-card input), .l-post-content select, .l-post-content textarea, .m-button, .m-input, .no-appearance {
+            -webkit-appearance: none !important;
+            -moz-appearance: none !important;
+            appearance: none !important
+        }
+
+        .no-padding {
+            padding: 0
+        }
+
+        .no-margin {
+            margin: 0
+        }
+
+        .no-scroll-y {
+            overflow-y: hidden
+        }
+
+        .align-center {
+            text-align: center
+        }
+
+        .align-left {
+            text-align: left
+        }
+
+        .align-right {
+            text-align: right
+        }
+
+        .pos-relative {
+            position: relative
+        }
+
+        .pos-absolute {
+            position: absolute
+        }
+
+        .bold {
+            font-weight: 700
+        }
+
+        .underline {
+            text-decoration: underline
+        }
+
+        .uppercase {
+            text-transform: uppercase
+        }
+
+        .pointer {
+            cursor: pointer
+        }
+
+        .only-desktop {
+            display: none
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .only-desktop {
+                display: block
+            }
+        }
+
+        .l-post-content {
+            padding-bottom: 15px
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content {
+                max-width: 820px;
+                min-height: 400px;
+                margin: 0 auto
+            }
+        }
+
+        @media only screen and (min-width: 48rem) and (min-width: 48rem) {
+            .l-post-content {
+                padding-bottom: 30px
+            }
+        }
+
+        .l-post-content h1, .l-post-content h2, .l-post-content h3, .l-post-content h4, .l-post-content h5, .l-post-content h6 {
+            color: var(--titles-color);
+            line-height: 1.3;
+            font-weight: 700;
+            padding-top: 5px;
+            margin: 0 0 30px
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content h1, .l-post-content h2, .l-post-content h3, .l-post-content h4, .l-post-content h5, .l-post-content h6 {
+                padding-top: 10px;
+                margin-bottom: 40px
+            }
+        }
+
+        .l-post-content h1 {
+            font-size: 2.125rem
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content h1 {
+                font-size: 2.625rem
+            }
+        }
+
+        .l-post-content h2 {
+            font-size: 1.75rem
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content h2 {
+                font-size: 2.25rem
+            }
+        }
+
+        .l-post-content h3 {
+            font-size: 1.375rem
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content h3 {
+                font-size: 1.75rem
+            }
+        }
+
+        .l-post-content h4 {
+            font-size: 1rem
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content h4 {
+                font-size: 1.375rem
+            }
+        }
+
+        .l-post-content h5 {
+            font-size: .938rem
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content h5 {
+                font-size: 1.125rem
+            }
+        }
+
+        .l-post-content h6 {
+            font-size: .813rem
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content h6 {
+                font-size: 1rem
+            }
+        }
+
+        .l-post-content p {
+            letter-spacing: .2px;
+            line-height: 1.5;
+            font-size: 1.125rem;
+            margin-bottom: 25px
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content p {
+                letter-spacing: .3px;
+                line-height: 1.6;
+                font-size: 1.25rem;
+                margin-bottom: 30px
+            }
+        }
+
+        .l-post-content p img {
+            margin-bottom: 0 !important
+        }
+
+        .l-post-content b, .l-post-content strong {
+            font-weight: 600
+        }
+
+        .l-post-content em {
+            font-style: italic
+        }
+
+        .l-post-content a {
+            color: var(--primary-foreground-color);
+            text-decoration: underline;
+            transition: color .2s linear
+        }
+
+        .l-post-content a:hover {
+            color: var(--link-color)
+        }
+
+        .l-post-content ol, .l-post-content ul {
+            letter-spacing: .2px;
+            line-height: 1.5;
+            font-size: 1.125rem;
+            padding-left: 20px;
+            margin: 0 0 20px
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content ol, .l-post-content ul {
+                letter-spacing: .3px;
+                line-height: 1.6;
+                font-size: 1.25rem;
+                padding-left: 40px;
+                margin-bottom: 30px
+            }
+        }
+
+        .l-post-content li {
+            margin-bottom: 20px
+        }
+
+        .l-post-content .kg-image, .l-post-content img {
+            display: block;
+            max-width: 100%;
+            margin: 0 auto 35px
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content .kg-image, .l-post-content img {
+                margin-bottom: 40px
+            }
+        }
+
+        .l-post-content iframe {
+            max-width: 100%
+        }
+
+        .l-post-content .fluid-width-video-wrapper {
+            margin: 0 auto 35px
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content .fluid-width-video-wrapper {
+                margin-bottom: 40px
+            }
+        }
+
+        .l-post-content.kg-image-card, .l-post-content figure {
+            padding: 20px 0 40px;
+            margin: 0 -20px
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content.kg-image-card, .l-post-content figure {
+                padding: 20px 0 50px;
+                margin: 0
+            }
+        }
+
+        .l-post-content.kg-image-card.kg-embed-card, .l-post-content figure.kg-embed-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 100%;
+            margin: 0 auto
+        }
+
+        .l-post-content.kg-image-card.kg-embed-card iframe, .l-post-content figure.kg-embed-card iframe {
+            margin: 0 auto
+        }
+
+        .l-post-content.kg-image-card.kg-width-full img, .l-post-content.kg-image-card.kg-width-wide img, .l-post-content figure.kg-width-full img, .l-post-content figure.kg-width-wide img {
+            width: 100%;
+            height: auto
+        }
+
+        @media only screen and (min-width: 80rem) {
+            .l-post-content.kg-image-card.kg-width-wide, .l-post-content figure.kg-width-wide {
+                margin: 0 -70px
+            }
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content.kg-image-card.kg-width-full, .l-post-content figure.kg-width-full {
+                width: 100vw;
+                margin-left: 50%;
+                transform: translateX(-50%)
+            }
+        }
+
+        .l-post-content.kg-image-card .kg-image, .l-post-content.kg-image-card img, .l-post-content figure .kg-image, .l-post-content figure img {
+            display: block;
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto
+        }
+
+        .l-post-content.kg-image-card figcaption, .l-post-content figure figcaption {
+            text-align: center;
+            letter-spacing: .1px;
+            line-height: 1.3;
+            font-size: .75rem;
+            padding: 10px 20px 0
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content.kg-image-card figcaption, .l-post-content figure figcaption {
+                font-size: .875rem;
+                padding: 15px 0 0
+            }
+        }
+
+        .l-post-content.kg-image-card .fluid-width-video-container, .l-post-content figure .fluid-width-video-container {
+            flex-grow: 1;
+            width: 100%
+        }
+
+        .l-post-content.kg-image-card .fluid-width-video-wrapper, .l-post-content figure .fluid-width-video-wrapper {
+            margin: 0 auto !important
+        }
+
+        .l-post-content.kg-image-card .kg-gallery-container, .l-post-content figure .kg-gallery-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%
+        }
+
+        .l-post-content.kg-image-card .kg-gallery-row, .l-post-content figure .kg-gallery-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center
+        }
+
+        .l-post-content.kg-image-card .kg-gallery-image img, .l-post-content figure .kg-gallery-image img {
+            display: block;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover
+        }
+
+        .l-post-content.kg-image-card .kg-gallery-row:not(:first-of-type), .l-post-content figure .kg-gallery-row:not(:first-of-type) {
+            margin: .75em 0 0
+        }
+
+        .l-post-content.kg-image-card .kg-gallery-image:not(:first-of-type), .l-post-content figure .kg-gallery-image:not(:first-of-type) {
+            margin: 0 0 0 .75em
+        }
+
+        .l-post-content hr {
+            position: relative;
+            margin: 30px 0;
+            border: 0;
+            border-top: 1px solid var(--secondary-subtle-color)
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content hr {
+                margin: 50px 0
+            }
+        }
+
+        .l-post-content hr:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--secondary-subtle-color);
+            box-shadow: 0 0 0 10px var(--background-color), 0 0 0 transparent;
+            transform: translate(-50%, -50%)
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content hr:after {
+                width: 12px;
+                height: 12px;
+                box-shadow: 0 0 0 20px var(--background-color), 0 0 0 transparent
+            }
+        }
+
+        .l-post-content blockquote {
+            position: relative;
+            letter-spacing: .2px;
+            line-height: 1.5;
+            font-size: 1.125rem;
+            font-style: italic;
+            font-family: Georgia, Times New Roman, Times, serif;
+            padding: 0 40px;
+            margin: 0 0 25px
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content blockquote {
+                letter-spacing: .3px;
+                line-height: 1.6;
+                font-size: 1.25rem;
+                padding: 0 60px;
+                margin-bottom: 30px
+            }
+        }
+
+        .l-post-content blockquote.kg-blockquote-alt {
+            color: var(--primary-subtle-color);
+            line-height: 1.2;
+            font-family: inherit;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 2rem;
+            padding-top: 20px;
+            padding-bottom: 20px
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content blockquote.kg-blockquote-alt {
+                font-size: 2.625rem;
+                padding-top: 40px;
+                padding-bottom: 40px
+            }
+        }
+
+        .l-post-content blockquote.kg-blockquote-alt:before {
+            display: none
+        }
+
+        .l-post-content blockquote:before {
+            content: '"';
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: var(--primary-foreground-color);
+            line-height: 1;
+            font-size: 2.625rem
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content blockquote:before {
+                font-size: 4rem
+            }
+        }
+
+        .l-post-content blockquote p:last-child {
+            margin-bottom: 0
+        }
+
+        .l-post-content table {
+            color: var(--titles-color);
+            font-size: .875rem;
+            width: calc(100% + 40px);
+            margin: 0 -20px 25px
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content table {
+                font-size: 1rem;
+                width: 100%;
+                margin: 0 0 30px
+            }
+        }
+
+        .l-post-content table thead {
+            border-bottom: 1px solid var(--table-head-border-bottom)
+        }
+
+        .l-post-content table thead td {
+            font-weight: 600
+        }
+
+        .l-post-content table tbody tr:nth-child(2n) {
+            background-color: var(--background-color)
+        }
+
+        .l-post-content table tbody tr:nth-child(odd) {
+            background-color: var(--table-background-color-odd)
+        }
+
+        .l-post-content table td {
+            text-align: center;
+            padding: 10px
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content table td {
+                padding: 20px
+            }
+        }
+
+        .l-post-content code {
+            display: inline-block;
+            color: var(--link-color);
+            font-size: .9rem;
+            padding: 0 5px
+        }
+
+        .l-post-content code, .l-post-content pre {
+            font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+            border-radius: 5px;
+            background-color: var(--secondary-subtle-color)
+        }
+
+        .l-post-content pre {
+            line-height: 1.4;
+            margin: 0 0 25px;
+            overflow-x: auto;
+            white-space: pre;
+            word-spacing: normal;
+            word-break: normal;
+            word-wrap: normal;
+            line-height: 1.5;
+            -moz-tab-size: 2;
+            -o-tab-size: 2;
+            tab-size: 2;
+            -webkit-hyphens: none;
+            -ms-hyphens: none;
+            hyphens: none
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content pre {
+                margin-bottom: 30px
+            }
+        }
+
+        .l-post-content pre > code {
+            display: block;
+            padding: 10px 10px 0;
+            white-space: pre;
+            word-spacing: normal;
+            word-break: normal;
+            word-wrap: normal;
+            line-height: 1.5;
+            -moz-tab-size: 2;
+            -o-tab-size: 2;
+            tab-size: 2;
+            -webkit-hyphens: none;
+            -ms-hyphens: none;
+            hyphens: none
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content pre > code {
+                padding: 20px 20px 0
+            }
+        }
+
+        .l-post-content pre.line-numbers > code {
+            padding: 0
+        }
+
+        .l-post-content form {
+            margin-bottom: 25px
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content form {
+                margin-bottom: 30px
+            }
+        }
+
+        .l-post-content input:not(.kg-video-card input):not(.kg-audio-card input), .l-post-content select, .l-post-content textarea {
+            margin-bottom: 20px
+        }
+
+        .l-post-content textarea {
+            height: 100px;
+            resize: none
+        }
+
+        .l-post-content select {
+            position: relative;
+            padding-right: 40px !important;
+            background-repeat: no-repeat;
+            background-position: calc(100% - 15px) 50%;
+            background-size: 15px 8px;
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5IiBoZWlnaHQ9IjUiPjxwYXRoIGZpbGw9IiM1NjVlNjAiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTguMzIuNTdhLjI0Ny4yNDcgMCAwMTAgLjM2TDQuNjggNC41N2EuMjQ3LjI0NyAwIDAxLS4zNiAwTC42OC45M2EuMjQ3LjI0NyAwIDAxMC0uMzZsLjM5LS4zOWEuMjQ3LjI0NyAwIDAxLjM2IDBMNC41IDMuMjUgNy41Ny4xOGEuMjQ3LjI0NyAwIDAxLjM2IDBsLjM5LjM5eiIvPjwvc3ZnPg==")
+        }
+
+        .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) {
+            border: 1px solid var(--primary-foreground-color) !important
+        }
+
+        .l-post-content .kg-bookmark-card {
+            width: 100%;
+            padding: 0 !important;
+            margin: 30px auto !important;
+            background: var(--background-color)
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content .kg-bookmark-card {
+                margin: 40px auto !important
+            }
+        }
+
+        .l-post-content .kg-bookmark-card:hover .kg-bookmark-container {
+            opacity: .8;
+            color: var(--primary-foreground-color)
+        }
+
+        .l-post-content .kg-card + .kg-bookmark-card {
+            margin-top: 0
+        }
+
+        .l-post-content .kg-bookmark-container {
+            display: flex;
+            color: var(--primary-foreground-color);
+            text-decoration: none !important;
+            min-height: 148px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, .1), 0 0 0 1px rgba(0, 0, 0, .1);
+            border-radius: 3px;
+            transition: opacity .2s linear
+        }
+
+        .l-post-content .kg-bookmark-content {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 20px
+        }
+
+        .l-post-content .kg-bookmark-title {
+            font-size: 1.125rem;
+            line-height: 1.3;
+            font-weight: 600
+        }
+
+        .l-post-content .kg-bookmark-description {
+            font-size: .875rem;
+            font-weight: 400;
+            line-height: 1.4;
+            margin-top: 12px;
+            overflow-y: hidden
+        }
+
+        .l-post-content .kg-bookmark-thumbnail {
+            position: relative;
+            min-width: 30%;
+            max-height: 100%;
+            overflow: hidden
+        }
+
+        .l-post-content .kg-bookmark-thumbnail img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+            -o-object-fit: cover;
+            object-fit: cover;
+            border-radius: 0 3px 3px 0
+        }
+
+        .l-post-content .kg-bookmark-metadata {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: .9rem;
+            font-weight: 400;
+            color: var(--titles-color);
+            margin-top: 14px
+        }
+
+        .l-post-content .kg-bookmark-icon {
+            width: 22px !important;
+            height: 22px !important;
+            margin-right: 8px !important
+        }
+
+        .l-post-content .kg-bookmark-author:after {
+            content: "\2022";
+            margin: 0 6px
+        }
+
+        .l-post-content .kg-bookmark-publisher {
+            color: inherit
+        }
+
+        @media (max-width: 500px) {
+            .l-post-content .kg-bookmark-container {
+                flex-direction: column
+            }
+
+            .l-post-content .kg-bookmark-thumbnail {
+                order: 1;
+                width: 100%;
+                min-height: 160px
+            }
+
+            .l-post-content .kg-bookmark-thumbnail img {
+                border-radius: 3px 3px 0 0
+            }
+
+            .l-post-content .kg-bookmark-content {
+                order: 2
+            }
+        }
+
+        .l-post-content .kg-nft-card .kg-nft-card-container {
+            border-radius: 20px;
+            background-color: var(--background-color)
+        }
+
+        .l-post-content .kg-nft-card .kg-ntf-image-container {
+            border-radius: 20px 20px 0 0;
+            overflow: hidden
+        }
+
+        .l-post-content .kg-nft-card .kg-nft-metadata {
+            border-radius: 0 0 20px 20px
+        }
+
+        .l-post-content .kg-nft-card .kg-nft-header {
+            margin-bottom: 10px
+        }
+
+        .l-post-content .kg-nft-card .kg-nft-header img {
+            display: inline-block;
+            width: 100px;
+            max-width: 100px;
+            margin: 0;
+            filter: invert(var(--kg-card-img-invert-color))
+        }
+
+        .l-post-content .kg-nft-card .kg-nft-title {
+            color: var(--secondary-foreground-color);
+            padding-top: 0
+        }
+
+        .l-post-content .kg-nft-card .kg-nft-creator, .l-post-content .kg-nft-card kg-nft-description {
+            color: var(--primary-foreground-color)
+        }
+
+        .l-post-content .kg-nft-card .kg-nft-creator span, .l-post-content .kg-nft-card kg-nft-description span {
+            color: var(--secondary-foreground-color)
+        }
+
+        .l-post-content .kg-button-card {
+            padding: 30px 0;
+            margin-bottom: 25px
+        }
+
+        .l-post-content .kg-button-card a.kg-btn {
+            color: #fff !important;
+            font-family: inherit !important;
+            height: auto;
+            background-color: var(--primary-subtle-color) !important;
+            box-shadow: 0 2px 4px var(--button-shadow-color-normal), 0 0 0 transparent
+        }
+
+        .l-post-content .kg-button-card a.kg-btn:hover {
+            opacity: 1;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px var(--button-shadow-color-hover), 0 0 0 transparent
+        }
+
+        .l-post-content .kg-callout-card {
+            margin-bottom: 25px
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content .kg-callout-card {
+                margin-bottom: 30px
+            }
+        }
+
+        .l-post-content .kg-callout-card .kg-callout-emoji {
+            padding-right: 24px
+        }
+
+        .l-post-content .kg-callout-card .kg-callout-text {
+            font-size: 1.0625rem
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content .kg-callout-card .kg-callout-text {
+                font-size: 1.125rem
+            }
+        }
+
+        .l-post-content .kg-header-card {
+            width: 100vw;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-left: 50%;
+            transform: translateX(-50%)
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content .kg-header-card {
+                margin-top: 40px;
+                margin-bottom: 40px
+            }
+        }
+
+        .l-post-content .kg-header-card.kg-style-light .kg-header-card-header, .l-post-content .kg-header-card.kg-style-light .kg-header-card-subheader {
+            color: #333
+        }
+
+        .l-post-content .kg-header-card.kg-style-light .kg-header-card-button {
+            color: #fff !important;
+            background-color: var(--primary-subtle-color) !important
+        }
+
+        .l-post-content .kg-header-card .kg-header-card-button {
+            color: #333 !important;
+            font-family: inherit;
+            height: auto !important;
+            background-color: #fff !important
+        }
+
+        .l-post-content .kg-header-card .kg-header-card-button:hover {
+            opacity: 1;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px var(--button-shadow-color-hover), 0 0 0 transparent
+        }
+
+        .l-post-content .kg-toggle-card {
+            margin-bottom: 20px
+        }
+
+        .l-post-content .kg-toggle-card .kg-toggle-heading-text {
+            padding-top: 0
+        }
+
+        .l-post-content .kg-toggle-card .kg-toggle-card-icon {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            border: 0 !important;
+            padding: 0
+        }
+
+        .l-post-content .kg-product-card {
+            margin-bottom: 30px
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content .kg-product-card {
+                margin-bottom: 40px
+            }
+        }
+
+        .l-post-content .kg-product-card .kg-product-card-image {
+            margin-bottom: 0;
+            border-radius: 5px
+        }
+
+        .l-post-content .kg-product-card .kg-product-card-title {
+            padding-top: 0;
+            font-family: inherit
+        }
+
+        .l-post-content .kg-product-card .kg-product-card-description p {
+            font-family: inherit
+        }
+
+        .l-post-content .kg-product-card .kg-product-card-button {
+            color: #fff !important;
+            font-family: inherit !important;
+            height: auto;
+            background-color: var(--primary-subtle-color) !important
+        }
+
+        .l-post-content .kg-file-card {
+            margin-bottom: 30px
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content .kg-file-card {
+                margin-bottom: 40px
+            }
+        }
+
+        .l-post-content .kg-audio-card {
+            margin-bottom: 30px
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content .kg-audio-card {
+                margin-bottom: 40px
+            }
+        }
+
+        .l-post-content .kg-audio-card img {
+            margin: 8px
+        }
+
+        .l-post-content .kg-audio-card .kg-audio-mute-icon svg, .l-post-content .kg-audio-card .kg-audio-pause-icon svg, .l-post-content .kg-audio-card .kg-audio-play-icon svg, .l-post-content .kg-audio-card .kg-audio-unmute-icon svg {
+            fill: var(--secondary-foreground-color)
+        }
+
+        .l-post-content .kg-audio-card .kg-audio-playback-rate {
+            color: var(--secondary-foreground-color)
+        }
+
+        .l-post-content .kg-audio-card .kg-audio-seek-slider:before, .l-post-content .kg-audio-card .kg-audio-volume-slider:before {
+            background-color: var(--secondary-foreground-color)
+        }
+
+        .rtl .l-post-content ol, .rtl .l-post-content ul {
+            padding-left: 0;
+            padding-right: 20px
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .rtl .l-post-content ol, .rtl .l-post-content ul {
+                padding-left: 0;
+                padding-right: 40px
+            }
+        }
+
+        .rtl .l-post-content code {
+            direction: ltr
+        }
+
+        .rtl .l-post-content blockquote:before {
+            left: auto;
+            right: 0
+        }
+
+        .rtl .l-post-content .kg-bookmark-icon {
+            margin-right: 0 !important;
+            margin-left: 8px !important
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .rtl .l-post-content figure.kg-width-full {
+                margin-left: 0;
+                margin-right: 50%;
+                transform: translateX(50%)
+            }
+        }
+
+        .rtl .l-post-content .kg-callout-card .kg-callout-emoji {
+            padding-right: auto;
+            padding-left: 24px
+        }
+
+        .rtl .l-post-content .kg-toggle-card .kg-toggle-card-icon {
+            margin-left: 0;
+            margin-right: 16px
+        }
+
+        .rtl .l-post-content .kg-product-card .kg-product-card-rating {
+            padding-left: 0;
+            padding-right: 16px
+        }
+
+        .l-post-content .kg-button-card a.kg-btn, .l-post-content .kg-header-card .kg-header-card-button, .l-post-content .kg-product-card .kg-product-card-button, .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-button {
+            display: inline-block;
+            color: #333;
+            text-align: center;
+            letter-spacing: .2px;
+            line-height: 1;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 5px;
+            padding: 13px 25px;
+            cursor: pointer;
+            outline: 0;
+            border: 0;
+            position: relative;
+            background-color: transparent;
+            transition: all .25s cubic-bezier(.02, .01, .47, 1)
+        }
+
+        .l-post-content .kg-button-card a.outlined.kg-btn, .l-post-content .kg-header-card .outlined.kg-header-card-button, .l-post-content .kg-product-card .outlined.kg-product-card-button, .l-post-content button.outlined:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-button.outlined {
+            color: var(--titles-color);
+            border: 1px solid var(--primary-foreground-color)
+        }
+
+        .l-post-content .kg-button-card a.filled.kg-btn, .l-post-content .kg-button-card a.primary.kg-btn, .l-post-content .kg-header-card .filled.kg-header-card-button, .l-post-content .kg-header-card .primary.kg-header-card-button, .l-post-content .kg-product-card .filled.kg-product-card-button, .l-post-content .kg-product-card .primary.kg-product-card-button, .l-post-content button.filled:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content button.primary:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-button.filled, .m-button.primary {
+            box-shadow: 0 2px 4px var(--button-shadow-color-normal), 0 0 0 transparent
+        }
+
+        .l-post-content .kg-button-card a.filled.kg-btn:hover, .l-post-content .kg-button-card a.primary.kg-btn:hover, .l-post-content .kg-header-card .filled.kg-header-card-button:hover, .l-post-content .kg-header-card .primary.kg-header-card-button:hover, .l-post-content .kg-product-card .filled.kg-product-card-button:hover, .l-post-content .kg-product-card .primary.kg-product-card-button:hover, .l-post-content button.filled:hover:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content button.primary:hover:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-button.filled:hover, .m-button.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px var(--button-shadow-color-hover), 0 0 0 transparent
+        }
+
+        .l-post-content .kg-button-card a.filled.kg-btn, .l-post-content .kg-header-card .filled.kg-header-card-button, .l-post-content .kg-product-card .filled.kg-product-card-button, .l-post-content button.filled:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-button.filled {
+            border-radius: 5px;
+            background-color: #fff
+        }
+
+        .l-post-content .kg-button-card a.block.kg-btn, .l-post-content .kg-header-card .block.kg-header-card-button, .l-post-content .kg-product-card .block.kg-product-card-button, .l-post-content button.block:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-button.block {
+            display: block;
+            width: 100%
+        }
+
+        .l-post-content .kg-button-card a.primary.kg-btn, .l-post-content .kg-header-card .primary.kg-header-card-button, .l-post-content .kg-product-card .primary.kg-product-card-button, .l-post-content button.primary:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-button.primary {
+            color: #fff;
+            background-color: var(--primary-subtle-color)
+        }
+
+        .l-post-content .kg-button-card .m-subscribe-section__container.loading a.kg-btn, .l-post-content .kg-button-card a.loading.kg-btn, .l-post-content .kg-header-card .loading.kg-header-card-button, .l-post-content .kg-header-card .m-subscribe-section__container.loading .kg-header-card-button, .l-post-content .kg-product-card .loading.kg-product-card-button, .l-post-content .kg-product-card .m-subscribe-section__container.loading .kg-product-card-button, .l-post-content .m-subscribe-section__container.loading button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content button.loading:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-button.loading, .m-subscribe-section__container.loading .l-post-content .kg-button-card a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-header-card .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .m-button {
+            cursor: default;
+            overflow: hidden
+        }
+
+        .l-post-content .kg-button-card .m-subscribe-section__container.loading a.kg-btn:after, .l-post-content .kg-button-card a.loading.kg-btn:after, .l-post-content .kg-header-card .loading.kg-header-card-button:after, .l-post-content .kg-header-card .m-subscribe-section__container.loading .kg-header-card-button:after, .l-post-content .kg-product-card .loading.kg-product-card-button:after, .l-post-content .kg-product-card .m-subscribe-section__container.loading .kg-product-card-button:after, .l-post-content .m-subscribe-section__container.loading button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button):after, .l-post-content button.loading:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button):after, .m-button.loading:after, .m-subscribe-section__container.loading .l-post-content .kg-button-card a.kg-btn:after, .m-subscribe-section__container.loading .l-post-content .kg-header-card .kg-header-card-button:after, .m-subscribe-section__container.loading .l-post-content .kg-product-card .kg-product-card-button:after, .m-subscribe-section__container.loading .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button):after, .m-subscribe-section__container.loading .m-button:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 25%;
+            height: 2px;
+            background-color: #fff;
+            -webkit-animation: loading 1s infinite;
+            animation: loading 1s infinite
+        }
+
+        @-webkit-keyframes loading {
+            0% {
+                transform: translatex(0)
+            }
+            50% {
+                transform: translatex(300%)
+            }
+            to {
+                transform: translatex(0)
+            }
+        }
+
+        @keyframes loading {
+            0% {
+                transform: translatex(0)
+            }
+            50% {
+                transform: translatex(300%)
+            }
+            to {
+                transform: translatex(0)
+            }
+        }
+
+        .l-post-content input:not(.kg-video-card input):not(.kg-audio-card input), .l-post-content select, .l-post-content textarea, .m-input {
+            color: var(--primary-foreground-color);
+            letter-spacing: .2px;
+            line-height: 1.3;
+            font-size: 1rem;
+            width: 100%;
+            border-radius: 5px;
+            padding: 11px 15px;
+            border: 1px solid var(--primary-border-color);
+            outline: 0;
+            background-color: var(--background-color);
+        }
+
+        .l-post-content input:focus:not(.kg-video-card input):not(.kg-audio-card input), .l-post-content select:focus, .l-post-content textarea:focus, .m-input:focus {
+            border-color: var(--primary-subtle-color)
+        }
+
+        .l-post-content input.in-search:not(.kg-video-card input):not(.kg-audio-card input), .l-post-content select.in-search, .l-post-content textarea.in-search, .m-input.in-search {
+            font-weight: 600;
+            padding-left: 40px
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .l-post-content input.in-search:not(.kg-video-card input):not(.kg-audio-card input), .l-post-content select.in-search, .l-post-content textarea.in-search, .m-input.in-search {
+                font-size: 1.25rem;
+                padding: 15px 30px 15px 60px
+            }
+        }
+
+        .l-post-content input.in-subscribe-section:not(.kg-video-card input):not(.kg-audio-card input), .l-post-content select.in-subscribe-section, .l-post-content textarea.in-subscribe-section, .m-input.in-subscribe-section {
+            margin-bottom: 15px
+        }
+
+        .m-share {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 45px;
+            z-index: 3;
+            background-color: var(--transparent-background-color);
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, .1), 0 0 0 transparent
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .m-share {
+                height: 50px
+            }
+        }
+
+        @media only screen and (min-width: 64rem) {
+            .m-share {
+                position: absolute;
+                top: 0;
+                left: auto;
+                right: -75px;
+                width: 40px;
+                height: auto;
+                background-color: transparent;
+                box-shadow: 0 0 0 transparent, 0 0 0 transparent
+            }
+        }
+
+        @media only screen and (min-width: 80rem) {
+            .m-share {
+                width: 50px;
+                right: -175px
+            }
+        }
+
+        @media only screen and (min-width: 90rem) {
+            .m-share {
+                right: -200px
+            }
+        }
+
+        .m-share a {
+            color: inherit !important
+        }
+
+        .m-share a:first-of-type {
+            margin-left: 0
+        }
+
+        @media only screen and (min-width: 64rem) {
+            .m-share a:first-of-type {
+                margin-bottom: 0
+            }
+        }
+
+        .m-share button:last-of-type {
+            margin-right: 0
+        }
+
+        @media only screen and (min-width: 64rem) {
+            .rtl .m-share {
+                right: auto;
+                left: -75px
+            }
+        }
+
+        @media only screen and (min-width: 80rem) {
+            .rtl .m-share {
+                left: -175px
+            }
+        }
+
+        @media only screen and (min-width: 90rem) {
+            .rtl .m-share {
+                left: -200px
+            }
+        }
+
+        .m-share__content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%
+        }
+
+        @media only screen and (min-width: 64rem) {
+            .m-share__content {
+                position: sticky;
+                top: 100px;
+                flex-direction: column-reverse;
+                align-items: flex-start;
+                height: auto
+            }
+        }
+
+        .rtl .m-share__content {
+            direction: ltr
+        }
+
+        .m-subscribe-section {
+            padding: 50px 0;
+            background-color: var(--secondary-subtle-color)
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .m-subscribe-section {
+                padding: 80px 0
+            }
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .m-subscribe-section__content {
+                display: flex;
+                align-items: center;
+                justify-content: space-between
+            }
+        }
+
+        .m-subscribe-section__text {
+            text-align: center;
+            margin-bottom: 30px
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .m-subscribe-section__text {
+                flex: 1;
+                text-align: left;
+                padding-right: 75px;
+                margin-bottom: 0
+            }
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .rtl .m-subscribe-section__text {
+                text-align: right;
+                padding-right: 0;
+                padding-left: 75px
+            }
+        }
+
+        .m-subscribe-section__title {
+            color: var(--titles-color);
+            letter-spacing: .3px;
+            line-height: 1.3;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0 0 20px
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .m-subscribe-section__title {
+                letter-spacing: .3px;
+                font-size: 1.5rem;
+                margin-bottom: 15px
+            }
+        }
+
+        .m-subscribe-section__description {
+            letter-spacing: .2px;
+            line-height: 1.4
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .m-subscribe-section__description {
+                font-size: 1.125rem
+            }
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .m-subscribe-section__form {
+                width: 300px;
+                margin: 0 auto
+            }
+        }
+
+        .l-post-content .kg-button-card .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-header-card-button a.kg-btn, .l-post-content .kg-button-card .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-product-card-button a.kg-btn, .l-post-content .kg-button-card .m-subscribe-section__container.loading .kg-header-card a.m-subscribe-section__container.kg-btn .kg-header-card-button, .l-post-content .kg-button-card .m-subscribe-section__container.loading .kg-product-card a.m-subscribe-section__container.kg-btn .kg-product-card-button, .l-post-content .kg-button-card .m-subscribe-section__container.loading .m-subscribe-section__container.m-button a.kg-btn, .l-post-content .kg-button-card .m-subscribe-section__container.loading a.kg-btn, .l-post-content .kg-button-card .m-subscribe-section__container.loading a.m-subscribe-section__container.kg-btn .l-post-content .kg-button-card a.kg-btn, .l-post-content .kg-button-card .m-subscribe-section__container.loading a.m-subscribe-section__container.kg-btn .l-post-content .kg-header-card .kg-header-card-button, .l-post-content .kg-button-card .m-subscribe-section__container.loading a.m-subscribe-section__container.kg-btn .l-post-content .kg-product-card .kg-product-card-button, .l-post-content .kg-button-card .m-subscribe-section__container.loading a.m-subscribe-section__container.kg-btn .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-button-card .m-subscribe-section__container.loading a.m-subscribe-section__container.kg-btn .m-button, .l-post-content .kg-button-card .m-subscribe-section__container.loading a.m-subscribe-section__container.kg-btn a.kg-btn, .l-post-content .kg-button-card .m-subscribe-section__container.loading a.m-subscribe-section__container.kg-btn button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-button-card .m-subscribe-section__container.loading button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) a.kg-btn, .l-post-content .kg-header-card .kg-button-card .m-subscribe-section__container.loading a.m-subscribe-section__container.kg-btn .kg-header-card-button, .l-post-content .kg-header-card .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-product-card-button .kg-header-card-button, .l-post-content .kg-header-card .m-subscribe-section__container.loading .kg-button-card .m-subscribe-section__container.kg-header-card-button a.kg-btn, .l-post-content .kg-header-card .m-subscribe-section__container.loading .kg-header-card-button, .l-post-content .kg-header-card .m-subscribe-section__container.loading .kg-product-card .m-subscribe-section__container.kg-header-card-button .kg-product-card-button, .l-post-content .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-header-card-button .kg-header-card-button, .l-post-content .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-header-card-button .l-post-content .kg-button-card a.kg-btn, .l-post-content .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-header-card-button .l-post-content .kg-header-card .kg-header-card-button, .l-post-content .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-header-card-button .l-post-content .kg-product-card .kg-product-card-button, .l-post-content .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-header-card-button .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-header-card-button .m-button, .l-post-content .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-header-card-button button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.m-button .kg-header-card-button, .l-post-content .kg-header-card .m-subscribe-section__container.loading button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .kg-header-card-button, .l-post-content .kg-product-card .kg-button-card .m-subscribe-section__container.loading a.m-subscribe-section__container.kg-btn .kg-product-card-button, .l-post-content .kg-product-card .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-header-card-button .kg-product-card-button, .l-post-content .kg-product-card .m-subscribe-section__container.loading .kg-button-card .m-subscribe-section__container.kg-product-card-button a.kg-btn, .l-post-content .kg-product-card .m-subscribe-section__container.loading .kg-header-card .m-subscribe-section__container.kg-product-card-button .kg-header-card-button, .l-post-content .kg-product-card .m-subscribe-section__container.loading .kg-product-card-button, .l-post-content .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-product-card-button .kg-product-card-button, .l-post-content .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-product-card-button .l-post-content .kg-button-card a.kg-btn, .l-post-content .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-product-card-button .l-post-content .kg-header-card .kg-header-card-button, .l-post-content .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-product-card-button .l-post-content .kg-product-card .kg-product-card-button, .l-post-content .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-product-card-button .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-product-card-button .m-button, .l-post-content .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-product-card-button button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.m-button .kg-product-card-button, .l-post-content .kg-product-card .m-subscribe-section__container.loading button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .kg-product-card-button, .l-post-content .m-subscribe-section__container.loading .kg-button-card button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) a.kg-btn, .l-post-content .m-subscribe-section__container.loading .kg-header-card button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .kg-header-card-button, .l-post-content .m-subscribe-section__container.loading .kg-product-card button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .kg-product-card-button, .l-post-content .m-subscribe-section__container.loading .m-subscribe-section__container.m-button button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .m-subscribe-section__container.loading button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .l-post-content .kg-button-card a.kg-btn, .l-post-content .m-subscribe-section__container.loading button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .l-post-content .kg-header-card .kg-header-card-button, .l-post-content .m-subscribe-section__container.loading button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .l-post-content .kg-product-card .kg-product-card-button, .l-post-content .m-subscribe-section__container.loading button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .m-subscribe-section__container.loading button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .m-button, .l-post-content .m-subscribe-section__container.loading button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .m-subscribe-section__container.loading button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content .kg-button-card .kg-header-card .m-subscribe-section__container.kg-header-card-button a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-button-card .kg-header-card a.m-subscribe-section__container.kg-btn .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-button-card .kg-product-card .m-subscribe-section__container.kg-product-card-button a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-button-card .kg-product-card a.m-subscribe-section__container.kg-btn .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-button-card .m-subscribe-section__container.m-button a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-button-card a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-button-card a.m-subscribe-section__container.kg-btn .l-post-content .kg-button-card a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-button-card a.m-subscribe-section__container.kg-btn .l-post-content .kg-header-card .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-button-card a.m-subscribe-section__container.kg-btn .l-post-content .kg-product-card .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-button-card a.m-subscribe-section__container.kg-btn .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content .kg-button-card a.m-subscribe-section__container.kg-btn .m-button, .m-subscribe-section__container.loading .l-post-content .kg-button-card a.m-subscribe-section__container.kg-btn a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-button-card a.m-subscribe-section__container.kg-btn button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content .kg-button-card button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-header-card .kg-button-card .m-subscribe-section__container.kg-header-card-button a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-header-card .kg-button-card a.m-subscribe-section__container.kg-btn .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card .kg-product-card .m-subscribe-section__container.kg-header-card-button .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card .kg-product-card .m-subscribe-section__container.kg-product-card-button .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card .m-subscribe-section__container.kg-header-card-button .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card .m-subscribe-section__container.kg-header-card-button .l-post-content .kg-button-card a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-header-card .m-subscribe-section__container.kg-header-card-button .l-post-content .kg-header-card .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card .m-subscribe-section__container.kg-header-card-button .l-post-content .kg-product-card .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card .m-subscribe-section__container.kg-header-card-button .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content .kg-header-card .m-subscribe-section__container.kg-header-card-button .m-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card .m-subscribe-section__container.kg-header-card-button button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content .kg-header-card .m-subscribe-section__container.m-button .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .kg-button-card .m-subscribe-section__container.kg-product-card-button a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-product-card .kg-button-card a.m-subscribe-section__container.kg-btn .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .kg-header-card .m-subscribe-section__container.kg-header-card-button .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .kg-header-card .m-subscribe-section__container.kg-product-card-button .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .m-subscribe-section__container.kg-product-card-button .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .m-subscribe-section__container.kg-product-card-button .l-post-content .kg-button-card a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-product-card .m-subscribe-section__container.kg-product-card-button .l-post-content .kg-header-card .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .m-subscribe-section__container.kg-product-card-button .l-post-content .kg-product-card .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .m-subscribe-section__container.kg-product-card-button .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content .kg-product-card .m-subscribe-section__container.kg-product-card-button .m-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .m-subscribe-section__container.kg-product-card-button button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content .kg-product-card .m-subscribe-section__container.m-button .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .m-subscribe-section__container.m-button button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .l-post-content .kg-button-card a.kg-btn, .m-subscribe-section__container.loading .l-post-content button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .l-post-content .kg-header-card .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .l-post-content .kg-product-card .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .m-button, .m-subscribe-section__container.loading .l-post-content button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .m-button, .m-subscribe-section__container.loading .m-subscribe-section__container.m-button .l-post-content .kg-button-card a.kg-btn, .m-subscribe-section__container.loading .m-subscribe-section__container.m-button .l-post-content .kg-header-card .kg-header-card-button, .m-subscribe-section__container.loading .m-subscribe-section__container.m-button .l-post-content .kg-product-card .kg-product-card-button, .m-subscribe-section__container.loading .m-subscribe-section__container.m-button .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .m-subscribe-section__container.m-button .m-button {
+            pointer-events: none
+        }
+
+        .m-subscribe-section__container.success .m-subscribe__success {
+            display: block
+        }
+
+        .m-subscribe-section__container.success .m-subscribe__error, .m-subscribe-section__container.success .m-subscribe__form, .m-subscribe-section__container.success .m-subscribe__invalid {
+            display: none
+        }
+
+        .m-subscribe-section__container.error .m-subscribe__error, .m-subscribe-section__container.invalid .m-subscribe__invalid {
+            display: block
+        }
+
+        .m-subscribe-section__container.error .m-subscribe__form {
+            margin-bottom: 20px
+        }
+
+        .m-subscribe-section__container .m-subscribe__error, .m-subscribe-section__container .m-subscribe__invalid, .m-subscribe-section__container .m-subscribe__success {
+            display: none
+        }
+
+        .m-subscribe__success_icon {
+            display: block;
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 25px
+        }
+
+        .m-subscribe__error {
+            text-align: center
+        }
+
+        .m-author {
+            padding: 40px 20px;
+            border-color: var(--secondary-subtle-color);
+            border-style: solid;
+            border-width: 1px 0;
+            margin: 0 auto
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .m-author {
+                display: flex;
+                justify-content: center;
+                padding: 60px 40px
+            }
+        }
+
+        @media only screen and (min-width: 80rem) {
+            .m-author {
+                padding: 60px 0
+            }
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .m-author__content {
+                display: flex;
+                max-width: 820px
+            }
+        }
+
+        .m-author__picture {
+            width: 90px;
+            margin: 0 auto 25px
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .m-author__picture {
+                width: 100px;
+                margin: 0 30px 0 0
+            }
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .rtl .m-author__picture {
+                margin: 0 0 0 30px
+            }
+        }
+
+        .m-author__info {
+            text-align: center
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .m-author__info {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex: 1;
+                text-align: left
+            }
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .rtl .m-author__info {
+                text-align: right
+            }
+        }
+
+        .m-author__name {
+            color: var(--link-color);
+            letter-spacing: .2px;
+            line-height: 1.3;
+            font-size: 1.125rem;
+            font-weight: 400;
+            margin: 0 0 15px
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .m-author__name {
+                letter-spacing: .3px;
+                font-size: 1.25rem
+            }
+        }
+
+        .m-author__bio {
+            letter-spacing: .2px;
+            line-height: 1.5;
+            margin-bottom: 20px
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .m-author__bio {
+                margin-bottom: 15px
+            }
+        }
+
+        .m-author-picture {
+            display: block;
+            width: 90px;
+            height: 90px
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .m-author-picture {
+                width: 100px;
+                height: 100px
+            }
+        }
+
+        .m-author-picture div {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            background-size: cover
+        }
+
+        .m-author-links {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            text-align: center
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .m-author-links {
+                text-align: left
+            }
+        }
+
+        .m-author-links li {
+            display: inline-block;
+            margin: 0 11px
+        }
+
+        .m-author-links li:first-of-type {
+            margin-left: 0
+        }
+
+        .m-author-links li:last-of-type {
+            margin-right: 0
+        }
+
+        .rtl .m-author-links {
+            direction: ltr;
+            text-align: right
+        }
+
+        .m-comments {
+            padding-top: 40px
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .m-comments {
+                padding-top: 60px
+            }
+        }
+
+        .m-comments iframe {
+            width: 100%;
+            max-width: 100%
+        }
+
+        .m-recommended {
+            padding-top: 40px
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .m-recommended {
+                padding-top: 60px
+            }
+        }
+
+        .m-recommended-articles {
+            margin: 0 -20px
+        }
+
+        @media only screen and (min-width: 64rem) {
+            .m-recommended-articles {
+                padding: 0 40px;
+                margin: 0 -30px
+            }
+        }
+
+        .m-recommended-slider {
+            list-style-type: none;
+            padding: 0;
+            margin: 0
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .m-recommended-slider .glide__track {
+                padding: 0 40px;
+                margin: 0 -40px
+            }
+        }
+
+        .m-recommended-slider .glide__slides {
+            padding: 40px 0 60px;
+            margin: 0 auto
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .m-recommended-slider .glide__slides {
+                padding: 40px 0 60px
+            }
+        }
+
+        @media only screen and (min-width: 80rem) {
+            .m-recommended-slider .glide__slides {
+                overflow: visible
+            }
+        }
+
+        .m-recommended-slider .m-article-card {
+            width: 100% !important;
+            margin: 0 !important
+        }
+
+        @media only screen and (min-width: 64rem) {
+            .m-recommended-slider .m-article-card .m-article-card__picture {
+                height: 190px
+            }
+        }
+
+        @media only screen and (min-width: 80rem) {
+            .m-recommended-slider .m-article-card .m-article-card__picture {
+                height: 220px
+            }
+        }
+
+        .m-recommended-slider__item {
+            padding: 0 20px
+        }
+    </style>
+
+    <script defer src="/public/cards.min.js?v=6726deec57"></script>
+    <style>:root {
+        --ghost-accent-color: #045BA8;
+    }</style>
+    <link href="/public/cards.min.css?v=6726deec57" rel="stylesheet" type="text/css">
+
+    <style>
+        :root {
+            --primary-subtle-color: var(--ghost-accent-color) !important;
+        }
+    </style>
+
+    <script>
+        // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+        const ghostHost = "http://137.184.211.5"
+        // @license-end
+    </script>
+
+</head>
+<body class="page-template page-contact-us">
+
+
+<!--<header-component></header-component>-->
+<header class="m-header with-picture js-header">
+    <div class="m-mobile-topbar" data-aos="fade-down">
+        <button aria-label="Open menu" class="m-icon-button in-mobile-topbar js-open-menu">
+            <span aria-hidden="true" class="icon-menu"></span>
+        </button>
+        <a class="m-logo in-mobile-topbar" href="#">
+            <img alt="TopShelf Equity Partners" class="m-logo__image-light"
+                 src="http://topshelfequitypartners.com/wp-content/uploads/2021/06/logox75.png">
+            <img alt="TopShelf Equity Partners" class="m-logo__image-dark"
+                 src="https://github.com/snehithkumar-d/TSEF/blob/main/Assets/images/Dark%20Mode.png?raw=true">
+        </a>
+        <button aria-label="Open search" class="m-icon-button in-mobile-topbar js-open-search">
+            <span aria-hidden="true" class="icon-search"></span>
+        </button>
+    </div>
+
+    <div class="m-menu js-menu">
+        <button aria-label="Close menu" class="m-icon-button outlined as-close-menu js-close-menu">
+            <span class="icon-close"></span>
+        </button>
+        <div class="m-menu__main" data-aos="fade-down">
+            <div class="l-wrapper">
+                <div class="m-nav js-main-nav">
+                    <nav aria-label="Main menu" class="m-nav__left js-main-nav-left" role="navigation">
+                        <ul>
+                            <li class="only-desktop">
+                                <a class="m-logo" href="#">
+                                    <img alt="TopShelf Equity Partners" class="m-logo__image-light"
+                                         src="http://topshelfequitypartners.com/wp-content/uploads/2021/06/logox75.png">
+                                    <img alt="TopShelf Equity Partners" class="m-logo__image-dark"
+                                         src="https://github.com/snehithkumar-d/TSEF/blob/main/Assets/images/Dark%20Mode.png?raw=true">
+                                </a>
+                            </li>
+
+                            <li class="nav-home nav-current">
+                                <a href="#">Home</a>
+                            </li>
+                            <li class="nav-portfolio">
+                                <a href="/portfolio">Portfolio</a>
+                            </li>
+                            <li class="nav-contact-us">
+                                <a href="/contact-us">Contact Us</a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                    <div class="m-nav__right">
+
+                        <button class="m-button primary block" id="newsletter-button" type="submit"><a
+                                href="https://invest.spolisetti.com">Portal →</a></button>
+                        <!--<div class="m-toggle-darkmode js-tooltip" data-tippy-content="Toggle light/dark mode" tabindex="0">
+                              <label for="toggle-darkmode" class="sr-only">
+                                  Toggle light/dark mode
+                              </label>
+                              <input id="toggle-darkmode" type="checkbox" class="js-toggle-darkmode">
+                              <div>
+                                  <span class="icon-moon moon" aria-hidden="true"></span>
+                                  <span class="icon-sunny sun" aria-hidden="true"></span>
+                              </div>
+                          </div> -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+<main class="main-wrap">
+
+    <section class="m-hero no-picture aos-init aos-animate" data-aos="fade">
+        <div class="m-hero__content aos-init aos-animate" data-aos="fade-down">
+            <h1 class="m-hero-title bigger">FAQ's</h1>
+        </div>
+    </section>
+    <style data-emotion="css eh1hnm">
+        .css-eh1hnm {
+            height: 3px;
+            background-image: var(--gradient);
+        }
+    </style>
+    <style data-emotion="css eh1hnm">
+        .css-eh1hnm {
+            height: 3px;
+            background-image: var(--gradient);
+        }
+    </style>
+    </section>
+    <style data-emotion="css eh1hnm">
+        .css-eh1hnm {
+            height: 3px;
+            background-image: var(--gradient);
+        }
+    </style>
+    <div class="css-eh1hnm"></div>
+    <article>
+        <div class="l-content">
+            <div class="l-wrapper in-post" data-aos="fade-up" data-aos-delay="300">
+                <div class="l-post-content">
+                    <div class="pos-relative js-post-content">
+                        <!--kg-card-begin: html-->
+                        <div class="pos-relative js-post-content">
+                            <div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+                                <div class="kg-toggle-heading">
+                                    <h4 class="kg-toggle-heading-text"><strong>What is your Minimum Investment Size
+                                        ?</strong></h4>
+                                    <a class="kg-toggle-card-icon">
+                                        <svg id="Regular" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="cls-1"
+                                                  d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="kg-toggle-content">
+                                    <p>Our minimum investment varies with each fund introduction.</p>
+                                </div>
+                            </div>
+                            <div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+                                <div class="kg-toggle-heading">
+                                    <h4 class="kg-toggle-heading-text"><strong>How are the Investments
+                                        Structured?</strong></h4>
+                                    <a class="kg-toggle-card-icon">
+                                        <svg id="Regular" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="cls-1"
+                                                  d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="kg-toggle-content">
+                                    <p>Investors are members of a fund (organized as an LLC) that purchase a specific
+                                        company’s shares or the economic interests in shares. Most funds we introduce
+                                        will have a manager that will establish a <em><em>Series of Interests</em></em>
+                                        for the purpose of making a separate and distinct investment in a specific
+                                        company or companies identified by the manager; purchasing securities in such
+                                        company or companies from secondary sources (directly or through forward
+                                        purchase contracts); or investing in interests of investment funds, special
+                                        purpose vehicles and other entities (including investment funds and other
+                                        entities affiliated with the manager or its affiliates) whose investment
+                                        portfolios are comprised of one or more companies consistent with the fund’s
+                                        general investment focus. Each series will remain segregated from each other
+                                        series.</p>
+                                </div>
+                            </div>
+                            <div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+                                <div class="kg-toggle-heading">
+                                    <h4 class="kg-toggle-heading-text"><strong>Do I own Stock in These
+                                        Companies?</strong></h4>
+                                    <a class="kg-toggle-card-icon">
+                                        <svg id="Regular" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="cls-1"
+                                                  d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="kg-toggle-content">
+                                    <p>No, you’ll be a member of an LLC that owns either the shares or the participation
+                                        interests in the economic upside and downside of the shares.</p>
+                                </div>
+                            </div>
+                            <div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+                                <div class="kg-toggle-heading">
+                                    <h4 class="kg-toggle-heading-text"><strong>How do you Price the Shares?</strong>
+                                    </h4>
+                                    <a class="kg-toggle-card-icon">
+                                        <svg id="Regular" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="cls-1"
+                                                  d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="kg-toggle-content">
+                                    <p>The industry uses the last round of financing and expected IPO range as a pricing
+                                        guidepost. Other factors may include investor demand, access to the company,
+                                        other secondary transactions that have occurred and publicly available
+                                        information.</p>
+                                </div>
+                            </div>
+                            <div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+                                <div class="kg-toggle-heading">
+                                    <h4 class="kg-toggle-heading-text"><strong>Can you Provide the Company's Financials,
+                                        Exit Strategy, and Prospectus?</strong></h4>
+                                    <a class="kg-toggle-card-icon">
+                                        <svg id="Regular" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="cls-1"
+                                                  d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="kg-toggle-content">
+                                    <p>Unfortunately, our network does not have access to the company’s most recent
+                                        financials, or their investor presentation. Our networks leverage the due
+                                        diligence performed by the company’s most recent investors and base our
+                                        investment opportunities on the price those investors paid.</p>
+                                </div>
+                            </div>
+                            <div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+                                <div class="kg-toggle-heading">
+                                    <h4 class="kg-toggle-heading-text"><strong>What Kind of Paperwork do I Receive as an
+                                        Investor?</strong></h4>
+                                    <a class="kg-toggle-card-icon">
+                                        <svg id="Regular" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="cls-1"
+                                                  d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="kg-toggle-content">
+                                    <p>Most funds’ paperwork is similar to that of any fund investment, but simpler. An
+                                        investor would sign a Purchase Agreement, through which they would purchase an
+                                        interest in the fund (company). In addition, and investor would also complete a
+                                        W-9 (W-8 BEN for foreign investors) and Suitability form. On an annual basis,
+                                        investors would receive a Schedule K-1 form that updates them on their
+                                        investment. All legal and financial documents are prepared with the involvement
+                                        of outside counsel or accountants, as applicable.</p>
+                                </div>
+                            </div>
+                            <div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+                                <div class="kg-toggle-heading">
+                                    <h4 class="kg-toggle-heading-text"><strong>Once I Invest, will I Receive any Formal
+                                        of Legal Documents Stating my Investment?</strong></h4>
+                                    <a class="kg-toggle-card-icon">
+                                        <svg id="Regular" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="cls-1"
+                                                  d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="kg-toggle-content">
+                                    <p>Yes, most funds send your countersigned Purchase Agreement indicating your
+                                        membership in the fund. You should also receive a welcome letter from the
+                                        managers outlining the series of participation and breakdown of your
+                                        investment.</p>
+                                </div>
+                            </div>
+                            <div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+                                <div class="kg-toggle-heading">
+                                    <h4 class="kg-toggle-heading-text"><strong>How is my Investment Treated for tax
+                                        Purposes?</strong></h4>
+                                    <a class="kg-toggle-card-icon">
+                                        <svg id="Regular" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="cls-1"
+                                                  d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="kg-toggle-content">
+                                    <p>Your investment in most funds would be taxed like any other fund investment. Our
+                                        network’s funds are taxed as partnerships, meaning that the fund’s gains and
+                                        losses would pass through to its investors. Generally, if an investment is held
+                                        for more than one year before its disposition, any income resulting from that
+                                        investment would be taxed at the long term capital gains rate. On an annual
+                                        basis, investors will receive a Schedule K-1 form that updates them on their
+                                        investment.
+                                        <br>
+                                        <br><strong><strong><em><em>Note: We are not tax experts and have provided this
+                                            discussion for informational purposes only and not as personal tax advice.
+                                            You should consult your tax advisors for guidance specific to your
+                                            circumstances.</em></em></strong></strong>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+                                <div class="kg-toggle-heading">
+                                    <h4 class="kg-toggle-heading-text"><strong>Will I be Receiving any Financial Updates
+                                        for my Investment? How Often?</strong></h4>
+                                    <a class="kg-toggle-card-icon">
+                                        <svg id="Regular" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="cls-1"
+                                                  d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="kg-toggle-content">
+                                    <p>Yes. Most funds have a third party fund administrator who should issue K1 forms
+                                        annually. Our network should also update you on any material impact to your
+                                        investment (company news, new funding rounds, secondary transactions, or
+                                        indicators to new valuation).</p>
+                                </div>
+                            </div>
+                            <div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+                                <div class="kg-toggle-heading">
+                                    <h4 class="kg-toggle-heading-text"><strong>What is the "Right of First Refusal"
+                                        Clause?</strong></h4>
+                                    <a class="kg-toggle-card-icon">
+                                        <svg id="Regular" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="cls-1"
+                                                  d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="kg-toggle-content">
+                                    <p>Right of First Refusal (ROFR or RFR) is a contractual right that gives its holder
+                                        the option to enter a business transaction with the owner of something,
+                                        according to specified terms, before the owner is entitled to enter into that
+                                        transaction with a third party. In short, the Right of First Refusal is the
+                                        company’s right to purchase the shares from the shareholder on the same terms as
+                                        a third party’s bid. The company has up to 30 days to make the decision upon a
+                                        third party submitting a Bona Fide Offer via a Transfer Notice (they may also
+                                        waive their right, in which case we can proceed immediately).</p>
+                                </div>
+                            </div>
+                            <div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+                                <div class="kg-toggle-heading">
+                                    <h4 class="kg-toggle-heading-text"><strong>How Long can I Hold These
+                                        Shares?</strong></h4>
+                                    <a class="kg-toggle-card-icon">
+                                        <svg id="Regular" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="cls-1"
+                                                  d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="kg-toggle-content">
+                                    <p>Following an IPO lockup period, the funds you invested in can transfer the shares
+                                        to your brokerage account for you to hold or sell at your preference.</p>
+                                </div>
+                            </div>
+                            <div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+                                <div class="kg-toggle-heading">
+                                    <h4 class="kg-toggle-heading-text"><strong>When can I Expect the Company I'm
+                                        Investing in to go Public or get Acquired?</strong></h4>
+                                    <a class="kg-toggle-card-icon">
+                                        <svg id="Regular" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="cls-1"
+                                                  d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="kg-toggle-content">
+                                    <p>We cannot guarantee an exit nor a timeline for any of your holdings. However, the
+                                        majority of investment opportunities are companies who have received
+                                        institutional financing and have a typical investment horizon of 2-5 years.</p>
+                                </div>
+                            </div>
+                            <div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+                                <div class="kg-toggle-heading">
+                                    <h4 class="kg-toggle-heading-text"><strong>Do I Have the Option to Sell Before the
+                                        Company Goes Public? What are the Methods if I Want to Exit or Cash out my
+                                        Investment?</strong></h4>
+                                    <a class="kg-toggle-card-icon">
+                                        <svg id="Regular" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="cls-1"
+                                                  d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="kg-toggle-content">
+                                    <p>While our network views the membership interest as a long-term commitment, it may
+                                        be permissible to sell your interest if needed and upon approval of the manager.
+                                        We would be able to accommodate the situation by working with you to find a
+                                        replacement buyer in the fund. Your LLC ownership is transferable, and we can
+                                        market it to our investor base, but we cannot guarantee we’ll be able to find a
+                                        buyer.</p>
+                                </div>
+                            </div>
+                            <div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+                                <div class="kg-toggle-heading">
+                                    <h4 class="kg-toggle-heading-text"><strong>The Company I Invested in has an Initial
+                                        Public Offering (IPO): What Happens Next?</strong></h4>
+                                    <a class="kg-toggle-card-icon">
+                                        <svg id="Regular" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="cls-1"
+                                                  d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="kg-toggle-content">
+                                    <p>If a company series that you’ve invested in goes public, our network would
+                                        register the shares and work with your brokerage account’s custodian to transfer
+                                        the shares. Typically, the common stock is subject to a 180-day lockup, so we
+                                        would facilitate this transfer after this period.</p>
+                                </div>
+                            </div>
+                            <div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+                                <div class="kg-toggle-heading">
+                                    <h4 class="kg-toggle-heading-text"><strong>Can Non-Accredited Investors
+                                        Invest?</strong></h4>
+                                    <a class="kg-toggle-card-icon">
+                                        <svg id="Regular" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="cls-1"
+                                                  d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="kg-toggle-content">
+                                    <p>Our network presents private offerings, open to accredited and qualified
+                                        investors only.</p>
+                                </div>
+                            </div>
+                            <div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+                                <div class="kg-toggle-heading">
+                                    <h4 class="kg-toggle-heading-text"><strong>Can I Invest with a Self-Directed
+                                        IRA?</strong></h4>
+                                    <a class="kg-toggle-card-icon">
+                                        <svg id="Regular" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="cls-1"
+                                                  d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="kg-toggle-content">
+                                    <p>Yes. There are funds in our network that accommodate investments from
+                                        self-directed IRAs.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--kg-card-end: html-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</main>
+
+
+<div aria-label="Search" aria-modal="true" class="m-search js-search" role="dialog">
+    <button aria-label="Close search" class="m-icon-button outlined as-close-search js-close-search">
+        <span aria-hidden="true" class="icon-close"></span>
+    </button>
+    <div class="m-search__content">
+        <form class="m-search__form">
+            <div class="pos-relative">
+                <span aria-hidden="true" class="icon-search m-search-icon"></span>
+                <label class="sr-only" for="search-input">
+                    Type to search
+                </label>
+                <input class="m-input in-search js-input-search" id="search-input" placeholder="Type to search"
+                       type="text">
+            </div>
+        </form>
+        <div class="js-search-results hide"></div>
+        <p class="m-not-found align-center hide js-no-results">
+            No results for your search, please try with something else.
+        </p>
+    </div>
+</div>
+
+
+<footer-component></footer-component>
+
+<script src="script.js" type="text/javascript"></script>
+<script defer src="https://snehithkumar-d.github.io/TSEF/Assets/js/manifest.js?v=6726deec57"></script>
+<script defer src="https://snehithkumar-d.github.io/TSEF/Assets/js/vendor/content-api.min.js?v=6726deec57"></script>
+<script defer src="https://snehithkumar-d.github.io/TSEF/Assets/js/vendor.js?v=6726deec57"></script>
+<script defer src="https://snehithkumar-d.github.io/TSEF/Assets/js/app.js?v=6726deec57"></script>
+
+
+</body>
+</html>
