@@ -406,21 +406,21 @@ footerTemplate.innerHTML = `
         <ul class="css-1rxzsrh">
           
           <li>
-            <a class="css-16v8fgb" href="/content-center">Portfolio</a>
+            <a class="css-16v8fgb" href="/portfolio">Portfolio</a>
           </li>
              <li>
             <a class="css-16v8fgb" href="/news"> </a>
           </li>
           <li>
-            <a href="https://invest.spolisetti.com " class="css-16v8fgb" target="_blank" rel="noopener noreferrer">Signup</a>
+            <a href="https://portal.topshelfequitypartners.com/" class="css-16v8fgb" target="_blank" rel="noopener noreferrer">Signup</a>
           </li>
         </ul>
       </li>
       <li class="css-16ilj6a">
-        <a class="css-138yxp1" href="/private-companies">Investors</a>
+        <a class="css-138yxp1" href="">Investors</a>
         <ul class="css-1rxzsrh">
             <li>
-            <a href="https://invest.spolisetti.com " class="css-16v8fgb" target="_blank" rel="noopener noreferrer">Visit  [Portal]</a>
+            <a href="https://portal.topshelfequitypartners.com/" class="css-16v8fgb" target="_blank" rel="noopener noreferrer">Visit  [Portal]</a>
           </li>
           
           <li>
@@ -432,31 +432,32 @@ footerTemplate.innerHTML = `
         </ul>
       </li>
       <li class="css-16ilj6a">
-        <a class="css-138yxp1" href="/institutional-investors">Legal</a>
+        <a class="css-138yxp1" href=" ">Legal</a>
         <ul class="css-1rxzsrh">
           <li>
             <a class="css-16v8fgb" href="/terms">Terms and conditions</a>
           </li>
           <li>
-            <a class="css-16v8fgb" href="/Privacy">Privacy </a>
+            <a class="css-16v8fgb" href="/privacy">Privacy </a>
           </li>
         </ul>
       </li>
+      
         
        <li class="css-16ilj6a">
-        <a class="css-138yxp1" href="/institutional-investors">Contact</a>
+        <a class="css-138yxp1" href="">Contact</a>
         <ul class="css-1rxzsrh">
           <li>
            <a class="css-16v8fgb" href="/request-information">Request information</a>
           </li>
           <li>
-             <a class="css-16v8fgb" href=" "> Contact US</a>
+             <a class="css-16v8fgb" href="/contact-us "> Contact US</a>
           </li>
             <li>
-             <a class="css-16v8fgb" href=" "> Become a member</a>
+             <a class="css-16v8fgb" href="https://portal.topshelfequitypartners.com/"> Become a member</a>
           </li>
             <li>
-            <a href="https://invest.spolisetti.com " class="css-16v8fgb" target="_blank" rel="noopener noreferrer">FAQ's</a>
+            <a href="/faq" class="css-16v8fgb" target="_blank" rel="noopener noreferrer">FAQ's</a>
           </li>
         </ul>
       </li>
@@ -484,7 +485,7 @@ footerTemplate.innerHTML = `
         
         </a>
           
-        <a href=" " class="css-boix9n" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/company/topshelf-equity-partners/ " class="css-boix9n" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="css-1ifhear">
             <title>Connect with TSEP, Inc. on LinkedIn</title>
             <path d="M512,64c0,-35.323 -28.677,-64 -64,-64l-384,0c-35.323,0 -64,28.677 -64,64l0,384c0,35.323 28.677,64 64,64l384,0c35.323,0 64,-28.677 64,-64l0,-384Z" class="css-1skxuzk"></path>
@@ -502,7 +503,7 @@ footerTemplate.innerHTML = `
         © TSEP | All Rights Reserved.
         <!-- -->
        
-        This website is operated by TopShelf Equity Partners LLC (“TopShelf”). | The material and information provided on the site is for information purposes and does not constitute an offer to purchase or sell securities. | Certain information on our site is only accessible by sophisticated investors. | Neither TopShelf nor any of its affiliates are registered investment advisers or broker dealers. | Nothing on our site constitutes a recommendation to purchase a particular security or that any investment is suitable for any investor. | The use of this site is subject to your agreement to be bound by our <a href="http://137.184.211.5/terms/ " class="css-1vef6j" target="_blank" rel="noopener noreferrer">Terms</a>.  | We use personal information in a manner consistent with our <a href="http://137.184.211.5/privacy" class="css-1vef6j" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
+        This website is operated by TopShelf Equity Partners LLC (“TopShelf”). | The material and information provided on the site is for information purposes and does not constitute an offer to purchase or sell securities. | Certain information on our site is only accessible by sophisticated investors. | Neither TopShelf nor any of its affiliates are registered investment advisers or broker dealers. | Nothing on our site constitutes a recommendation to purchase a particular security or that any investment is suitable for any investor. | The use of this site is subject to your agreement to be bound by our <a href="/terms " class="css-1vef6j" target="_blank" rel="noopener noreferrer">Terms</a>.  | We use personal information in a manner consistent with our <a href="/privacy" class="css-1vef6j" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
       </p>
     </div>
   </div>
