@@ -412,10 +412,10 @@ footerTemplate.innerHTML = `
             <a class="css-16v8fgb" href="/news"> </a>
           </li>
            <li>
-            <a href="https://portal.topshelfequitypartners.com/" class="css-16v8fgb" target="_blank" rel="noopener noreferrer">Investor [Portal]</a>
+            <a href="https://members.topshelfequitypartners.com/" class="css-16v8fgb" target="_blank" rel="noopener noreferrer">Investor [Portal]</a>
           </li>
           <li>
-            <a href="https://portal.topshelfequitypartners.com/" class="css-16v8fgb" target="_blank" rel="noopener noreferrer">Signup</a>
+            <a href="https://members.topshelfequitypartners.com/" class="css-16v8fgb" target="_blank" rel="noopener noreferrer">Signup</a>
           </li>
         </ul>
       </li>
@@ -441,17 +441,15 @@ footerTemplate.innerHTML = `
              <a class="css-16v8fgb" href="/contact-us "> Contact US</a>
           </li>
             <li>
-             <a class="css-16v8fgb" href="https://portal.topshelfequitypartners.com/"> Become a member</a>
+             <a class="css-16v8fgb" href="https://members.topshelfequitypartners.com/"> Become a member</a>
           </li>
-            <li>
-            <a href="/faq" class="css-16v8fgb" target="_blank" rel="noopener noreferrer">FAQ's</a>
-          </li>
+             
         </ul>
       </li>
       
       
     </ul>
-
+    
 
     <div class="css-1b0fgd4">
 
@@ -470,7 +468,7 @@ footerTemplate.innerHTML = `
 
         </a>
 
-        <a href=" --" class="css-boix9n" target="_blank" rel="noopener noreferrer">
+        <a href=" " class="css-boix9n" target="_blank" rel="noopener noreferrer">
         
         </a>
           
@@ -491,7 +489,6 @@ footerTemplate.innerHTML = `
       <p class="css-f2kk04">
         © TSEP | All Rights Reserved.
         <!-- -->
-       
         This website is operated by TopShelf Equity Partners LLC (“TopShelf”). | The material and information provided on the site is for information purposes and does not constitute an offer to purchase or sell securities. | Certain information on our site is only accessible by sophisticated investors. | Neither TopShelf nor any of its affiliates are registered investment advisers or broker dealers. | Nothing on our site constitutes a recommendation to purchase a particular security or that any investment is suitable for any investor. | The use of this site is subject to your agreement to be bound by our <a href="/terms " class="css-1vef6j" target="_blank" rel="noopener noreferrer">Terms</a>.  | We use personal information in a manner consistent with our <a href="/privacy" class="css-1vef6j" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
       </p>
     </div>
