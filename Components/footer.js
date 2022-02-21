@@ -411,26 +411,15 @@ footerTemplate.innerHTML = `
              <li>
             <a class="css-16v8fgb" href="/news"> </a>
           </li>
+           <li>
+            <a href="https://portal.topshelfequitypartners.com/" class="css-16v8fgb" target="_blank" rel="noopener noreferrer">Investor [Portal]</a>
+          </li>
           <li>
             <a href="https://portal.topshelfequitypartners.com/" class="css-16v8fgb" target="_blank" rel="noopener noreferrer">Signup</a>
           </li>
         </ul>
       </li>
-      <li class="css-16ilj6a">
-        <a class="css-138yxp1" href="">Investors</a>
-        <ul class="css-1rxzsrh">
-            <li>
-            <a href="https://portal.topshelfequitypartners.com/" class="css-16v8fgb" target="_blank" rel="noopener noreferrer">Visit  [Portal]</a>
-          </li>
-          
-          <li>
-            <a class="css-16v8fgb" href=" ">  </a>
-          </li>
-          <li>
-            <a class="css-16v8fgb" href="/ "></a>
-          </li>
-        </ul>
-      </li>
+       
       <li class="css-16ilj6a">
         <a class="css-138yxp1" href=" ">Legal</a>
         <ul class="css-1rxzsrh">
@@ -447,9 +436,7 @@ footerTemplate.innerHTML = `
        <li class="css-16ilj6a">
         <a class="css-138yxp1" href="">Contact</a>
         <ul class="css-1rxzsrh">
-          <li>
-           <a class="css-16v8fgb" href="/request-information">Request information</a>
-          </li>
+         
           <li>
              <a class="css-16v8fgb" href="/contact-us "> Contact US</a>
           </li>
@@ -461,6 +448,8 @@ footerTemplate.innerHTML = `
           </li>
         </ul>
       </li>
+      
+      
     </ul>
 
 
