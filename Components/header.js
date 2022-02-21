@@ -42,8 +42,8 @@ headerTemplate.innerHTML = `
             <span class="icon-menu" aria-hidden="true"></span>
         </button>
         <a href="http://137.184.211.5" class="m-logo in-mobile-topbar">
-            <img src="http://137.184.211.5/content/images/2022/01/Basic-Logo-1.png" alt="TopShelf Equity Partners" class="m-logo__image-light">
-            <img src="http://137.184.211.5/content/images/2022/01/Dark-Mode-15.png" alt="TopShelf Equity Partners" class="m-logo__image-dark">
+            <img src="https://www.topshelfequitypartners.com/content/images/2022/01/Basic-Logo-1.png" alt="TopShelf Equity Partners" class="m-logo__image-light">
+            <img src="https://www.topshelfequitypartners.com/content/images/2022/01/Dark-Mode-15.png" alt="TopShelf Equity Partners" class="m-logo__image-dark">
         </a>
         <button class="m-icon-button in-mobile-topbar js-open-search" aria-label="Open search">
             <span class="icon-search" aria-hidden="true"></span>
@@ -61,19 +61,19 @@ headerTemplate.innerHTML = `
                         <ul>
                             <li class="only-desktop">
                                 <a href="http://137.184.211.5" class="m-logo">
-                                    <img src="http://137.184.211.5/content/images/2022/01/Basic-Logo-1.png" alt="TopShelf Equity Partners" class="m-logo__image-light">
-                                    <img src="http://137.184.211.5/content/images/2022/01/Dark-Mode-15.png" alt="TopShelf Equity Partners" class="m-logo__image-dark">
+                                    <img src="https://www.topshelfequitypartners.com/content/images/2022/01/Basic-Logo-1.png" alt="TopShelf Equity Partners" class="m-logo__image-light">
+                                    <img src="https://www.topshelfequitypartners.com/content/images/2022/01/Dark-Mode-15.png" alt="TopShelf Equity Partners" class="m-logo__image-dark">
                                 </a>
                             </li>
 
                             <li class="nav-home nav-current">
-                                <a href="http://137.184.211.5/">Home</a>
+                                <a href="https://www.topshelfequitypartners.com/">Home</a>
                             </li>
                             <li class="nav-portfolio">
-                                <a href="http://137.184.211.5/portfolio/">Portfolio</a>
+                                <a href="https://www.topshelfequitypartners.com/portfolio/">Portfolio</a>
                             </li>
                             <li class="nav-contact-us">
-                                <a href="http://137.184.211.5/contact-us/">Contact Us</a>
+                                <a href="https://www.topshelfequitypartners.com/contact-us/">Contact Us</a>
                             </li>
 
 

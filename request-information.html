@@ -24,7 +24,1551 @@
     <script src="https://snehithkumar-d.github.io/TSEF/Components/header.js"></script>
     <script src="https://snehithkumar-d.github.io/TSEF/Components/footer.js"></script>
 
+<style>
+    @charset "UTF-8";
+    .hide {
+        display: none
+    }
 
+    .sr-only {
+        clip: rect(0 0 0 0);
+        -webkit-clip-path: inset(100%);
+        clip-path: inset(100%);
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        white-space: nowrap
+    }
+
+    .focusable:focus, .l-post-content .kg-button-card a.kg-btn:focus, .l-post-content .kg-header-card .kg-header-card-button:focus, .l-post-content .kg-product-card .kg-product-card-button:focus, .l-post-content button:focus:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-button:focus {
+        box-shadow: 0 0 0 2px var(--primary-subtle-color) !important
+    }
+
+    .content-centered {
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+
+    .l-post-content .kg-button-card a.kg-btn, .l-post-content .kg-header-card .kg-header-card-button, .l-post-content .kg-product-card .kg-product-card-button, .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content input:not(.kg-video-card input):not(.kg-audio-card input), .l-post-content select, .l-post-content textarea, .m-button, .m-input, .no-appearance {
+        -webkit-appearance: none !important;
+        -moz-appearance: none !important;
+        appearance: none !important
+    }
+
+    .no-padding {
+        padding: 0
+    }
+
+    .no-margin {
+        margin: 0
+    }
+
+    .no-scroll-y {
+        overflow-y: hidden
+    }
+
+    .align-center {
+        text-align: center
+    }
+
+    .align-left {
+        text-align: left
+    }
+
+    .align-right {
+        text-align: right
+    }
+
+    .pos-relative {
+        position: relative
+    }
+
+    .pos-absolute {
+        position: absolute
+    }
+
+    .bold {
+        font-weight: 700
+    }
+
+    .underline {
+        text-decoration: underline
+    }
+
+    .uppercase {
+        text-transform: uppercase
+    }
+
+    .pointer {
+        cursor: pointer
+    }
+
+    .only-desktop {
+        display: none
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .only-desktop {
+            display: block
+        }
+    }
+
+    .l-post-content {
+        padding-bottom: 15px
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content {
+            max-width: 820px;
+            min-height: 400px;
+            margin: 0 auto
+        }
+    }
+
+    @media only screen and (min-width: 48rem) and (min-width: 48rem) {
+        .l-post-content {
+            padding-bottom: 30px
+        }
+    }
+
+    .l-post-content h1, .l-post-content h2, .l-post-content h3, .l-post-content h4, .l-post-content h5, .l-post-content h6 {
+        color: var(--titles-color);
+        line-height: 1.3;
+        font-weight: 700;
+        padding-top: 5px;
+        margin: 0 0 30px
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content h1, .l-post-content h2, .l-post-content h3, .l-post-content h4, .l-post-content h5, .l-post-content h6 {
+            padding-top: 10px;
+            margin-bottom: 40px
+        }
+    }
+
+    .l-post-content h1 {
+        font-size: 2.125rem
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content h1 {
+            font-size: 2.625rem
+        }
+    }
+
+    .l-post-content h2 {
+        font-size: 1.75rem
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content h2 {
+            font-size: 2.25rem
+        }
+    }
+
+    .l-post-content h3 {
+        font-size: 1.375rem
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content h3 {
+            font-size: 1.75rem
+        }
+    }
+
+    .l-post-content h4 {
+        font-size: 1rem
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content h4 {
+            font-size: 1.375rem
+        }
+    }
+
+    .l-post-content h5 {
+        font-size: .938rem
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content h5 {
+            font-size: 1.125rem
+        }
+    }
+
+    .l-post-content h6 {
+        font-size: .813rem
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content h6 {
+            font-size: 1rem
+        }
+    }
+
+    .l-post-content p {
+        letter-spacing: .2px;
+        line-height: 1.5;
+        font-size: 1.125rem;
+        margin-bottom: 25px
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content p {
+            letter-spacing: .3px;
+            line-height: 1.6;
+            font-size: 1.25rem;
+            margin-bottom: 30px
+        }
+    }
+
+    .l-post-content p img {
+        margin-bottom: 0 !important
+    }
+
+    .l-post-content b, .l-post-content strong {
+        font-weight: 600
+    }
+
+    .l-post-content em {
+        font-style: italic
+    }
+
+    .l-post-content a {
+        color: var(--primary-foreground-color);
+        text-decoration: underline;
+        transition: color .2s linear
+    }
+
+    .l-post-content a:hover {
+        color: var(--link-color)
+    }
+
+    .l-post-content ol, .l-post-content ul {
+        letter-spacing: .2px;
+        line-height: 1.5;
+        font-size: 1.125rem;
+        padding-left: 20px;
+        margin: 0 0 20px
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content ol, .l-post-content ul {
+            letter-spacing: .3px;
+            line-height: 1.6;
+            font-size: 1.25rem;
+            padding-left: 40px;
+            margin-bottom: 30px
+        }
+    }
+
+    .l-post-content li {
+        margin-bottom: 20px
+    }
+
+    .l-post-content .kg-image, .l-post-content img {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto 35px
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content .kg-image, .l-post-content img {
+            margin-bottom: 40px
+        }
+    }
+
+    .l-post-content iframe {
+        max-width: 100%
+    }
+
+    .l-post-content .fluid-width-video-wrapper {
+        margin: 0 auto 35px
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content .fluid-width-video-wrapper {
+            margin-bottom: 40px
+        }
+    }
+
+    .l-post-content.kg-image-card, .l-post-content figure {
+        padding: 20px 0 40px;
+        margin: 0 -20px
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content.kg-image-card, .l-post-content figure {
+            padding: 20px 0 50px;
+            margin: 0
+        }
+    }
+
+    .l-post-content.kg-image-card.kg-embed-card, .l-post-content figure.kg-embed-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 100%;
+        margin: 0 auto
+    }
+
+    .l-post-content.kg-image-card.kg-embed-card iframe, .l-post-content figure.kg-embed-card iframe {
+        margin: 0 auto
+    }
+
+    .l-post-content.kg-image-card.kg-width-full img, .l-post-content.kg-image-card.kg-width-wide img, .l-post-content figure.kg-width-full img, .l-post-content figure.kg-width-wide img {
+        width: 100%;
+        height: auto
+    }
+
+    @media only screen and (min-width: 80rem) {
+        .l-post-content.kg-image-card.kg-width-wide, .l-post-content figure.kg-width-wide {
+            margin: 0 -70px
+        }
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content.kg-image-card.kg-width-full, .l-post-content figure.kg-width-full {
+            width: 100vw;
+            margin-left: 50%;
+            transform: translateX(-50%)
+        }
+    }
+
+    .l-post-content.kg-image-card .kg-image, .l-post-content.kg-image-card img, .l-post-content figure .kg-image, .l-post-content figure img {
+        display: block;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto
+    }
+
+    .l-post-content.kg-image-card figcaption, .l-post-content figure figcaption {
+        text-align: center;
+        letter-spacing: .1px;
+        line-height: 1.3;
+        font-size: .75rem;
+        padding: 10px 20px 0
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content.kg-image-card figcaption, .l-post-content figure figcaption {
+            font-size: .875rem;
+            padding: 15px 0 0
+        }
+    }
+
+    .l-post-content.kg-image-card .fluid-width-video-container, .l-post-content figure .fluid-width-video-container {
+        flex-grow: 1;
+        width: 100%
+    }
+
+    .l-post-content.kg-image-card .fluid-width-video-wrapper, .l-post-content figure .fluid-width-video-wrapper {
+        margin: 0 auto !important
+    }
+
+    .l-post-content.kg-image-card .kg-gallery-container, .l-post-content figure .kg-gallery-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%
+    }
+
+    .l-post-content.kg-image-card .kg-gallery-row, .l-post-content figure .kg-gallery-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center
+    }
+
+    .l-post-content.kg-image-card .kg-gallery-image img, .l-post-content figure .kg-gallery-image img {
+        display: block;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover
+    }
+
+    .l-post-content.kg-image-card .kg-gallery-row:not(:first-of-type), .l-post-content figure .kg-gallery-row:not(:first-of-type) {
+        margin: .75em 0 0
+    }
+
+    .l-post-content.kg-image-card .kg-gallery-image:not(:first-of-type), .l-post-content figure .kg-gallery-image:not(:first-of-type) {
+        margin: 0 0 0 .75em
+    }
+
+    .l-post-content hr {
+        position: relative;
+        margin: 30px 0;
+        border: 0;
+        border-top: 1px solid var(--secondary-subtle-color)
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content hr {
+            margin: 50px 0
+        }
+    }
+
+    .l-post-content hr:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--secondary-subtle-color);
+        box-shadow: 0 0 0 10px var(--background-color), 0 0 0 transparent;
+        transform: translate(-50%, -50%)
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content hr:after {
+            width: 12px;
+            height: 12px;
+            box-shadow: 0 0 0 20px var(--background-color), 0 0 0 transparent
+        }
+    }
+
+    .l-post-content blockquote {
+        position: relative;
+        letter-spacing: .2px;
+        line-height: 1.5;
+        font-size: 1.125rem;
+        font-style: italic;
+        font-family: Georgia, Times New Roman, Times, serif;
+        padding: 0 40px;
+        margin: 0 0 25px
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content blockquote {
+            letter-spacing: .3px;
+            line-height: 1.6;
+            font-size: 1.25rem;
+            padding: 0 60px;
+            margin-bottom: 30px
+        }
+    }
+
+    .l-post-content blockquote.kg-blockquote-alt {
+        color: var(--primary-subtle-color);
+        line-height: 1.2;
+        font-family: inherit;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2rem;
+        padding-top: 20px;
+        padding-bottom: 20px
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content blockquote.kg-blockquote-alt {
+            font-size: 2.625rem;
+            padding-top: 40px;
+            padding-bottom: 40px
+        }
+    }
+
+    .l-post-content blockquote.kg-blockquote-alt:before {
+        display: none
+    }
+
+    .l-post-content blockquote:before {
+        content: '"';
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: var(--primary-foreground-color);
+        line-height: 1;
+        font-size: 2.625rem
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content blockquote:before {
+            font-size: 4rem
+        }
+    }
+
+    .l-post-content blockquote p:last-child {
+        margin-bottom: 0
+    }
+
+    .l-post-content table {
+        color: var(--titles-color);
+        font-size: .875rem;
+        width: calc(100% + 40px);
+        margin: 0 -20px 25px
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content table {
+            font-size: 1rem;
+            width: 100%;
+            margin: 0 0 30px
+        }
+    }
+
+    .l-post-content table thead {
+        border-bottom: 1px solid var(--table-head-border-bottom)
+    }
+
+    .l-post-content table thead td {
+        font-weight: 600
+    }
+
+    .l-post-content table tbody tr:nth-child(2n) {
+        background-color: var(--background-color)
+    }
+
+    .l-post-content table tbody tr:nth-child(odd) {
+        background-color: var(--table-background-color-odd)
+    }
+
+    .l-post-content table td {
+        text-align: center;
+        padding: 10px
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content table td {
+            padding: 20px
+        }
+    }
+
+    .l-post-content code {
+        display: inline-block;
+        color: var(--link-color);
+        font-size: .9rem;
+        padding: 0 5px
+    }
+
+    .l-post-content code, .l-post-content pre {
+        font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+        border-radius: 5px;
+        background-color: var(--secondary-subtle-color)
+    }
+
+    .l-post-content pre {
+        line-height: 1.4;
+        margin: 0 0 25px;
+        overflow-x: auto;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: 1.5;
+        -moz-tab-size: 2;
+        -o-tab-size: 2;
+        tab-size: 2;
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content pre {
+            margin-bottom: 30px
+        }
+    }
+
+    .l-post-content pre > code {
+        display: block;
+        padding: 10px 10px 0;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: 1.5;
+        -moz-tab-size: 2;
+        -o-tab-size: 2;
+        tab-size: 2;
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content pre > code {
+            padding: 20px 20px 0
+        }
+    }
+
+    .l-post-content pre.line-numbers > code {
+        padding: 0
+    }
+
+    .l-post-content form {
+        margin-bottom: 25px
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content form {
+            margin-bottom: 30px
+        }
+    }
+
+    .l-post-content input:not(.kg-video-card input):not(.kg-audio-card input), .l-post-content select, .l-post-content textarea {
+        margin-bottom: 20px
+    }
+
+    .l-post-content textarea {
+        height: 100px;
+        resize: none
+    }
+
+    .l-post-content select {
+        position: relative;
+        padding-right: 40px !important;
+        background-repeat: no-repeat;
+        background-position: calc(100% - 15px) 50%;
+        background-size: 15px 8px;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5IiBoZWlnaHQ9IjUiPjxwYXRoIGZpbGw9IiM1NjVlNjAiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTguMzIuNTdhLjI0Ny4yNDcgMCAwMTAgLjM2TDQuNjggNC41N2EuMjQ3LjI0NyAwIDAxLS4zNiAwTC42OC45M2EuMjQ3LjI0NyAwIDAxMC0uMzZsLjM5LS4zOWEuMjQ3LjI0NyAwIDAxLjM2IDBMNC41IDMuMjUgNy41Ny4xOGEuMjQ3LjI0NyAwIDAxLjM2IDBsLjM5LjM5eiIvPjwvc3ZnPg==")
+    }
+
+    .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) {
+        border: 1px solid var(--primary-foreground-color) !important
+    }
+
+    .l-post-content .kg-bookmark-card {
+        width: 100%;
+        padding: 0 !important;
+        margin: 30px auto !important;
+        background: var(--background-color)
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content .kg-bookmark-card {
+            margin: 40px auto !important
+        }
+    }
+
+    .l-post-content .kg-bookmark-card:hover .kg-bookmark-container {
+        opacity: .8;
+        color: var(--primary-foreground-color)
+    }
+
+    .l-post-content .kg-card + .kg-bookmark-card {
+        margin-top: 0
+    }
+
+    .l-post-content .kg-bookmark-container {
+        display: flex;
+        color: var(--primary-foreground-color);
+        text-decoration: none !important;
+        min-height: 148px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, .1), 0 0 0 1px rgba(0, 0, 0, .1);
+        border-radius: 3px;
+        transition: opacity .2s linear
+    }
+
+    .l-post-content .kg-bookmark-content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 20px
+    }
+
+    .l-post-content .kg-bookmark-title {
+        font-size: 1.125rem;
+        line-height: 1.3;
+        font-weight: 600
+    }
+
+    .l-post-content .kg-bookmark-description {
+        font-size: .875rem;
+        font-weight: 400;
+        line-height: 1.4;
+        margin-top: 12px;
+        overflow-y: hidden
+    }
+
+    .l-post-content .kg-bookmark-thumbnail {
+        position: relative;
+        min-width: 30%;
+        max-height: 100%;
+        overflow: hidden
+    }
+
+    .l-post-content .kg-bookmark-thumbnail img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+        -o-object-fit: cover;
+        object-fit: cover;
+        border-radius: 0 3px 3px 0
+    }
+
+    .l-post-content .kg-bookmark-metadata {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: .9rem;
+        font-weight: 400;
+        color: var(--titles-color);
+        margin-top: 14px
+    }
+
+    .l-post-content .kg-bookmark-icon {
+        width: 22px !important;
+        height: 22px !important;
+        margin-right: 8px !important
+    }
+
+    .l-post-content .kg-bookmark-author:after {
+        content: "\2022";
+        margin: 0 6px
+    }
+
+    .l-post-content .kg-bookmark-publisher {
+        color: inherit
+    }
+
+    @media (max-width: 500px) {
+        .l-post-content .kg-bookmark-container {
+            flex-direction: column
+        }
+
+        .l-post-content .kg-bookmark-thumbnail {
+            order: 1;
+            width: 100%;
+            min-height: 160px
+        }
+
+        .l-post-content .kg-bookmark-thumbnail img {
+            border-radius: 3px 3px 0 0
+        }
+
+        .l-post-content .kg-bookmark-content {
+            order: 2
+        }
+    }
+
+    .l-post-content .kg-nft-card .kg-nft-card-container {
+        border-radius: 20px;
+        background-color: var(--background-color)
+    }
+
+    .l-post-content .kg-nft-card .kg-ntf-image-container {
+        border-radius: 20px 20px 0 0;
+        overflow: hidden
+    }
+
+    .l-post-content .kg-nft-card .kg-nft-metadata {
+        border-radius: 0 0 20px 20px
+    }
+
+    .l-post-content .kg-nft-card .kg-nft-header {
+        margin-bottom: 10px
+    }
+
+    .l-post-content .kg-nft-card .kg-nft-header img {
+        display: inline-block;
+        width: 100px;
+        max-width: 100px;
+        margin: 0;
+        filter: invert(var(--kg-card-img-invert-color))
+    }
+
+    .l-post-content .kg-nft-card .kg-nft-title {
+        color: var(--secondary-foreground-color);
+        padding-top: 0
+    }
+
+    .l-post-content .kg-nft-card .kg-nft-creator, .l-post-content .kg-nft-card kg-nft-description {
+        color: var(--primary-foreground-color)
+    }
+
+    .l-post-content .kg-nft-card .kg-nft-creator span, .l-post-content .kg-nft-card kg-nft-description span {
+        color: var(--secondary-foreground-color)
+    }
+
+    .l-post-content .kg-button-card {
+        padding: 30px 0;
+        margin-bottom: 25px
+    }
+
+    .l-post-content .kg-button-card a.kg-btn {
+        color: #fff !important;
+        font-family: inherit !important;
+        height: auto;
+        background-color: var(--primary-subtle-color) !important;
+        box-shadow: 0 2px 4px var(--button-shadow-color-normal), 0 0 0 transparent
+    }
+
+    .l-post-content .kg-button-card a.kg-btn:hover {
+        opacity: 1;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px var(--button-shadow-color-hover), 0 0 0 transparent
+    }
+
+    .l-post-content .kg-callout-card {
+        margin-bottom: 25px
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content .kg-callout-card {
+            margin-bottom: 30px
+        }
+    }
+
+    .l-post-content .kg-callout-card .kg-callout-emoji {
+        padding-right: 24px
+    }
+
+    .l-post-content .kg-callout-card .kg-callout-text {
+        font-size: 1.0625rem
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content .kg-callout-card .kg-callout-text {
+            font-size: 1.125rem
+        }
+    }
+
+    .l-post-content .kg-header-card {
+        width: 100vw;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: 50%;
+        transform: translateX(-50%)
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content .kg-header-card {
+            margin-top: 40px;
+            margin-bottom: 40px
+        }
+    }
+
+    .l-post-content .kg-header-card.kg-style-light .kg-header-card-header, .l-post-content .kg-header-card.kg-style-light .kg-header-card-subheader {
+        color: #333
+    }
+
+    .l-post-content .kg-header-card.kg-style-light .kg-header-card-button {
+        color: #fff !important;
+        background-color: var(--primary-subtle-color) !important
+    }
+
+    .l-post-content .kg-header-card .kg-header-card-button {
+        color: #333 !important;
+        font-family: inherit;
+        height: auto !important;
+        background-color: #fff !important
+    }
+
+    .l-post-content .kg-header-card .kg-header-card-button:hover {
+        opacity: 1;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px var(--button-shadow-color-hover), 0 0 0 transparent
+    }
+
+    .l-post-content .kg-toggle-card {
+        margin-bottom: 20px
+    }
+
+    .l-post-content .kg-toggle-card .kg-toggle-heading-text {
+        padding-top: 0
+    }
+
+    .l-post-content .kg-toggle-card .kg-toggle-card-icon {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        border: 0 !important;
+        padding: 0
+    }
+
+    .l-post-content .kg-product-card {
+        margin-bottom: 30px
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content .kg-product-card {
+            margin-bottom: 40px
+        }
+    }
+
+    .l-post-content .kg-product-card .kg-product-card-image {
+        margin-bottom: 0;
+        border-radius: 5px
+    }
+
+    .l-post-content .kg-product-card .kg-product-card-title {
+        padding-top: 0;
+        font-family: inherit
+    }
+
+    .l-post-content .kg-product-card .kg-product-card-description p {
+        font-family: inherit
+    }
+
+    .l-post-content .kg-product-card .kg-product-card-button {
+        color: #fff !important;
+        font-family: inherit !important;
+        height: auto;
+        background-color: var(--primary-subtle-color) !important
+    }
+
+    .l-post-content .kg-file-card {
+        margin-bottom: 30px
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content .kg-file-card {
+            margin-bottom: 40px
+        }
+    }
+
+    .l-post-content .kg-audio-card {
+        margin-bottom: 30px
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content .kg-audio-card {
+            margin-bottom: 40px
+        }
+    }
+
+    .l-post-content .kg-audio-card img {
+        margin: 8px
+    }
+
+    .l-post-content .kg-audio-card .kg-audio-mute-icon svg, .l-post-content .kg-audio-card .kg-audio-pause-icon svg, .l-post-content .kg-audio-card .kg-audio-play-icon svg, .l-post-content .kg-audio-card .kg-audio-unmute-icon svg {
+        fill: var(--secondary-foreground-color)
+    }
+
+    .l-post-content .kg-audio-card .kg-audio-playback-rate {
+        color: var(--secondary-foreground-color)
+    }
+
+    .l-post-content .kg-audio-card .kg-audio-seek-slider:before, .l-post-content .kg-audio-card .kg-audio-volume-slider:before {
+        background-color: var(--secondary-foreground-color)
+    }
+
+    .rtl .l-post-content ol, .rtl .l-post-content ul {
+        padding-left: 0;
+        padding-right: 20px
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .rtl .l-post-content ol, .rtl .l-post-content ul {
+            padding-left: 0;
+            padding-right: 40px
+        }
+    }
+
+    .rtl .l-post-content code {
+        direction: ltr
+    }
+
+    .rtl .l-post-content blockquote:before {
+        left: auto;
+        right: 0
+    }
+
+    .rtl .l-post-content .kg-bookmark-icon {
+        margin-right: 0 !important;
+        margin-left: 8px !important
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .rtl .l-post-content figure.kg-width-full {
+            margin-left: 0;
+            margin-right: 50%;
+            transform: translateX(50%)
+        }
+    }
+
+    .rtl .l-post-content .kg-callout-card .kg-callout-emoji {
+        padding-right: auto;
+        padding-left: 24px
+    }
+
+    .rtl .l-post-content .kg-toggle-card .kg-toggle-card-icon {
+        margin-left: 0;
+        margin-right: 16px
+    }
+
+    .rtl .l-post-content .kg-product-card .kg-product-card-rating {
+        padding-left: 0;
+        padding-right: 16px
+    }
+
+    .l-post-content .kg-button-card a.kg-btn, .l-post-content .kg-header-card .kg-header-card-button, .l-post-content .kg-product-card .kg-product-card-button, .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-button {
+        display: inline-block;
+        color: #333;
+        text-align: center;
+        letter-spacing: .2px;
+        line-height: 1;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 5px;
+        padding: 13px 25px;
+        cursor: pointer;
+        outline: 0;
+        border: 0;
+        position: relative;
+        background-color: transparent;
+        transition: all .25s cubic-bezier(.02, .01, .47, 1)
+    }
+
+    .l-post-content .kg-button-card a.outlined.kg-btn, .l-post-content .kg-header-card .outlined.kg-header-card-button, .l-post-content .kg-product-card .outlined.kg-product-card-button, .l-post-content button.outlined:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-button.outlined {
+        color: var(--titles-color);
+        border: 1px solid var(--primary-foreground-color)
+    }
+
+    .l-post-content .kg-button-card a.filled.kg-btn, .l-post-content .kg-button-card a.primary.kg-btn, .l-post-content .kg-header-card .filled.kg-header-card-button, .l-post-content .kg-header-card .primary.kg-header-card-button, .l-post-content .kg-product-card .filled.kg-product-card-button, .l-post-content .kg-product-card .primary.kg-product-card-button, .l-post-content button.filled:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content button.primary:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-button.filled, .m-button.primary {
+        box-shadow: 0 2px 4px var(--button-shadow-color-normal), 0 0 0 transparent
+    }
+
+    .l-post-content .kg-button-card a.filled.kg-btn:hover, .l-post-content .kg-button-card a.primary.kg-btn:hover, .l-post-content .kg-header-card .filled.kg-header-card-button:hover, .l-post-content .kg-header-card .primary.kg-header-card-button:hover, .l-post-content .kg-product-card .filled.kg-product-card-button:hover, .l-post-content .kg-product-card .primary.kg-product-card-button:hover, .l-post-content button.filled:hover:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content button.primary:hover:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-button.filled:hover, .m-button.primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px var(--button-shadow-color-hover), 0 0 0 transparent
+    }
+
+    .l-post-content .kg-button-card a.filled.kg-btn, .l-post-content .kg-header-card .filled.kg-header-card-button, .l-post-content .kg-product-card .filled.kg-product-card-button, .l-post-content button.filled:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-button.filled {
+        border-radius: 5px;
+        background-color: #fff
+    }
+
+    .l-post-content .kg-button-card a.block.kg-btn, .l-post-content .kg-header-card .block.kg-header-card-button, .l-post-content .kg-product-card .block.kg-product-card-button, .l-post-content button.block:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-button.block {
+        display: block;
+        width: 100%
+    }
+
+    .l-post-content .kg-button-card a.primary.kg-btn, .l-post-content .kg-header-card .primary.kg-header-card-button, .l-post-content .kg-product-card .primary.kg-product-card-button, .l-post-content button.primary:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-button.primary {
+        color: #fff;
+        background-color: var(--primary-subtle-color)
+    }
+
+    .l-post-content .kg-button-card .m-subscribe-section__container.loading a.kg-btn, .l-post-content .kg-button-card a.loading.kg-btn, .l-post-content .kg-header-card .loading.kg-header-card-button, .l-post-content .kg-header-card .m-subscribe-section__container.loading .kg-header-card-button, .l-post-content .kg-product-card .loading.kg-product-card-button, .l-post-content .kg-product-card .m-subscribe-section__container.loading .kg-product-card-button, .l-post-content .m-subscribe-section__container.loading button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content button.loading:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-button.loading, .m-subscribe-section__container.loading .l-post-content .kg-button-card a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-header-card .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .m-button {
+        cursor: default;
+        overflow: hidden
+    }
+
+    .l-post-content .kg-button-card .m-subscribe-section__container.loading a.kg-btn:after, .l-post-content .kg-button-card a.loading.kg-btn:after, .l-post-content .kg-header-card .loading.kg-header-card-button:after, .l-post-content .kg-header-card .m-subscribe-section__container.loading .kg-header-card-button:after, .l-post-content .kg-product-card .loading.kg-product-card-button:after, .l-post-content .kg-product-card .m-subscribe-section__container.loading .kg-product-card-button:after, .l-post-content .m-subscribe-section__container.loading button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button):after, .l-post-content button.loading:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button):after, .m-button.loading:after, .m-subscribe-section__container.loading .l-post-content .kg-button-card a.kg-btn:after, .m-subscribe-section__container.loading .l-post-content .kg-header-card .kg-header-card-button:after, .m-subscribe-section__container.loading .l-post-content .kg-product-card .kg-product-card-button:after, .m-subscribe-section__container.loading .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button):after, .m-subscribe-section__container.loading .m-button:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 25%;
+        height: 2px;
+        background-color: #fff;
+        -webkit-animation: loading 1s infinite;
+        animation: loading 1s infinite
+    }
+
+    @-webkit-keyframes loading {
+        0% {
+            transform: translatex(0)
+        }
+        50% {
+            transform: translatex(300%)
+        }
+        to {
+            transform: translatex(0)
+        }
+    }
+
+    @keyframes loading {
+        0% {
+            transform: translatex(0)
+        }
+        50% {
+            transform: translatex(300%)
+        }
+        to {
+            transform: translatex(0)
+        }
+    }
+
+    .l-post-content input:not(.kg-video-card input):not(.kg-audio-card input), .l-post-content select, .l-post-content textarea, .m-input {
+        color: var(--primary-foreground-color);
+        letter-spacing: .2px;
+        line-height: 1.3;
+        font-size: 1rem;
+        width: 100%;
+        border-radius: 5px;
+        padding: 11px 15px;
+        border: 1px solid var(--primary-border-color);
+        outline: 0;
+        background-color: var(--background-color)
+    }
+
+    .l-post-content input:focus:not(.kg-video-card input):not(.kg-audio-card input), .l-post-content select:focus, .l-post-content textarea:focus, .m-input:focus {
+        border-color: var(--primary-subtle-color)
+    }
+
+    .l-post-content input.in-search:not(.kg-video-card input):not(.kg-audio-card input), .l-post-content select.in-search, .l-post-content textarea.in-search, .m-input.in-search {
+        font-weight: 600;
+        padding-left: 40px
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .l-post-content input.in-search:not(.kg-video-card input):not(.kg-audio-card input), .l-post-content select.in-search, .l-post-content textarea.in-search, .m-input.in-search {
+            font-size: 1.25rem;
+            padding: 15px 30px 15px 60px
+        }
+    }
+
+    .l-post-content input.in-subscribe-section:not(.kg-video-card input):not(.kg-audio-card input), .l-post-content select.in-subscribe-section, .l-post-content textarea.in-subscribe-section, .m-input.in-subscribe-section {
+        margin-bottom: 15px
+    }
+
+    .m-share {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 45px;
+        z-index: 3;
+        background-color: var(--transparent-background-color);
+        box-shadow: 0 -4px 10px rgba(0, 0, 0, .1), 0 0 0 transparent
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .m-share {
+            height: 50px
+        }
+    }
+
+    @media only screen and (min-width: 64rem) {
+        .m-share {
+            position: absolute;
+            top: 0;
+            left: auto;
+            right: -75px;
+            width: 40px;
+            height: auto;
+            background-color: transparent;
+            box-shadow: 0 0 0 transparent, 0 0 0 transparent
+        }
+    }
+
+    @media only screen and (min-width: 80rem) {
+        .m-share {
+            width: 50px;
+            right: -175px
+        }
+    }
+
+    @media only screen and (min-width: 90rem) {
+        .m-share {
+            right: -200px
+        }
+    }
+
+    .m-share a {
+        color: inherit !important
+    }
+
+    .m-share a:first-of-type {
+        margin-left: 0
+    }
+
+    @media only screen and (min-width: 64rem) {
+        .m-share a:first-of-type {
+            margin-bottom: 0
+        }
+    }
+
+    .m-share button:last-of-type {
+        margin-right: 0
+    }
+
+    @media only screen and (min-width: 64rem) {
+        .rtl .m-share {
+            right: auto;
+            left: -75px
+        }
+    }
+
+    @media only screen and (min-width: 80rem) {
+        .rtl .m-share {
+            left: -175px
+        }
+    }
+
+    @media only screen and (min-width: 90rem) {
+        .rtl .m-share {
+            left: -200px
+        }
+    }
+
+    .m-share__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%
+    }
+
+    @media only screen and (min-width: 64rem) {
+        .m-share__content {
+            position: sticky;
+            top: 100px;
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            height: auto
+        }
+    }
+
+    .rtl .m-share__content {
+        direction: ltr
+    }
+
+    .m-subscribe-section {
+        padding: 50px 0;
+        background-color: var(--secondary-subtle-color)
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .m-subscribe-section {
+            padding: 80px 0
+        }
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .m-subscribe-section__content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between
+        }
+    }
+
+    .m-subscribe-section__text {
+        text-align: center;
+        margin-bottom: 30px
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .m-subscribe-section__text {
+            flex: 1;
+            text-align: left;
+            padding-right: 75px;
+            margin-bottom: 0
+        }
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .rtl .m-subscribe-section__text {
+            text-align: right;
+            padding-right: 0;
+            padding-left: 75px
+        }
+    }
+
+    .m-subscribe-section__title {
+        color: var(--titles-color);
+        letter-spacing: .3px;
+        line-height: 1.3;
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 0 0 20px
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .m-subscribe-section__title {
+            letter-spacing: .3px;
+            font-size: 1.5rem;
+            margin-bottom: 15px
+        }
+    }
+
+    .m-subscribe-section__description {
+        letter-spacing: .2px;
+        line-height: 1.4
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .m-subscribe-section__description {
+            font-size: 1.125rem
+        }
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .m-subscribe-section__form {
+            width: 300px;
+            margin: 0 auto
+        }
+    }
+
+    .l-post-content .kg-button-card .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-header-card-button a.kg-btn, .l-post-content .kg-button-card .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-product-card-button a.kg-btn, .l-post-content .kg-button-card .m-subscribe-section__container.loading .kg-header-card a.m-subscribe-section__container.kg-btn .kg-header-card-button, .l-post-content .kg-button-card .m-subscribe-section__container.loading .kg-product-card a.m-subscribe-section__container.kg-btn .kg-product-card-button, .l-post-content .kg-button-card .m-subscribe-section__container.loading .m-subscribe-section__container.m-button a.kg-btn, .l-post-content .kg-button-card .m-subscribe-section__container.loading a.kg-btn, .l-post-content .kg-button-card .m-subscribe-section__container.loading a.m-subscribe-section__container.kg-btn .l-post-content .kg-button-card a.kg-btn, .l-post-content .kg-button-card .m-subscribe-section__container.loading a.m-subscribe-section__container.kg-btn .l-post-content .kg-header-card .kg-header-card-button, .l-post-content .kg-button-card .m-subscribe-section__container.loading a.m-subscribe-section__container.kg-btn .l-post-content .kg-product-card .kg-product-card-button, .l-post-content .kg-button-card .m-subscribe-section__container.loading a.m-subscribe-section__container.kg-btn .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-button-card .m-subscribe-section__container.loading a.m-subscribe-section__container.kg-btn .m-button, .l-post-content .kg-button-card .m-subscribe-section__container.loading a.m-subscribe-section__container.kg-btn a.kg-btn, .l-post-content .kg-button-card .m-subscribe-section__container.loading a.m-subscribe-section__container.kg-btn button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-button-card .m-subscribe-section__container.loading button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) a.kg-btn, .l-post-content .kg-header-card .kg-button-card .m-subscribe-section__container.loading a.m-subscribe-section__container.kg-btn .kg-header-card-button, .l-post-content .kg-header-card .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-product-card-button .kg-header-card-button, .l-post-content .kg-header-card .m-subscribe-section__container.loading .kg-button-card .m-subscribe-section__container.kg-header-card-button a.kg-btn, .l-post-content .kg-header-card .m-subscribe-section__container.loading .kg-header-card-button, .l-post-content .kg-header-card .m-subscribe-section__container.loading .kg-product-card .m-subscribe-section__container.kg-header-card-button .kg-product-card-button, .l-post-content .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-header-card-button .kg-header-card-button, .l-post-content .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-header-card-button .l-post-content .kg-button-card a.kg-btn, .l-post-content .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-header-card-button .l-post-content .kg-header-card .kg-header-card-button, .l-post-content .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-header-card-button .l-post-content .kg-product-card .kg-product-card-button, .l-post-content .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-header-card-button .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-header-card-button .m-button, .l-post-content .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-header-card-button button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.m-button .kg-header-card-button, .l-post-content .kg-header-card .m-subscribe-section__container.loading button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .kg-header-card-button, .l-post-content .kg-product-card .kg-button-card .m-subscribe-section__container.loading a.m-subscribe-section__container.kg-btn .kg-product-card-button, .l-post-content .kg-product-card .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-header-card-button .kg-product-card-button, .l-post-content .kg-product-card .m-subscribe-section__container.loading .kg-button-card .m-subscribe-section__container.kg-product-card-button a.kg-btn, .l-post-content .kg-product-card .m-subscribe-section__container.loading .kg-header-card .m-subscribe-section__container.kg-product-card-button .kg-header-card-button, .l-post-content .kg-product-card .m-subscribe-section__container.loading .kg-product-card-button, .l-post-content .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-product-card-button .kg-product-card-button, .l-post-content .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-product-card-button .l-post-content .kg-button-card a.kg-btn, .l-post-content .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-product-card-button .l-post-content .kg-header-card .kg-header-card-button, .l-post-content .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-product-card-button .l-post-content .kg-product-card .kg-product-card-button, .l-post-content .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-product-card-button .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-product-card-button .m-button, .l-post-content .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-product-card-button button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.m-button .kg-product-card-button, .l-post-content .kg-product-card .m-subscribe-section__container.loading button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .kg-product-card-button, .l-post-content .m-subscribe-section__container.loading .kg-button-card button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) a.kg-btn, .l-post-content .m-subscribe-section__container.loading .kg-header-card button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .kg-header-card-button, .l-post-content .m-subscribe-section__container.loading .kg-product-card button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .kg-product-card-button, .l-post-content .m-subscribe-section__container.loading .m-subscribe-section__container.m-button button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .m-subscribe-section__container.loading button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .l-post-content .kg-button-card a.kg-btn, .l-post-content .m-subscribe-section__container.loading button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .l-post-content .kg-header-card .kg-header-card-button, .l-post-content .m-subscribe-section__container.loading button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .l-post-content .kg-product-card .kg-product-card-button, .l-post-content .m-subscribe-section__container.loading button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .m-subscribe-section__container.loading button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .m-button, .l-post-content .m-subscribe-section__container.loading button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .m-subscribe-section__container.loading button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content .kg-button-card .kg-header-card .m-subscribe-section__container.kg-header-card-button a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-button-card .kg-header-card a.m-subscribe-section__container.kg-btn .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-button-card .kg-product-card .m-subscribe-section__container.kg-product-card-button a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-button-card .kg-product-card a.m-subscribe-section__container.kg-btn .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-button-card .m-subscribe-section__container.m-button a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-button-card a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-button-card a.m-subscribe-section__container.kg-btn .l-post-content .kg-button-card a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-button-card a.m-subscribe-section__container.kg-btn .l-post-content .kg-header-card .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-button-card a.m-subscribe-section__container.kg-btn .l-post-content .kg-product-card .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-button-card a.m-subscribe-section__container.kg-btn .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content .kg-button-card a.m-subscribe-section__container.kg-btn .m-button, .m-subscribe-section__container.loading .l-post-content .kg-button-card a.m-subscribe-section__container.kg-btn a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-button-card a.m-subscribe-section__container.kg-btn button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content .kg-button-card button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-header-card .kg-button-card .m-subscribe-section__container.kg-header-card-button a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-header-card .kg-button-card a.m-subscribe-section__container.kg-btn .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card .kg-product-card .m-subscribe-section__container.kg-header-card-button .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card .kg-product-card .m-subscribe-section__container.kg-product-card-button .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card .m-subscribe-section__container.kg-header-card-button .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card .m-subscribe-section__container.kg-header-card-button .l-post-content .kg-button-card a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-header-card .m-subscribe-section__container.kg-header-card-button .l-post-content .kg-header-card .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card .m-subscribe-section__container.kg-header-card-button .l-post-content .kg-product-card .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card .m-subscribe-section__container.kg-header-card-button .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content .kg-header-card .m-subscribe-section__container.kg-header-card-button .m-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card .m-subscribe-section__container.kg-header-card-button button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content .kg-header-card .m-subscribe-section__container.m-button .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .kg-button-card .m-subscribe-section__container.kg-product-card-button a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-product-card .kg-button-card a.m-subscribe-section__container.kg-btn .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .kg-header-card .m-subscribe-section__container.kg-header-card-button .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .kg-header-card .m-subscribe-section__container.kg-product-card-button .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .m-subscribe-section__container.kg-product-card-button .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .m-subscribe-section__container.kg-product-card-button .l-post-content .kg-button-card a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-product-card .m-subscribe-section__container.kg-product-card-button .l-post-content .kg-header-card .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .m-subscribe-section__container.kg-product-card-button .l-post-content .kg-product-card .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .m-subscribe-section__container.kg-product-card-button .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content .kg-product-card .m-subscribe-section__container.kg-product-card-button .m-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .m-subscribe-section__container.kg-product-card-button button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content .kg-product-card .m-subscribe-section__container.m-button .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .m-subscribe-section__container.m-button button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .l-post-content .kg-button-card a.kg-btn, .m-subscribe-section__container.loading .l-post-content button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .l-post-content .kg-header-card .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .l-post-content .kg-product-card .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .m-button, .m-subscribe-section__container.loading .l-post-content button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .m-button, .m-subscribe-section__container.loading .m-subscribe-section__container.m-button .l-post-content .kg-button-card a.kg-btn, .m-subscribe-section__container.loading .m-subscribe-section__container.m-button .l-post-content .kg-header-card .kg-header-card-button, .m-subscribe-section__container.loading .m-subscribe-section__container.m-button .l-post-content .kg-product-card .kg-product-card-button, .m-subscribe-section__container.loading .m-subscribe-section__container.m-button .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .m-subscribe-section__container.m-button .m-button {
+        pointer-events: none
+    }
+
+    .m-subscribe-section__container.success .m-subscribe__success {
+        display: block
+    }
+
+    .m-subscribe-section__container.success .m-subscribe__error, .m-subscribe-section__container.success .m-subscribe__form, .m-subscribe-section__container.success .m-subscribe__invalid {
+        display: none
+    }
+
+    .m-subscribe-section__container.error .m-subscribe__error, .m-subscribe-section__container.invalid .m-subscribe__invalid {
+        display: block
+    }
+
+    .m-subscribe-section__container.error .m-subscribe__form {
+        margin-bottom: 20px
+    }
+
+    .m-subscribe-section__container .m-subscribe__error, .m-subscribe-section__container .m-subscribe__invalid, .m-subscribe-section__container .m-subscribe__success {
+        display: none
+    }
+
+    .m-subscribe__success_icon {
+        display: block;
+        width: 64px;
+        height: 64px;
+        margin: 0 auto 25px
+    }
+
+    .m-subscribe__error {
+        text-align: center
+    }
+
+    .m-author {
+        padding: 40px 20px;
+        border-color: var(--secondary-subtle-color);
+        border-style: solid;
+        border-width: 1px 0;
+        margin: 0 auto
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .m-author {
+            display: flex;
+            justify-content: center;
+            padding: 60px 40px
+        }
+    }
+
+    @media only screen and (min-width: 80rem) {
+        .m-author {
+            padding: 60px 0
+        }
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .m-author__content {
+            display: flex;
+            max-width: 820px
+        }
+    }
+
+    .m-author__picture {
+        width: 90px;
+        margin: 0 auto 25px
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .m-author__picture {
+            width: 100px;
+            margin: 0 30px 0 0
+        }
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .rtl .m-author__picture {
+            margin: 0 0 0 30px
+        }
+    }
+
+    .m-author__info {
+        text-align: center
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .m-author__info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1;
+            text-align: left
+        }
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .rtl .m-author__info {
+            text-align: right
+        }
+    }
+
+    .m-author__name {
+        color: var(--link-color);
+        letter-spacing: .2px;
+        line-height: 1.3;
+        font-size: 1.125rem;
+        font-weight: 400;
+        margin: 0 0 15px
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .m-author__name {
+            letter-spacing: .3px;
+            font-size: 1.25rem
+        }
+    }
+
+    .m-author__bio {
+        letter-spacing: .2px;
+        line-height: 1.5;
+        margin-bottom: 20px
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .m-author__bio {
+            margin-bottom: 15px
+        }
+    }
+
+    .m-author-picture {
+        display: block;
+        width: 90px;
+        height: 90px
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .m-author-picture {
+            width: 100px;
+            height: 100px
+        }
+    }
+
+    .m-author-picture div {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: cover
+    }
+
+    .m-author-links {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        text-align: center
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .m-author-links {
+            text-align: left
+        }
+    }
+
+    .m-author-links li {
+        display: inline-block;
+        margin: 0 11px
+    }
+
+    .m-author-links li:first-of-type {
+        margin-left: 0
+    }
+
+    .m-author-links li:last-of-type {
+        margin-right: 0
+    }
+
+    .rtl .m-author-links {
+        direction: ltr;
+        text-align: right
+    }
+
+    .m-comments {
+        padding-top: 40px
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .m-comments {
+            padding-top: 60px
+        }
+    }
+
+    .m-comments iframe {
+        width: 100%;
+        max-width: 100%
+    }
+
+    .m-recommended {
+        padding-top: 40px
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .m-recommended {
+            padding-top: 60px
+        }
+    }
+
+    .m-recommended-articles {
+        margin: 0 -20px
+    }
+
+    @media only screen and (min-width: 64rem) {
+        .m-recommended-articles {
+            padding: 0 40px;
+            margin: 0 -30px
+        }
+    }
+
+    .m-recommended-slider {
+        list-style-type: none;
+        padding: 0;
+        margin: 0
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .m-recommended-slider .glide__track {
+            padding: 0 40px;
+            margin: 0 -40px
+        }
+    }
+
+    .m-recommended-slider .glide__slides {
+        padding: 40px 0 60px;
+        margin: 0 auto
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .m-recommended-slider .glide__slides {
+            padding: 40px 0 60px
+        }
+    }
+
+    @media only screen and (min-width: 80rem) {
+        .m-recommended-slider .glide__slides {
+            overflow: visible
+        }
+    }
+
+    .m-recommended-slider .m-article-card {
+        width: 100% !important;
+        margin: 0 !important
+    }
+
+    @media only screen and (min-width: 64rem) {
+        .m-recommended-slider .m-article-card .m-article-card__picture {
+            height: 190px
+        }
+    }
+
+    @media only screen and (min-width: 80rem) {
+        .m-recommended-slider .m-article-card .m-article-card__picture {
+            height: 220px
+        }
+    }
+
+    .m-recommended-slider__item {
+        padding: 0 20px
+    }
+</style>
     <style>
         /* These font-faces are here to make fonts work if the Ghost instance is installed in a subdirectory */
 
@@ -84,21 +1628,21 @@
 
     <meta content="Pre-IPO Equity Market" name="description"/>
     <link href="/favicon.png" rel="icon" type="image/png"/>
-    <link href="http://137.184.211.5/" rel="canonical"/>
+    <link href="https://www.topshelfequitypartners.com/" rel="canonical"/>
     <meta content="no-referrer-when-downgrade" name="referrer"/>
 
     <meta content="TopShelf Equity Partners" property="og:site_name"/>
     <meta content="website" property="og:type"/>
     <meta content="TopShelf Equity Partners" property="og:title"/>
     <meta content="Pre-IPO Equity Market" property="og:description"/>
-    <meta content="http://137.184.211.5/" property="og:url"/>
-    <meta content="http://137.184.211.5/content/images/2022/01/Bck-3.png" property="og:image"/>
+    <meta content="https://www.topshelfequitypartners.com/" property="og:url"/>
+    <meta content="https://www.topshelfequitypartners.com/content/images/2022/01/Bck-3.png" property="og:image"/>
     <meta content="https://www.facebook.com/ghost" property="article:publisher"/>
     <meta content="summary_large_image" name="twitter:card"/>
     <meta content="TopShelf Equity Partners" name="twitter:title"/>
     <meta content="Pre-IPO Equity Market" name="twitter:description"/>
-    <meta content="http://137.184.211.5/" name="twitter:url"/>
-    <meta content="http://137.184.211.5/content/images/2022/01/Bck-3.png" name="twitter:image"/>
+    <meta content="https://www.topshelfequitypartners.com/" name="twitter:url"/>
+    <meta content="https://www.topshelfequitypartners.com/content/images/2022/01/Bck-3.png" name="twitter:image"/>
     <meta content="@ghost" name="twitter:site"/>
     <meta content="1920" property="og:image:width"/>
     <meta content="1080" property="og:image:height"/>
@@ -110,30 +1654,31 @@
             "publisher": {
                 "@type": "Organization",
                 "name": "TopShelf Equity Partners",
-                "url": "http://137.184.211.5/",
+                "url": "https://www.topshelfequitypartners.com/",
                 "logo": {
                     "@type": "ImageObject",
-                    "url": "http://137.184.211.5/content/images/2022/01/Basic-Logo-1.png"
+                    "url": "https://www.topshelfequitypartners.com/content/images/2022/01/Basic-Logo-1.png"
                 }
             },
-            "url": "http://137.184.211.5/",
+            "url": "https://www.topshelfequitypartners.com/",
             "image": {
                 "@type": "ImageObject",
-                "url": "http://137.184.211.5/content/images/2022/01/Bck-3.png",
+                "url": "https://www.topshelfequitypartners.com/content/images/2022/01/Bck-3.png",
                 "width": 1920,
                 "height": 1080
             },
             "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": "http://137.184.211.5/"
+                "@id": "https://www.topshelfequitypartners.com/"
             },
             "description": "Pre-IPO Equity Market"
         }
     </script>
 
     <meta content="Ghost 4.33" name="generator"/>
-    <link href="http://137.184.211.5/rss/" rel="alternate" title="TopShelf Equity Partners" type="application/rss+xml"/>
-    <script crossorigin="anonymous" data-ghost="http://137.184.211.5/" defer
+    <link href="https://www.topshelfequitypartners.com/rss/" rel="alternate" title="TopShelf Equity Partners"
+          type="application/rss+xml"/>
+    <script crossorigin="anonymous" data-ghost="https://www.topshelfequitypartners.com/" defer
             src="https://unpkg.com/@tryghost/portal@~1.14.0/umd/portal.min.js"></script>
     <style id="gh-members-styles">.gh-post-upgrade-cta-content,
     .gh-post-upgrade-cta {
@@ -211,11 +1756,6 @@
         }
     </style>
 
-    <script>
-        // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
-        const ghostHost = "http://137.184.211.5"
-        // @license-end
-    </script>
 
 </head>
 
@@ -225,7 +1765,7 @@
         <button aria-label="Open menu" class="m-icon-button in-mobile-topbar js-open-menu">
             <span aria-hidden="true" class="icon-menu"></span>
         </button>
-        <a class="m-logo in-mobile-topbar" href="#">
+        <a class="m-logo in-mobile-topbar" href="index">
             <img alt="TopShelf Equity Partners" class="m-logo__image-light"
                  src="http://topshelfequitypartners.com/wp-content/uploads/2021/06/logox75.png">
             <img alt="TopShelf Equity Partners" class="m-logo__image-dark"
@@ -246,7 +1786,7 @@
                     <nav aria-label="Main menu" class="m-nav__left js-main-nav-left" role="navigation">
                         <ul>
                             <li class="only-desktop">
-                                <a class="m-logo" href="#">
+                                <a class="m-logo" href="/index">
                                     <img alt="TopShelf Equity Partners" class="m-logo__image-light"
                                          src="http://topshelfequitypartners.com/wp-content/uploads/2021/06/logox75.png">
                                     <img alt="TopShelf Equity Partners" class="m-logo__image-dark"
@@ -255,7 +1795,7 @@
                             </li>
 
                             <li class="nav-home nav-current">
-                                <a href="#">Home</a>
+                                <a href="/index">Home</a>
                             </li>
                             <li class="nav-portfolio">
                                 <a href="/portfolio">Portfolio</a>
@@ -290,22 +1830,9 @@
 
 </header>
 
-<section class="m-hero with-picture" data-aos="fade">
-    <div class="m-hero__picture ">
-        <img
-                alt=""
-                sizes="(max-width: 600px) 600px, (max-width: 1000px) 1000px, 2000px"
-                src="/content/images/size/w1000/2022/01/Bck.png"
-                srcset="
-          /content/images/size/w300/2022/01/Bck.png 300w,
-          /content/images/size/w600/2022/01/Bck.png 600w,
-          /content/images/size/w1000/2022/01/Bck.png 1000w,
-          /content/images/size/w2000/2022/01/Bck.png 2000w
-        "
-        />
-    </div>
-    <div class="m-hero__content" data-aos="fade-down">
-        <h1 class="m-hero-title bigger">FAQ&#x27;s</h1>
+<section class="m-hero no-picture aos-init aos-animate" data-aos="fade">
+    <div class="m-hero__content aos-init aos-animate" data-aos="fade-down">
+        <h1 class="m-hero-title bigger">Request Information</h1>
     </div>
 </section>
 <style data-emotion="css eh1hnm">
@@ -454,7 +1981,7 @@
                 --theme-ui-colors-gray0_black: #f7f7f7;
                 --theme-ui-colors-transparent_black: transparent;
                 --theme-ui-colors-gray6_c1cdda: #535353;
-                --theme-ui-colors-card: rgba(255, 255, 255, 0.75);
+                --theme-ui-colors-card: rgba(161, 88, 88, 0.75);
                 --theme-ui-colors-underlay: rgba(247, 247, 247, 0.75);
                 --theme-ui-colors-quoteUnderlay: rgba(255, 255, 255, 0.75);
                 --theme-ui-colors-white_0b1218: #fff;
@@ -2698,55 +4225,6 @@
                         }
                     </style>
 
-                    <section class="m-subscribe-section js-newsletter">
-                        <div class="l-wrapper in-post">
-                            <div class="m-subscribe-section__content">
-                                <div class="m-subscribe-section__text">
-                                    <h4 class="m-subscribe-section__title">Subscribe to our newsletter</h4>
-                                    <p class="m-subscribe-section__description">
-                                        Get the latest posts delivered right to your inbox.
-                                    </p>
-                                </div>
-                                <div class="m-subscribe-section__form">
-
-                                    <div class="m-subscribe-section__form">
-                                        <form class="m-subscribe-section__container" data-members-form="subscribe"
-                                              id="newsletter-form">
-                                            <div class="m-subscribe__form">
-                                                <div class="pos-relative">
-                                                    <label class="sr-only" for="newsletter-input">Your email
-                                                        address</label>
-                                                    <input class="m-input in-subscribe-section" data-members-email=""
-                                                           id="newsletter-input" placeholder="Your email address"
-                                                           required="" type="email">
-                                                </div>
-                                                <button class="m-button primary block" id="newsletter-button"
-                                                        type="submit">Subscribe
-                                                </button>
-                                            </div>
-                                            <div class="m-subscribe__success">
-                                                <header class="m-heading no-margin">
-                                                    <img alt="Success!" class="m-subscribe__success_icon"
-                                                         src="/assets/images/success.png?v=6726deec57">
-                                                    <p class="m-heading__description in-newsletter-form">
-                                                        Now check your inbox and click the link to confirm your
-                                                        subscription.
-                                                    </p>
-                                                </header>
-                                            </div>
-                                            <p class="m-subscribe__invalid m-small-text">
-                                                Please enter a valid email address
-                                            </p>
-                                            <p class="m-subscribe__error m-small-text">
-                                                Oops! There was an error sending the email, please try later.
-                                            </p>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
 
                     <style data-emotion="css eh1hnm">
                         .css-eh1hnm {
@@ -2756,6 +4234,138 @@
                     </style>
                     <div class="css-eh1hnm"></div>
 
+                    <section class="m-subscribe-section js-newsletter" style="background-color: white">
+                        <div class="l-wrapper in-post">
+                            <div class="m-subscribe-section__content">
+                                <div class="m-subscribe-section__text">
+                                    <h4 class="m-subscribe-section__title">Request Information</h4>
+                                    <p class="m-subscribe-section__description">
+                                        <img src=" "
+                                             width="100%">
+                                        This is a description for request information
+                                        <image></image>
+                                    </p>
+                                </div>
+
+                                <div class="m-subscribe-section__form">
+                                    <div class="m-subscribe-section__form">
+                                        <form class="m-subscribe-section__container" data-members-form="subscribe"
+                                              id="myForm" method="POST" name="google-sheet"
+                                              id="newsletter-form">
+                                            <div class="m-subscribe__form">
+                                                <div class="pos-relative">
+                                                    <label class="sr-only" for="newsletter-input">Your Name </label>
+                                                    <input class="m-input in-subscribe-section" id="name"
+                                                           id="newsletter-input" name="Name" placeholder="Your name"
+                                                           required type="text">
+                                                </div>
+
+                                                <div class="pos-relative">
+                                                    <label class="sr-only" for="newsletter-input">Your Email </label>
+                                                    <input class="m-input in-subscribe-section" id="email"
+                                                           id="newsletter-input" name="Email"
+                                                           placeholder="Your email address" required type="email">
+                                                </div>
+
+                                                <div class="pos-relative">
+                                                    <label class="sr-only" for="newsletter-input">Your Phone
+                                                        number </label>
+                                                    <input class="m-input in-subscribe-section" id="phonenumber"
+                                                           id="newsletter-input" name="Phone"
+                                                           placeholder="Your phone number" required type="tel">
+                                                </div>
+
+                                                <div class="pos-relative">
+                                                    <label class="sr-only" for="newsletter-input">Subject </label>
+                                                    <textarea REQUIRED class="m-input in-subscribe-section"
+                                                              id="newsletter-input" id="subject" name="Subject"
+                                                              placeholder="Subject" type="text"></textarea>
+                                                </div>
+                                                <div class="pos-relative">
+                                                    <label>Select Accrediation Status*</label>
+                                                    <br>
+                                                    <br>
+                                                    <select class=" select m-input in-subscribe-section "
+                                                            id="accreditation" name="Accreditation"
+                                                            placeholder="Select your accreditation status" required
+                                                            type="select">
+                                                        <option value="Not Selected any value">Select from dropdown
+                                                        </option>
+                                                        <option value="I'm Not Accredited">I'm Not Accredited</option>
+                                                        <option value="YES, Individual with net-worth of $1M+ (with or without spouse)">
+                                                            YES, Individual with net-worth of $1M+ (with or without
+                                                            spouse)
+                                                        </option>
+                                                        <option value="YES, Individual with annual income in last two years of $200K+ ($300K+ with spouse)">
+                                                            YES, Individual with annual income in last two years of
+                                                            $200K+ ($300K+ with spouse)
+                                                        </option>
+                                                        <option value="YES, Entity of trust not formed for the specific purpose of investing  with $5M+ in assets">
+                                                            YES, Entity of trust not formed for the specific purpose of
+                                                            investing with $5M+ in assets
+                                                        </option>
+                                                        <option value="YES, Finra-licensed individual in good standing with Series 7, 82 or 65">
+                                                            YES, Finra-licensed individual in good standing with Series
+                                                            7, 82 or 65
+                                                        </option>
+                                                        <option value="YES, Entitiy beneficially owned by all accredited investors by the standards above">
+                                                            YES, Entitiy beneficially owned by all accredited investors
+                                                            by the standards above
+                                                        </option>
+                                                        <option value="Others">Others</option>
+                                                    </select>
+                                                </div>
+
+
+                                                <button class="m-button primary block" id="newsletter-button"
+                                                        name="submit" type="submit" value="Submit">Submit
+                                                </button>
+
+                                            </div>
+                                            <div class="m-subscribe__success">
+                                                <header class="m-heading no-margin">
+                                                    <img alt="Success!" class="m-subscribe__success_icon"
+                                                         src="/assets/images/success.png?v=6726deec57">
+                                                    <p class="m-heading__description in-newsletter-form">
+                                                        Thankyou for requesting, TopShelf team will be sending you
+                                                        details shortly.
+                                                    </p>
+                                                </header>
+                                            </div>
+
+                                            <p class="m-subscribe__invalid m-small-text">
+                                                Please enter a valid email address
+                                            </p>
+                                            <p class="m-subscribe__error m-small-text">
+                                                Thankyou for requesting, TopShelf team will be sending you details
+                                                shortly.
+                                            </p>
+                                        </form>
+
+                                        <script>
+                                            const scriptURL = 'https://script.google.com/macros/s/AKfycbxyfSOUwaDxIXhhLh660H0jkvtcSLQw3uczFyZH49P38oLuegNEfxuKvqkTSSMKnhRg/exec'
+                                            const form = document.forms['google-sheet']
+
+                                            form.addEventListener('submit', e => {
+                                                e.preventDefault()
+                                                fetch(scriptURL, {method: 'POST', body: new FormData(form)})
+                                                    .then(response => alert("Thankyou for requesting, TopShelf team will be sending you details shortly."))
+                                                    .catch(error => console.error('Error!', error.message))
+                                            })
+
+                                            function myFunction() {
+                                                document.getElementById("myForm").reset();
+                                            }
+                                        </script>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
                     <style data-emotion="css 1qvtovv">
                         .css-1qvtovv {
                             padding-top: 32px;
@@ -2764,370 +4374,7 @@
                             background-color: var(--theme-ui-colors-gray0_slate9);
                         }
                     </style>
-                    <section class="css-1qvtovv">
 
-                        <div class="css-1i5bnyy">
-
-                            <div class="css-14wfhca">
-                                <div class="css-kdjx97">
-                                    <h2 class="css-l35s7n">Explore Companies</h2>
-                                    <p class="css-1megf85"></p>
-                                </div>
-                            </div>
-
-                            <ul class="css-kdtjv2">
-                                <li class="css-6pa516">
-                                    <a class="css-dd0scb" href=" " rel="noopener noreferrer" target="_blank">
-                                        <style data-emotion="css x9blrq">
-                                            .css-x9blrq {
-                                                margin-top: 0;
-                                                font-size: 1.25rem;
-                                                color: var(--theme-ui-colors-primary);
-                                            }
-
-                                            a:hover .css-x9blrq, a:focus .css-x9blrq {
-                                                -webkit-text-decoration: none;
-                                                text-decoration: none;
-                                            }
-                                        </style>
-                                        <img src="http://topshelfequitypartners.com/wp-content/uploads/2021/06/AA1.png"
-                                             width="100%">
-                                        <br>
-                                        <br>
-                                        <h2 class="css-x9blrq">Automation Anywhere</h2>
-                                        <div class="css-xkw52e">2021 | RPA</div>
-                                        <style data-emotion="css 1mbbvi2">
-                                            .css-1mbbvi2 {
-                                                margin-bottom: 0;
-                                                color: var(--theme-ui-colors-primary);
-                                            }
-
-                                            a:hover .css-1mbbvi2, a:focus .css-1mbbvi2 {
-                                                -webkit-text-decoration: underline;
-                                                text-decoration: underline;
-                                            }
-                                        </style>
-                                        <p class="css-1mbbvi2">Learn more →</p>
-                                    </a>
-                                </li>
-                                <li class="css-xmps7d">
-                                    <a class="css-dd0scb" href=" " rel="noopener noreferrer" target="_blank">
-                                        <img src="http://topshelfequitypartners.com/wp-content/uploads/2021/06/R1.png"
-                                             width="100%">
-                                        <br>
-                                        <br>
-                                        <h2 class="css-x9blrq">Rubrik</h2>
-                                        <div class="css-xkw52e">2021 | Storage Company</div>
-                                        <p class="css-1mbbvi2">Learn more →</p>
-                                    </a>
-                                </li>
-                                <li class="css-xmps7d">
-                                    <a class="css-dd0scb" href=" " rel="noopener noreferrer" target="_blank">
-                                        <img src="http://topshelfequitypartners.com/wp-content/uploads/2021/06/KR1.png"
-                                             width="100%">
-                                        <br>
-                                        <br>
-                                        <h2 class="css-x9blrq">Kraken</h2>
-                                        <div class="css-xkw52e">2021 | Cryptocurrency</div>
-                                        <p class="css-1mbbvi2">Learn more →</p>
-                                    </a>
-                                </li>
-
-                            </ul>
-                            <ul class="css-kdtjv2">
-                                <li class="css-6pa516">
-                                    <a class="css-dd0scb" href=" " rel="noopener noreferrer" target="_blank">
-
-                                        </style>
-                                        <img src="http://topshelfequitypartners.com/wp-content/uploads/2021/06/T.png"
-                                             width="100%">
-                                        <br>
-                                        <br>
-                                        <h2 class="css-x9blrq">ThoughtSpot</h2>
-                                        <div class="css-xkw52e">2021 | RPA</div>
-                                        <style data-emotion="css 1mbbvi2">
-                                            .css-1mbbvi2 {
-                                                margin-bottom: 0;
-                                                color: var(--theme-ui-colors-primary);
-                                            }
-
-                                            a:hover .css-1mbbvi2, a:focus .css-1mbbvi2 {
-                                                -webkit-text-decoration: underline;
-                                                text-decoration: underline;
-                                            }
-                                        </style>
-                                        <p class="css-1mbbvi2">Learn more →</p>
-                                    </a>
-                                </li>
-                                <li class="css-xmps7d">
-                                    <a class="css-dd0scb" href=" " rel="noopener noreferrer" target="_blank">
-                                        <br>
-                                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAiIGhlaWdodD0iMjUiIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAxNjAgMjUiPgogICAgPGcgZmlsbD0iIzAwMjM3QyIgY2xpcC1wYXRoPSJ1cmwoI3ByZWZpeF9fY2xpcDApIj4KICAgICAgICA8cGF0aCBkPSJNMTkuOTg3LjA0MmMtMi4yNiAwLTQuMDg0Ljc2Ny01LjQzMiAyLjg2LS44Ny0xLjg2NS0yLjc1OC0yLjg2LTUuMS0yLjg2LTEuODg3IDAtNC4wODUuOTEyLTUuMDE4IDIuNTkxVi44M2MwLS4xNjUtLjE0NS0uMzEtLjMxMS0uMzFILjMxMUMuMTQ1LjUxOCAwIC42NjMgMCAuODI4djE2LjU0NmMwIC4xNjYuMTQ1LjMxLjMxMS4zMWg0LjAyMmMuMTY2IDAgLjMxMS0uMTQ0LjMxMS0uMzFWNy42M2MwLTEuODg3IDEuMTgyLTMuMzggMy4yMTQtMy4zOCAyLjA5NCAwIDMuMDI3IDEuMzkgMy4wMjcgMy4yMzV2OS44NjljMCAuMTY2LjE0NS4zMS4zMTEuMzFoMy45OGMuMTY3IDAgLjMxMi0uMTQ0LjMxMi0uMzFWNy42MDljMC0xLjg0NSAxLjE4Mi0zLjM4IDMuMTcyLTMuMzggMi4xMzYgMCAzLjAyNyAxLjM5IDMuMDI3IDMuMjM1djkuODdjMCAuMTY1LjE0NS4zMS4zMTEuMzFoMy44NzdjLjE2NiAwIC4zMTEtLjE0NS4zMTEtLjMxVjYuNTUxYy4wMjEtNC42MDMtMy4wMjctNi41MS02LjE5OS02LjUxek0zNy43MzUgMTQuNDkzYy0yLjI2IDAtNC40MTcuOTEyLTUuMTg0IDIuMTc3IDEuNDUyLjk5NSAzLjIxNCAxLjUzNCA1LjE4NCAxLjUzNCAxLjk0OSAwIDMuNzMyLS41NiA1LjE4My0xLjUzNC0uNzY3LTEuMjY1LTMuMDA2LTIuMTc3LTUuMTgzLTIuMTc3ek01Ny4zMjggMGMtNC4zOTUgMC04LjQzOCAzLjU2Ni04LjQzOCA5LjA0IDAgNS43ODQgNC4xNDYgOS4xNjQgOC44NTMgOS4xNjQgMy45NiAwIDYuNjE0LTIuMTk4IDcuNjMtNC45MTQuMDYyLS4xNjYtLjAyMS0uMzUyLS4yMDgtLjQxNGwtMy4zNTgtLjg5MmMtLjE0Ni0uMDQxLS4yOS4wMi0uMzUzLjE2Ni0uNjIyIDEuMjQ0LTEuNzgzIDIuMDk0LTMuNjkgMi4wOTQtMi4zMDIgMC00LjIzLTEuNjM4LTQuMzM0LTMuODk4aDExLjk4NGMuMTY2IDAgLjI5LS4xMjQuMzExLS4yOS4wMi0uMjcuMDQyLS43MjYuMDQyLTEuMTRDNjUuODA4IDMuMzggNjIuNjM2IDAgNTcuMzI4IDB6bS0zLjc3MyA3LjE1M2MuMTAzLTEuNTc2IDEuNDMtMy4zOCAzLjgzNS0zLjM4IDIuMjgxIDAgMy43NzQgMS42OCAzLjgzNiAzLjM4aC03LjY3MXoiLz4KICAgICAgICA8cGF0aCBkPSJNMzcuNzM1IDBjLTUuMTIxIDAtOC45OTkgMy43OTQtOC45OTkgOS4xMDIgMCAyLjMwMS43NDcgNC4zNTQgMi4wMTEgNS45MDkgMS4wMzctLjkzMyAyLjU5Mi0xLjgwNCA0LjQxNy0yLjE1Ni0xLjAxNi0uNzg4LTEuNy0yLjA5NC0xLjctMy45MTkgMC0zLjE3MiAyLjAzMS00LjYwMyA0LjI1LTQuNjAzIDIuMjE4IDAgNC4yNSAxLjQ1MiA0LjI1IDQuNjAzIDAgMS44MjUtLjY4NCAzLjEzLTEuNjggMy45MTkgMS44MjUuMzUyIDMuMzggMS4yMjMgNC40MTcgMi4xMzUgMS4yNjUtMS41NTUgMi4wMTEtMy41ODcgMi4wMTEtNS45MDlDNDYuNzMzIDMuNzk0IDQyLjg3NiAwIDM3LjczNSAwek0xNTEuNTIgMGMtNC4zOTUgMC04LjQzOCAzLjU2Ni04LjQzOCA5LjA0IDAgNS43ODQgNC4xNDYgOS4xNjQgOC44NTMgOS4xNjQgMy45ODEgMCA2LjYxNC0yLjE5OCA3LjYzLTQuOTE0LjA2Mi0uMTY2LS4wNDItLjM1Mi0uMjA4LS40MTRsLTMuMzU5LS44OTJjLS4xNDUtLjA0MS0uMjkuMDItLjM1Mi4xNjYtLjYyMiAxLjI0NC0xLjc4MyAyLjA5NC0zLjY5MSAyLjA5NC0yLjMwMSAwLTQuMjI5LTEuNjM4LTQuMzMzLTMuODk4aDEyLjAyNmMuMTY1IDAgLjI5LS4xMjQuMzExLS4yOS4wMi0uMjcuMDQxLS43MjYuMDQxLTEuMTRDMTYwIDMuMzggMTU2LjgyOCAwIDE1MS41MiAwem0tMy43NTMgNy4xNTNjLjEwNC0xLjU3NiAxLjQzMS0zLjM4IDMuODM2LTMuMzggMi4yODEgMCAzLjc3MyAxLjY4IDMuODM2IDMuMzhoLTcuNjcyek0xNDAuNDI3LjUxOGgtMy44NTZjLS4xNjYgMC0uMzExLjE0NS0uMzExLjMxMVYyLjU1Yy0uNTgxLTEuMTYtMi4xMzYtMi4zNDMtNC44NzItMi4zNDMtNC43MDcgMC03Ljk4MyAzLjgzNi03Ljk4MyA4LjM3NyAwIDQuODEgMy40MjEgOC4zMzQgNy45ODMgOC4zMzQgMi40NjcgMCA0LjA4NC0xLjA3OCA0Ljc4OS0yLjE5N3YxLjI2NGMwIDMuMzE4LTEuNjM4IDQuNzctNC41NjEgNC43Ny0yLjA3NCAwLTMuNTI1LTEuMjI0LTMuOTQtMi45NDUtLjA0MS0uMTY2LS4yMDctLjI3LS4zNzMtLjIyOGwtMy42MDcuOTU0Yy0uMTY2LjA0MS0uMjQ5LjIwNy0uMjI5LjM1Mi42MjIgMy4xNTIgMy43MTIgNS45MyA4LjI5NCA1LjkzIDYuNDQ4IDAgOC45OTgtNC4yOTIgOC45OTgtOC45OThWLjgzYy0uMDIxLS4xNjctLjE0NS0uMzEyLS4zMzItLjMxMnptLTguMjMxIDEyLjQyYy0yLjQwNSAwLTQuMTI2LTEuNjgtNC4xMjYtNC4zNTQgMC0yLjY1NCAxLjgwNC00LjMzNCA0LjEyNi00LjMzNCAyLjIzOSAwIDQuMDQzIDEuNjggNC4wNDMgNC4zMzRzLTEuNjc5IDQuMzU0LTQuMDQzIDQuMzU0ek03Ny4zOTguMDYyYy0xLjg0NiAwLTMuODk4LjgwOS00Ljk1NiAyLjU5MlYuODI5YzAtLjE2NS0uMTQ1LS4zMS0uMzEtLjMxaC0zLjg3OGMtLjE2NiAwLS4zMS4xNDUtLjMxLjMxdjE2LjU0NmMwIC4xNjYuMTQ0LjMxLjMxLjMxaDQuMDIzYy4xNjUgMCAuMzEtLjE0NC4zMS0uMzFWNy44MTdjMC0xLjk5IDEuMTgyLTMuNTY3IDMuMjE0LTMuNTY3IDIuMjQgMCAzLjE3MiAxLjQ5MyAzLjE3MiAzLjQyMXY5LjcwNGMwIC4xNjYuMTQ2LjMxLjMxMS4zMWg0LjAyM2MuMTY2IDAgLjMxLS4xNDQuMzEtLjMxVjYuODYzYzAtMy43NTMtMS45NDgtNi44LTYuMjItNi44ek0xMTMuNTc4IDBjLTQuNTIgMC02Ljk4NyAyLjg2MS03LjM0IDUuNTE1LS4wMjEuMDgzLjA0Mi4xNDUuMTI1LjE2NmwzLjgxNS44MDljLjA4My4wMi4xNjUtLjA0Mi4xODYtLjEyNS4yMDctMS40MyAxLjMwNi0yLjYzMyAzLjI1NS0yLjYzMyAxLjk0OSAwIDIuOTAzIDEuMDE2IDIuOTAzIDIuMjQgMCAuNi0uMzExIDEuMDc3LTEuMjg1IDEuMjIzbC00LjIzLjYyMmMtMi44NjEuNDE0LTUuMTIxIDIuMTM1LTUuMTIxIDUuMjA0IDAgMi42OTUgMi4yMzkgNS4xNjIgNS44ODggNS4xNjIgMi41MyAwIDQuMTQ3LTEuMTYgNS4wMzgtMi41MDh2MS43YzAgLjE2Ni4xNDUuMzEuMzExLjMxaDMuNjI5Yy4xNjUgMCAuMzExLS4xNDQuMzExLS4zMVY2LjUzQzEyMS4wNDIgMy4wNjkgMTE5LjAzMSAwIDExMy41NzggMHptMi45NDQgMTAuNzRjMCAzLjAyNy0xLjgwNCAzLjk4LTMuNzczIDMuOTgtMS40OTMgMC0yLjI0LS45NzQtMi4yNC0xLjk5IDAtMS4zMjcuOTMzLTEuOTkgMi4xMzYtMi4xNTZsMy44NzctLjYwMXYuNzY3ek0xMDMuMTA4LjUxOGgtMy44NTdjLS4xNjYgMC0uMzEuMTQ1LS4zMS4zMTFWMi41NUM5OC4zNiAxLjM5IDk2Ljc4My4yMDcgOTQuMDY3LjIwN2MtNC43MDcgMC03Ljk4MyAzLjgzNi03Ljk4MyA4LjM3NyAwIDQuODEgMy40MjIgOC4zMzQgNy45ODMgOC4zMzQgMi40NjcgMCA0LjA4NC0xLjA3OCA0Ljc5LTIuMTk3djEuMjY0YzAgMy4zMTgtMS42MzkgNC43Ny00LjU2MiA0Ljc3LTIuMDczIDAtMy41MjUtMS4yMjQtMy45NC0yLjk0NS0uMDQtLjE2Ni0uMjA3LS4yNy0uMzczLS4yMjhsLTMuNjA3Ljk1NGMtLjE2Ni4wNDEtLjI1LjIwNy0uMjI4LjM1Mi42MjIgMy4xNTIgMy43MSA1LjkzIDguMjkzIDUuOTMgNi40NDggMCA4Ljk5OC00LjI5MiA4Ljk5OC04Ljk5OFYuODNjLS4wMi0uMTY3LS4xNjUtLjMxMi0uMzMxLS4zMTJ6bS04LjIzMiAxMi40MmMtMi40MDUgMC00LjEyNi0xLjY4LTQuMTI2LTQuMzU0IDAtMi42NTQgMS44MDQtNC4zMzQgNC4xMjYtNC4zMzQgMi4yNCAwIDQuMDQzIDEuNjggNC4wNDMgNC4zMzRzLTEuNjc5IDQuMzU0LTQuMDQzIDQuMzU0eiIvPgogICAgPC9nPgogICAgPGRlZnM+CiAgICAgICAgPGNsaXBQYXRoIGlkPSJwcmVmaXhfX2NsaXAwIj4KICAgICAgICAgICAgPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTAgMGgxNjB2MjQuODM5SDBWMHoiLz4KICAgICAgICA8L2NsaXBQYXRoPgogICAgPC9kZWZzPgo8L3N2Zz4K"
-                                             width="100%">
-                                        <br>
-                                        <br>
-                                        <h2 class="css-x9blrq">Moengage</h2>
-                                        <div class="css-xkw52e">2021 | Marketing Software</div>
-                                        <p class="css-1mbbvi2">Learn more →</p>
-                                    </a>
-                                </li>
-                                <li class="css-xmps7d">
-                                    <a class="css-dd0scb" href=" " rel="noopener noreferrer" target="_blank">
-                                        <img src="https://topshelfprod.s3.us-west-2.amazonaws.com/Images/1642790561860-thumbnail.png"
-                                             width="100%">
-                                        <br>
-                                        <br>
-                                        <h2 class="css-x9blrq">Magic</h2>
-                                        <div class="css-xkw52e">2021 | Freelance</div>
-                                        <p class="css-1mbbvi2">Learn more →</p>
-                                    </a>
-                                </li>
-
-                            </ul>
-                            <ul class="css-kdtjv2">
-                                <li class="css-6pa516">
-                                    <a class="css-dd0scb" href=" " rel="noopener noreferrer" target="_blank">
-                                        <style data-emotion="css x9blrq">
-                                            .css-x9blrq {
-                                                margin-top: 0;
-                                                font-size: 1.25rem;
-                                                color: var(--theme-ui-colors-primary);
-                                            }
-
-                                            a:hover .css-x9blrq, a:focus .css-x9blrq {
-                                                -webkit-text-decoration: none;
-                                                text-decoration: none;
-                                            }
-                                        </style>
-                                        <img src="https://topshelfprod.s3.us-west-2.amazonaws.com/Images/1642793744542-thumbnail.png"
-                                             width="100%">
-                                        <br>
-
-                                        <h2 class="css-x9blrq">People.ai</h2>
-                                        <div class="css-xkw52e">2021 | RPI</div>
-                                        <style data-emotion="css 1mbbvi2">
-                                            .css-1mbbvi2 {
-                                                margin-bottom: 0;
-                                                color: var(--theme-ui-colors-primary);
-                                            }
-
-                                            a:hover .css-1mbbvi2, a:focus .css-1mbbvi2 {
-                                                -webkit-text-decoration: underline;
-                                                text-decoration: underline;
-                                            }
-                                        </style>
-                                        <p class="css-1mbbvi2">Learn more →</p>
-                                    </a>
-                                </li>
-                                <li class="css-xmps7d">
-                                    <a class="css-dd0scb" href=" " rel="noopener noreferrer" target="_blank">
-                                        <br>
-                                        <img src="https://topshelf-dev.s3.ap-south-1.amazonaws.com/Images/1638363688724-thumbnail.png"
-                                             width="100%">
-                                        <br>
-                                        <br><br>
-                                        <h2 class="css-x9blrq">Vahaan</h2>
-                                        <div class="css-xkw52e">2021 | Recuriting Company</div>
-                                        <p class="css-1mbbvi2">Learn more →</p>
-                                    </a>
-                                </li>
-                                <li class="css-xmps7d">
-                                    <a class="css-dd0scb" href=" " rel="noopener noreferrer" target="_blank">
-                                        <img src="https://uploads-ssl.webflow.com/5ff3026d09b0135a8486ca89/5ff302d144f6cced3032eadb_Black%20Logo.svg"
-                                             width="100%">
-                                        <br>
-                                        <br>
-                                        <h2 class="css-x9blrq">Moonshot Brands</h2>
-                                        <div class="css-xkw52e">2021 | Consultancy</div>
-                                        <p class="css-1mbbvi2">Learn more →</p>
-                                    </a>
-                                </li>
-
-                            </ul>
-
-                            <ul class="css-kdtjv2">
-                                <li class="css-6pa516">
-                                    <a class="css-dd0scb" href=" " rel="noopener noreferrer" target="_blank">
-                                        <style data-emotion="css x9blrq">
-                                            .css-x9blrq {
-                                                margin-top: 0;
-                                                font-size: 1.25rem;
-                                                color: var(--theme-ui-colors-primary);
-                                            }
-
-                                            a:hover .css-x9blrq, a:focus .css-x9blrq {
-                                                -webkit-text-decoration: none;
-                                                text-decoration: none;
-                                            }
-                                        </style>
-                                        <img src="https://topshelfprod.s3.us-west-2.amazonaws.com/Images/1642793744542-thumbnail.png"
-                                             width="100%">
-                                        <br>
-
-                                        <h2 class="css-x9blrq">People.ai</h2>
-                                        <div class="css-xkw52e">2021 | RPI</div>
-                                        <style data-emotion="css 1mbbvi2">
-                                            .css-1mbbvi2 {
-                                                margin-bottom: 0;
-                                                color: var(--theme-ui-colors-primary);
-                                            }
-
-                                            a:hover .css-1mbbvi2, a:focus .css-1mbbvi2 {
-                                                -webkit-text-decoration: underline;
-                                                text-decoration: underline;
-                                            }
-                                        </style>
-                                        <p class="css-1mbbvi2">Learn more →</p>
-                                    </a>
-                                </li>
-                                <li class="css-xmps7d">
-                                    <a class="css-dd0scb" href=" " rel="noopener noreferrer" target="_blank">
-                                        <br>
-                                        <img src="https://topshelf-dev.s3.ap-south-1.amazonaws.com/Images/1638363688724-thumbnail.png"
-                                             width="100%">
-                                        <br>
-                                        <br><br>
-                                        <h2 class="css-x9blrq">Vahaan</h2>
-                                        <div class="css-xkw52e">2021 | Recuriting Company</div>
-                                        <p class="css-1mbbvi2">Learn more →</p>
-                                    </a>
-                                </li>
-                                <li class="css-xmps7d">
-                                    <a class="css-dd0scb" href=" " rel="noopener noreferrer" target="_blank">
-                                        <img src="https://uploads-ssl.webflow.com/5ff3026d09b0135a8486ca89/5ff302d144f6cced3032eadb_Black%20Logo.svg"
-                                             width="100%">
-                                        <br>
-                                        <br>
-                                        <h2 class="css-x9blrq">Moonshot Brands</h2>
-                                        <div class="css-xkw52e">2021 | Consultancy</div>
-                                        <p class="css-1mbbvi2">Learn more →</p>
-                                    </a>
-                                </li>
-
-                            </ul>
-                            <ul class="css-kdtjv2">
-                                <li class="css-6pa516">
-                                    <a class="css-dd0scb" href=" " rel="noopener noreferrer" target="_blank">
-                                        <style data-emotion="css x9blrq">
-                                            .css-x9blrq {
-                                                margin-top: 0;
-                                                font-size: 1.25rem;
-                                                color: var(--theme-ui-colors-primary);
-                                            }
-
-                                            a:hover .css-x9blrq, a:focus .css-x9blrq {
-                                                -webkit-text-decoration: none;
-                                                text-decoration: none;
-                                            }
-                                        </style>
-                                        <img src="https://topshelfprod.s3.us-west-2.amazonaws.com/Images/1642793744542-thumbnail.png"
-                                             width="100%">
-                                        <br>
-
-                                        <h2 class="css-x9blrq">People.ai</h2>
-                                        <div class="css-xkw52e">2021 | RPI</div>
-                                        <style data-emotion="css 1mbbvi2">
-                                            .css-1mbbvi2 {
-                                                margin-bottom: 0;
-                                                color: var(--theme-ui-colors-primary);
-                                            }
-
-                                            a:hover .css-1mbbvi2, a:focus .css-1mbbvi2 {
-                                                -webkit-text-decoration: underline;
-                                                text-decoration: underline;
-                                            }
-                                        </style>
-                                        <p class="css-1mbbvi2">Learn more →</p>
-                                    </a>
-                                </li>
-                                <li class="css-xmps7d">
-                                    <a class="css-dd0scb" href=" " rel="noopener noreferrer" target="_blank">
-                                        <br>
-                                        <img src="https://topshelf-dev.s3.ap-south-1.amazonaws.com/Images/1638363688724-thumbnail.png"
-                                             width="100%">
-                                        <br>
-                                        <br><br>
-                                        <h2 class="css-x9blrq">Vahaan</h2>
-                                        <div class="css-xkw52e">2021 | Recuriting Company</div>
-                                        <p class="css-1mbbvi2">Learn more →</p>
-                                    </a>
-                                </li>
-                                <li class="css-xmps7d">
-                                    <a class="css-dd0scb" href=" " rel="noopener noreferrer" target="_blank">
-                                        <img src="https://uploads-ssl.webflow.com/5ff3026d09b0135a8486ca89/5ff302d144f6cced3032eadb_Black%20Logo.svg"
-                                             width="100%">
-                                        <br>
-                                        <br>
-                                        <h2 class="css-x9blrq">Moonshot Brands</h2>
-                                        <div class="css-xkw52e">2021 | Consultancy</div>
-                                        <p class="css-1mbbvi2">Learn more →</p>
-                                    </a>
-                                </li>
-
-                            </ul>
-                            <ul class="css-kdtjv2">
-                                <li class="css-6pa516">
-                                    <a class="css-dd0scb" href=" " rel="noopener noreferrer" target="_blank">
-                                        <style data-emotion="css x9blrq">
-                                            .css-x9blrq {
-                                                margin-top: 0;
-                                                font-size: 1.25rem;
-                                                color: var(--theme-ui-colors-primary);
-                                            }
-
-                                            a:hover .css-x9blrq, a:focus .css-x9blrq {
-                                                -webkit-text-decoration: none;
-                                                text-decoration: none;
-                                            }
-                                        </style>
-                                        <img src="https://topshelfprod.s3.us-west-2.amazonaws.com/Images/1642793744542-thumbnail.png"
-                                             width="100%">
-                                        <br>
-
-                                        <h2 class="css-x9blrq">People.ai</h2>
-                                        <div class="css-xkw52e">2021 | RPI</div>
-                                        <style data-emotion="css 1mbbvi2">
-                                            .css-1mbbvi2 {
-                                                margin-bottom: 0;
-                                                color: var(--theme-ui-colors-primary);
-                                            }
-
-                                            a:hover .css-1mbbvi2, a:focus .css-1mbbvi2 {
-                                                -webkit-text-decoration: underline;
-                                                text-decoration: underline;
-                                            }
-                                        </style>
-                                        <p class="css-1mbbvi2">Learn more →</p>
-                                    </a>
-                                </li>
-                                <li class="css-xmps7d">
-                                    <a class="css-dd0scb" href=" " rel="noopener noreferrer" target="_blank">
-                                        <br>
-                                        <img src="https://topshelf-dev.s3.ap-south-1.amazonaws.com/Images/1638363688724-thumbnail.png"
-                                             width="100%">
-                                        <br>
-                                        <br><br>
-                                        <h2 class="css-x9blrq">Vahaan</h2>
-                                        <div class="css-xkw52e">2021 | Recuriting Company</div>
-                                        <p class="css-1mbbvi2">Learn more →</p>
-                                    </a>
-                                </li>
-                                <li class="css-xmps7d">
-                                    <a class="css-dd0scb" href=" " rel="noopener noreferrer" target="_blank">
-                                        <img src="https://uploads-ssl.webflow.com/5ff3026d09b0135a8486ca89/5ff302d144f6cced3032eadb_Black%20Logo.svg"
-                                             width="100%">
-                                        <br>
-                                        <br>
-                                        <h2 class="css-x9blrq">Moonshot Brands</h2>
-                                        <div class="css-xkw52e">2021 | Consultancy</div>
-                                        <p class="css-1mbbvi2">Learn more →</p>
-                                    </a>
-                                </li>
-
-                            </ul>
-                            <a class="css-1u538i1" href="/request-information">More Companies →</a>
-                        </div>
-                    </section>
 
                     <style data-emotion="css 1s4w019">
                         .css-1s4w019 {
@@ -3149,927 +4396,927 @@
                             }
                         }
                     </style>
-                    <section class="css-1s4w019">
-                        <style data-emotion="css 1i5bnyy">
-                            .css-1i5bnyy {
-                                max-width: var(--maxContentWidth);
-                                margin-left: auto;
-                                margin-right: auto;
-                                padding-left: 32px;
-                                padding-right: 32px;
-                            }
-                        </style>
-                        <div class="css-1i5bnyy">
-                            <style data-emotion="css 14wfhca">
-                                .css-14wfhca {
-                                    padding-top: 32px;
-                                    padding-bottom: 16px;
-                                }
-                            </style>
-                            <div class="css-14wfhca">
-                                <style data-emotion="css kdjx97">
-                                    .css-kdjx97 {
-                                        margin-left: 0;
-                                        margin-right: 0;
-                                        text-align: left;
-                                    }
-                                </style>
-                                <div class="css-kdjx97">
-                                    <style data-emotion="css l35s7n">
-                                        .css-l35s7n {
-                                            max-width: 40ch;
-                                            margin-top: 0;
-                                            margin-bottom: 0;
-                                            font-size: 2rem;
-                                        }
-                                    </style>
-                                    <h2 class="css-l35s7n">
-                                        You get to review some of the best opportunities there are in the growth
-                                        markets.
-                                        <style data-emotion="css bcs3p5">
-                                            .css-bcs3p5 {
-                                                margin-left: 4px;
-                                                font-size: 16px;
-                                                color: var(--theme-ui-colors-gray6_slate3);
-                                            }
-                                        </style>
-                                        <sup class="css-bcs3p5"> </sup>
-                                    </h2>
-                                    <style data-emotion="css 1megf85">
-                                        .css-1megf85 {
-                                            max-width: 55ch;
-                                            margin-bottom: 0;
-                                        }
-                                    </style>
-                                    <p class="css-1megf85"></p>
-                                </div>
-                            </div>
-                            <style data-emotion="css 15hy1ed">
-                                .css-15hy1ed {
-                                    margin-top: 0;
-                                    margin-bottom: 0;
-                                    margin-left: -8px;
-                                    margin-right: -8px;
-                                    padding-top: 32px;
-                                    padding-bottom: 32px;
-                                    padding-left: 0;
-                                    display: block;
-                                    list-style-type: none;
-                                }
-
-                                @media screen and (min-width: 40em) {
-                                    .css-15hy1ed {
-                                        display: block;
-                                    }
-                                }
-
-                                @media screen and (min-width: 52em) {
-                                    .css-15hy1ed {
-                                        display: -webkit-box;
-                                        display: -webkit-flex;
-                                        display: -ms-flexbox;
-                                        display: flex;
-                                    }
-                                }
-                            </style>
-                            <style data-emotion="css kdtjv2">
-                                .css-kdtjv2 {
-                                    box-sizing: border-box;
-                                    margin: 0;
-                                    min-width: 0;
-                                    display: -webkit-box;
-                                    display: -webkit-flex;
-                                    display: -ms-flexbox;
-                                    display: flex;
-                                    margin-top: 0;
-                                    margin-bottom: 0;
-                                    margin-left: -8px;
-                                    margin-right: -8px;
-                                    padding-top: 32px;
-                                    padding-bottom: 32px;
-                                    padding-left: 0;
-                                    display: block;
-                                    list-style-type: none;
-                                }
-
-                                @media screen and (min-width: 40em) {
-                                    .css-kdtjv2 {
-                                        display: block;
-                                    }
-                                }
-
-                                @media screen and (min-width: 52em) {
-                                    .css-kdtjv2 {
-                                        display: -webkit-box;
-                                        display: -webkit-flex;
-                                        display: -ms-flexbox;
-                                        display: flex;
-                                    }
-                                }
-                            </style>
-                            <ul class="css-kdtjv2">
-                                <style data-emotion="css 1wbz4f2">
-                                    .css-1wbz4f2 {
-                                        padding-top: 0;
-                                        padding-left: 8px;
-                                        padding-right: 8px;
-                                        -webkit-flex: 1;
-                                        -ms-flex: 1;
-                                        flex: 1;
-                                    }
-
-                                    @media screen and (min-width: 40em) {
-                                        .css-1wbz4f2 {
-                                            padding-top: 0;
-                                        }
-                                    }
-
-                                    @media screen and (min-width: 52em) {
-                                        .css-1wbz4f2 {
-                                            padding-top: 0;
-                                        }
-                                    }
-                                </style>
-                                <style data-emotion="css 6pa516">
-                                    .css-6pa516 {
-                                        box-sizing: border-box;
-                                        margin: 0;
-                                        min-width: 0;
-                                        display: -webkit-box;
-                                        display: -webkit-flex;
-                                        display: -ms-flexbox;
-                                        display: flex;
-                                        padding-top: 0;
-                                        padding-left: 8px;
-                                        padding-right: 8px;
-                                        -webkit-flex: 1;
-                                        -ms-flex: 1;
-                                        flex: 1;
-                                    }
-
-                                    @media screen and (min-width: 40em) {
-                                        .css-6pa516 {
-                                            padding-top: 0;
-                                        }
-                                    }
-
-                                    @media screen and (min-width: 52em) {
-                                        .css-6pa516 {
-                                            padding-top: 0;
-                                        }
-                                    }
-                                </style>
-                                <li class="css-6pa516">
-                                    <style data-emotion="css teu41e">
-                                        .css-teu41e {
-                                            width: 100%;
-                                            border-radius: 6px;
-                                            padding: 32px;
-                                            display: block;
-                                            -webkit-flex-direction: column;
-                                            -ms-flex-direction: column;
-                                            flex-direction: column;
-                                            -webkit-text-decoration: none;
-                                            text-decoration: none;
-                                            background-color: var(--theme-ui-colors-card);
-                                            box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.25);
-                                            -webkit-transition: box-shadow 200ms;
-                                            transition: box-shadow 200ms;
-                                            color: inherit;
-                                        }
-
-                                        .css-teu41e:hover, .css-teu41e:focus {
-                                            box-shadow: 0 2px 32px rgba(0, 0, 0, 0.25);
-                                        }
-                                    </style>
-                                    <style data-emotion="css dd0scb">
-                                        .css-dd0scb {
-                                            box-sizing: border-box;
-                                            margin: 0;
-                                            min-width: 0;
-                                            display: -webkit-box;
-                                            display: -webkit-flex;
-                                            display: -ms-flexbox;
-                                            display: flex;
-                                            width: 100%;
-                                            border-radius: 6px;
-                                            padding: 32px;
-                                            display: block;
-                                            -webkit-flex-direction: column;
-                                            -ms-flex-direction: column;
-                                            flex-direction: column;
-                                            -webkit-text-decoration: none;
-                                            text-decoration: none;
-                                            background-color: var(--theme-ui-colors-card);
-                                            box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.25);
-                                            -webkit-transition: box-shadow 200ms;
-                                            transition: box-shadow 200ms;
-                                            color: inherit;
-                                        }
-
-                                        .css-dd0scb:hover, .css-dd0scb:focus {
-                                            box-shadow: 0 2px 32px rgba(0, 0, 0, 0.25);
-                                        }
-                                    </style>
-                                    <a class="css-dd0scb" href="/partnership-with-shareholders">
-                                        <style data-emotion="css 1yi783e">
-                                            .css-1yi783e {
-                                                margin-top: 0;
-                                                font-size: 1.25rem;
-                                                color: var(--theme-ui-colors-primary);
-                                            }
-
-                                            a:hover .css-1yi783e, a:focus .css-1yi783e {
-                                                -webkit-text-decoration: underline;
-                                                text-decoration: underline;
-                                            }
-                                        </style>
-
-                                        <h2 class="css-1yi783e">Partnership with Shareholders → </h2>
-                                        <style data-emotion="css xkw52e">
-                                            .css-xkw52e {
-                                                height: auto;
-                                                margin-top: 0;
-                                                margin-bottom: 0;
-                                                -webkit-flex: 1;
-                                                -ms-flex: 1;
-                                                flex: 1;
-                                            }
-                                        </style>
-                                        <div class="css-xkw52e">Choose the right transaction for your stakeholders,
-                                            including secondary auctions and tender offers
-                                        </div>
-                                    </a>
-                                </li>
-                                <style data-emotion="css p07627">
-                                    .css-p07627 {
-                                        padding-top: 16px;
-                                        padding-left: 8px;
-                                        padding-right: 8px;
-                                        -webkit-flex: 1;
-                                        -ms-flex: 1;
-                                        flex: 1;
-                                    }
-
-                                    @media screen and (min-width: 40em) {
-                                        .css-p07627 {
-                                            padding-top: 16px;
-                                        }
-                                    }
-
-                                    @media screen and (min-width: 52em) {
-                                        .css-p07627 {
-                                            padding-top: 0;
-                                        }
-                                    }
-                                </style>
-                                <style data-emotion="css xmps7d">
-                                    .css-xmps7d {
-                                        box-sizing: border-box;
-                                        margin: 0;
-                                        min-width: 0;
-                                        display: -webkit-box;
-                                        display: -webkit-flex;
-                                        display: -ms-flexbox;
-                                        display: flex;
-                                        padding-top: 16px;
-                                        padding-left: 8px;
-                                        padding-right: 8px;
-                                        -webkit-flex: 1;
-                                        -ms-flex: 1;
-                                        flex: 1;
-                                    }
-
-                                    @media screen and (min-width: 40em) {
-                                        .css-xmps7d {
-                                            padding-top: 16px;
-                                        }
-                                    }
-
-                                    @media screen and (min-width: 52em) {
-                                        .css-xmps7d {
-                                            padding-top: 0;
-                                        }
-                                    }
-                                </style>
-                                <li class="css-xmps7d">
-                                    <a class="css-dd0scb" href="/partnership-with-investor">
-                                        <h2 class="css-1yi783e">Partnership with Investors →</h2>
-                                        <div class="css-xkw52e">Access equity in emerging, innovative businesses and
-                                            other private market opportunities with issuer-sourced disclosure
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                            <style data-emotion="css 141zcg0">
-                                .css-141zcg0 {
-                                    margin-top: 0;
-                                    margin-bottom: 0;
-                                    padding-bottom: 32px;
-                                    position: relative;
-                                    line-height: 1.125;
-                                    color: var(--theme-ui-colors-gray5_slate4);
-                                }
-                            </style>
-                            <p class="css-141zcg0">
-                                <style data-emotion="css 1pzcnyu">
-                                    .css-1pzcnyu {
-                                        font-size: 12px;
-                                    }
-                                </style>
-                                <small class="css-1pzcnyu">
-                                    <style data-emotion="css 1scjva6">
-                                        .css-1scjva6 {
-                                            font-size: 10px;
-                                            position: absolute;
-                                            left: -0.65rem;
-                                        }
-                                    </style>
-                                    <sup class="css-1scjva6"></sup>
-
-                                </small>
-                            </p>
-                        </div>
-                    </section>
-                    <style data-emotion="css 1v9ly1m">
-                        .css-1v9ly1m {
-                            background-color: var(--theme-ui-colors-white_0b1218);
-                            padding-bottom: 32px;
-                            padding-top: 0;
+                    <!-- <section class="css-1s4w019">-->
+                    <style data-emotion="css 1i5bnyy">
+                        .css-1i5bnyy {
+                            max-width: var(--maxContentWidth);
+                            margin-left: auto;
+                            margin-right: auto;
+                            padding-left: 32px;
+                            padding-right: 32px;
                         }
                     </style>
-                    <section class="css-1v9ly1m" id="video">
-                        <div class="css-1i5bnyy">
-                            <style data-emotion="css 17otlgt">
-                                .css-17otlgt {
-                                    padding-top: 0;
-                                    margin: 0;
-                                }
-                            </style>
-                            <figure class="css-17otlgt">
-                                <style data-emotion="css zbzmk0">
-                                    .css-zbzmk0 {
-                                        aspect-ratio: 16/9;
-                                        border-radius: 6px;
-                                        box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.25);
-                                        width: 100%;
-                                        background-color: var(--theme-ui-colors-black);
-                                    }
-                                </style>
-
-                                <style data-emotion="css 1grd7op">
-                                    .css-1grd7op {
-                                        margin-top: 16px;
-                                        padding-left: 16px;
-                                        padding-right: 16px;
-                                        text-align: center;
-                                    }
-                                </style>
-
-                            </figure>
-                        </div>
-                    </section>
-
-                    <style data-emotion="css 1bmb8fh">
-                        .css-1bmb8fh {
-                            padding-top: 64px;
-                            padding-bottom: 64px;
-                            background-color: var(--theme-ui-colors-white_0b1218);
-                            background-image: none;
-                            -webkit-background-position: -675px -490px;
-                            background-position: -675px -490px;
-                            background-repeat: no-repeat;
-                            -webkit-background-size: 2551.35px 1146.35px;
-                            background-size: 2551.35px 1146.35px;
-                        }
-
-                        @media screen and (min-width: 52em) {
-                            .css-1bmb8fh {
-                                padding-top: 96px;
-                            }
-                        }
-
-                        @media screen and (min-width: 64em) {
-                            .css-1bmb8fh {
-                                background-image: url(data:);
-                            }
-                        }
-                    </style>
-                    <style data-emotion="css ruxopc">
-                        .css-ruxopc {
-                            box-sizing: border-box;
-                            margin: 0;
-                            min-width: 0;
-                            display: -webkit-box;
-                            display: -webkit-flex;
-                            display: -ms-flexbox;
-                            display: flex;
-                            padding-top: 64px;
-                            padding-bottom: 64px;
-                            background-color: var(--theme-ui-colors-white_0b1218);
-                            background-image: none;
-                            -webkit-background-position: -675px -490px;
-                            background-position: -675px -490px;
-                            background-repeat: no-repeat;
-                            -webkit-background-size: 2551.35px 1146.35px;
-                            background-size: 2551.35px 1146.35px;
-                        }
-
-                        @media screen and (min-width: 52em) {
-                            .css-ruxopc {
-                                padding-top: 96px;
-                            }
-                        }
-
-                        @media screen and (min-width: 64em) {
-                            .css-ruxopc {
-                                background-image: url(data:);
-                            }
-                        }
-                    </style>
-                    <div class="css-ruxopc">
-                        <style data-emotion="css 3rk6c8">
-                            .css-3rk6c8 {
-                                -webkit-flex: 1;
-                                -ms-flex: 1;
-                                flex: 1;
-                                -webkit-box-pack: space-around;
-                                -ms-flex-pack: space-around;
-                                -webkit-justify-content: space-around;
-                                justify-content: space-around;
-                                background-color: var(--theme-ui-colors-quoteUnderlay);
-                            }
-                        </style>
-                        <style data-emotion="css 1d09vla">
-                            .css-1d09vla {
-                                box-sizing: border-box;
-                                margin: 0;
-                                min-width: 0;
-                                display: -webkit-box;
-                                display: -webkit-flex;
-                                display: -ms-flexbox;
-                                display: flex;
-                                -webkit-flex: 1;
-                                -ms-flex: 1;
-                                flex: 1;
-                                -webkit-box-pack: space-around;
-                                -ms-flex-pack: space-around;
-                                -webkit-justify-content: space-around;
-                                justify-content: space-around;
-                                background-color: var(--theme-ui-colors-quoteUnderlay);
-                            }
-                        </style>
-                        <div class="css-1d09vla">
-                            <style data-emotion="css 14lspg0">
-                                .css-14lspg0 {
-                                    max-width: 72.5ch;
-                                    padding-top: 16px;
-                                    padding-bottom: 16px;
-                                    padding-left: 32px;
-                                    padding-right: 32px;
-                                }
-                            </style>
-                            <style data-emotion="css pm5qkr">
-                                .css-pm5qkr {
-                                    box-sizing: border-box;
-                                    margin: 0;
-                                    min-width: 0;
-                                    max-width: 72.5ch;
-                                    padding-top: 16px;
-                                    padding-bottom: 16px;
-                                    padding-left: 32px;
-                                    padding-right: 32px;
-                                }
-                            </style>
-                            <div class="css-pm5qkr">
-                                <style data-emotion="css cmz8o1">
-                                    .css-cmz8o1 {
-                                        margin-top: 0;
-                                        margin-left: 0;
-                                        margin-right: 0;
-                                        font-size: 20px;
-                                        text-indent: -0.65rem;
-                                        color: var(--theme-ui-colors-text);
-                                    }
-                                </style>
-                                <blockquote class="css-cmz8o1">
-                                    <style data-emotion="css 1xye8pm">
-                                        .css-1xye8pm {
-                                            color: var(--theme-ui-colors-gray6_slate3);
-                                        }
-                                    </style>
-                                    <span class="css-1xye8pm">
-                <h2>Our Clients Know</h2>“</span>
-                                    TopShelf Equity is one of the largest and most experienced global private equity
-                                    investors.
-                                    Our specialists work to identify companies with the potential to become public
-                                    before they go public, allowing our fund partners to capitalize on their
-                                    considerable investment in pre-IPO companies. We recognize tech businesses that are
-                                    poised for explosive growth, and we help our private equity fund partners capitalize
-                                    on that growth by investing in companies before they become publicly traded.<span
-                                        class="css-1xye8pm">”</span>
-                                    <style data-emotion="css ye6h0f">
-                                        .css-ye6h0f {
-                                            margin-left: 4px;
-                                            font-size: 14px;
-                                            color: var(--theme-ui-colors-gray6_slate3);
-                                        }
-                                    </style>
-                                    <sup class="css-ye6h0f"> </sup>
-                                </blockquote>
-                                <style data-emotion="css 1roxmox">
-                                    .css-1roxmox {
-                                        margin-bottom: 32px;
-                                        -webkit-flex-direction: column-reverse;
-                                        -ms-flex-direction: column-reverse;
-                                        flex-direction: column-reverse;
-                                        -webkit-align-items: flex-start;
-                                        -webkit-box-align: flex-start;
-                                        -ms-flex-align: flex-start;
-                                        align-items: flex-start;
-                                    }
-
-                                    @media screen and (min-width: 40em) {
-                                        .css-1roxmox {
-                                            -webkit-flex-direction: row;
-                                            -ms-flex-direction: row;
-                                            flex-direction: row;
-                                            -webkit-align-items: center;
-                                            -webkit-box-align: center;
-                                            -ms-flex-align: center;
-                                            align-items: center;
-                                        }
-                                    }
-                                </style>
-                                <style data-emotion="css nwcos9">
-                                    .css-nwcos9 {
-                                        box-sizing: border-box;
-                                        margin: 0;
-                                        min-width: 0;
-                                        display: -webkit-box;
-                                        display: -webkit-flex;
-                                        display: -ms-flexbox;
-                                        display: flex;
-                                        margin-bottom: 32px;
-                                        -webkit-flex-direction: column-reverse;
-                                        -ms-flex-direction: column-reverse;
-                                        flex-direction: column-reverse;
-                                        -webkit-align-items: flex-start;
-                                        -webkit-box-align: flex-start;
-                                        -ms-flex-align: flex-start;
-                                        align-items: flex-start;
-                                    }
-
-                                    @media screen and (min-width: 40em) {
-                                        .css-nwcos9 {
-                                            -webkit-flex-direction: row;
-                                            -ms-flex-direction: row;
-                                            flex-direction: row;
-                                            -webkit-align-items: center;
-                                            -webkit-box-align: center;
-                                            -ms-flex-align: center;
-                                            align-items: center;
-                                        }
-                                    }
-                                </style>
-                                <div class="css-nwcos9">
-                                    <style data-emotion="css fs02ts">
-                                        .css-fs02ts {
-                                            width: 48px;
-                                            height: 48px;
-                                            display: block;
-                                            -webkit-flex: 48px 0 0;
-                                            -ms-flex: 48px 0 0;
-                                            flex: 48px 0 0;
-                                        }
-                                    </style>
-                                    <div class="css-fs02ts">
-                                        <style data-emotion="css 31l4ka">
-                                            .css-31l4ka {
-                                                max-width: 100%;
-                                                display: block;
-                                                color: var(--theme-ui-colors-goldmanSachsLogoPrimary);
-                                            }
-                                        </style>
-
-                                        <rect class="css-3nmyh8" height="72" width="72" x="0.4" y="0.4"></rect>
-                                        <style data-emotion="css 1s5azb3">
-                                            .css-1s5azb3 {
-                                                color: var(--theme-ui-colors-goldmanSachsLogoSecondary);
-                                            }
-                                        </style>
-                                        <g class="css-1s5azb3">
-                                            <style data-emotion="css 1jejitu">
-                                                .css-1jejitu {
-                                                    fill: var(--theme-ui-colors-goldmanSachsLogoSecondary);
-                                                }
-                                            </style>
-
-                                        </g>
-                                        </svg>
-                                    </div>
-                                    <style data-emotion="css c3ilnb">
-                                        .css-c3ilnb {
-                                            margin-bottom: 16px;
-                                            padding-left: 0;
-                                        }
-
-                                        @media screen and (min-width: 40em) {
-                                            .css-c3ilnb {
-                                                margin-bottom: 0;
-                                                padding-left: 16px;
-                                            }
-                                        }
-                                    </style>
-                                    <div class="css-c3ilnb">
-                                        <style data-emotion="css 122g915">
-                                            .css-122g915 {
-                                                margin-top: 0;
-                                                margin-bottom: 0;
-                                                font-weight: 550;
-                                                font-size: 16px;
-                                                line-height: 1.25;
-                                                color: var(--theme-ui-colors-gray6_c1cdda);
-                                            }
-
-                                            @media screen and (min-width: 40em) {
-                                                .css-122g915 {
-                                                    font-size: 20px;
-                                                }
-                                            }
-                                        </style>
-
-                                        <style data-emotion="css vr1k08">
-                                            .css-vr1k08 {
-                                                margin-top: 0;
-                                                margin-bottom: 0;
-                                                font-size: 14px;
-                                                line-height: 1.25;
-                                                color: var(--theme-ui-colors-gray6_c1cdda);
-                                            }
-
-                                            @media screen and (min-width: 40em) {
-                                                .css-vr1k08 {
-                                                    font-size: 16px;
-                                                }
-                                            }
-                                        </style>
-
-                                    </div>
-                                </div>
-                                <style data-emotion="css a98mxk">
-                                    .css-a98mxk {
-                                        margin-top: 0;
-                                        margin-bottom: 0;
-                                        position: relative;
-                                        line-height: 1.125;
-                                        color: var(--theme-ui-colors-gray5_slate4);
-                                    }
-                                </style>
-                                <p class="css-a98mxk">
-                                    <small class="css-1pzcnyu">
-                                        <sup class="css-1scjva6"> </sup>
-                                        <br class="css-wtgqz2"/>
-                                    </small>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <style data-emotion="css n6zm4p">
-                        .css-n6zm4p {
+                    <!-- <div class="css-1i5bnyy">-->
+                    <style data-emotion="css 14wfhca">
+                        .css-14wfhca {
                             padding-top: 32px;
-                            padding-bottom: 32px;
-                            color: var(--theme-ui-colors-white);
-                            background-image: var(--gradient);
-                        }
-
-                        @media print {
-                            .css-n6zm4p {
-                                display: none;
-                            }
+                            padding-bottom: 16px;
                         }
                     </style>
-                    <section class="css-n6zm4p" id="learn-more">
-                        <style data-emotion="css q19hc6">
-                            .css-q19hc6 {
-                                max-width: var(--maxContentWidth);
-                                margin-left: auto;
-                                margin-right: auto;
-                                padding: 32px;
-                                -webkit-box-pack: center;
-                                -ms-flex-pack: center;
-                                -webkit-justify-content: center;
-                                justify-content: center;
-                            }
-                        </style>
-                        <style data-emotion="css 1ncd8mq">
-                            .css-1ncd8mq {
-                                box-sizing: border-box;
-                                margin: 0;
-                                min-width: 0;
-                                display: -webkit-box;
-                                display: -webkit-flex;
-                                display: -ms-flexbox;
-                                display: flex;
-                                max-width: var(--maxContentWidth);
-                                margin-left: auto;
-                                margin-right: auto;
-                                padding: 32px;
-                                -webkit-box-pack: center;
-                                -ms-flex-pack: center;
-                                -webkit-justify-content: center;
-                                justify-content: center;
-                            }
-                        </style>
-                        <div class="css-1ncd8mq">
-                            <style data-emotion="css ig836v">
-                                .css-ig836v {
-                                    width: 60ch;
-                                    border-radius: 6px;
-                                    padding: 32px;
-                                    -webkit-flex-direction: column;
-                                    -ms-flex-direction: column;
-                                    flex-direction: column;
-                                    background-color: rgba(255, 255, 255, 0.0625);
-                                    box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.5);
-                                }
-                            </style>
-                            <style data-emotion="css rzpqnk">
-                                .css-rzpqnk {
-                                    box-sizing: border-box;
-                                    margin: 0;
-                                    min-width: 0;
-                                    display: -webkit-box;
-                                    display: -webkit-flex;
-                                    display: -ms-flexbox;
-                                    display: flex;
-                                    width: 60ch;
-                                    border-radius: 6px;
-                                    padding: 32px;
-                                    -webkit-flex-direction: column;
-                                    -ms-flex-direction: column;
-                                    flex-direction: column;
-                                    background-color: rgba(255, 255, 255, 0.0625);
-                                    box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.5);
-                                }
-                            </style>
-                            <div class="css-rzpqnk">
-                                <style data-emotion="css rjg36p">
-                                    .css-rjg36p {
-                                        margin-top: 0;
-                                        text-align: center;
-                                    }
-                                </style>
-
-
-                                <h2 class="css-rjg36p">Learn more about TopShelf Equity Partners</h2>
-                                <style data-emotion="css vsbrt4">
-                                    .css-vsbrt4 {
-                                        border-color: var(--theme-ui-colors-black);
-                                        color: var(--theme-ui-colors-white);
-                                        background-color: var(--theme-ui-colors-black);
-                                    }
-                                </style>
-                                <style data-emotion="css 1fzvdbl">
-                                    .css-1fzvdbl {
-                                        display: -webkit-inline-box;
-                                        display: -webkit-inline-flex;
-                                        display: -ms-inline-flexbox;
-                                        display: inline-flex;
-                                        -webkit-align-items: center;
-                                        -webkit-box-align: center;
-                                        -ms-flex-align: center;
-                                        align-items: center;
-                                        white-space: nowrap;
-                                        cursor: pointer;
-                                        -webkit-appearance: none;
-                                        -moz-appearance: none;
-                                        -ms-appearance: none;
-                                        appearance: none;
-                                        height: 40px;
-                                        font-weight: 500;
-                                        font-size: inherit;
-                                        font-family: inherit;
-                                        color: var(--theme-ui-colors-background);
-                                        background-color: var(--theme-ui-colors-primary);
-                                        -webkit-text-decoration: none;
-                                        text-decoration: none;
-                                        stroke: currentcolor;
-                                        -webkit-box-pack: center;
-                                        -ms-flex-pack: center;
-                                        -webkit-justify-content: center;
-                                        justify-content: center;
-                                        -webkit-flex-shrink: 0;
-                                        -ms-flex-negative: 0;
-                                        flex-shrink: 0;
-                                        margin: 0;
-                                        padding-top: 0;
-                                        padding-bottom: 0;
-                                        padding-left: 16px;
-                                        padding-right: 16px;
-                                        border-width: 1px;
-                                        border-style: solid;
-                                        border-color: var(--theme-ui-colors-primary);
-                                        -webkit-transition: border-color 200ms, color 200ms, background-color 200ms,;
-                                        transition: border-color 200ms, color 200ms, background-color 200ms,;
-                                        border-radius: 3px;
-                                        border-color: var(--theme-ui-colors-black);
-                                        color: var(--theme-ui-colors-white);
-                                        background-color: var(--theme-ui-colors-black);
-                                    }
-
-                                    .css-1fzvdbl:focus {
-                                        outline: none;
-                                        box-shadow: 0 0 0 1px white, 0 0 0 3px #035697;
-                                    }
-                                </style>
-                                <style data-emotion="css 1u538i1">
-                                    .css-1u538i1 {
-                                        box-sizing: border-box;
-                                        margin: 0;
-                                        min-width: 0;
-                                        display: -webkit-inline-box;
-                                        display: -webkit-inline-flex;
-                                        display: -ms-inline-flexbox;
-                                        display: inline-flex;
-                                        -webkit-align-items: center;
-                                        -webkit-box-align: center;
-                                        -ms-flex-align: center;
-                                        align-items: center;
-                                        white-space: nowrap;
-                                        cursor: pointer;
-                                        -webkit-appearance: none;
-                                        -moz-appearance: none;
-                                        -ms-appearance: none;
-                                        appearance: none;
-                                        height: 40px;
-                                        font-weight: 500;
-                                        font-size: inherit;
-                                        font-family: inherit;
-                                        color: var(--theme-ui-colors-background);
-                                        background-color: var(--theme-ui-colors-primary);
-                                        -webkit-text-decoration: none;
-                                        text-decoration: none;
-                                        stroke: currentcolor;
-                                        -webkit-box-pack: center;
-                                        -ms-flex-pack: center;
-                                        -webkit-justify-content: center;
-                                        justify-content: center;
-                                        -webkit-flex-shrink: 0;
-                                        -ms-flex-negative: 0;
-                                        flex-shrink: 0;
-                                        margin: 0;
-                                        padding-top: 0;
-                                        padding-bottom: 0;
-                                        padding-left: 16px;
-                                        padding-right: 16px;
-                                        border-width: 1px;
-                                        border-style: solid;
-                                        border-color: var(--theme-ui-colors-primary);
-                                        -webkit-transition: border-color 200ms, color 200ms, background-color 200ms,;
-                                        transition: border-color 200ms, color 200ms, background-color 200ms,;
-                                        border-radius: 3px;
-                                        border-color: var(--theme-ui-colors-black);
-                                        color: var(--theme-ui-colors-white);
-                                        background-color: var(--theme-ui-colors-black);
-                                    }
-
-                                    .css-1u538i1:focus {
-                                        outline: none;
-                                        box-shadow: 0 0 0 1px white, 0 0 0 3px #035697;
-                                    }
-                                </style>
-                                <a class="css-1u538i1" href="/request-information">Request information</a>
-                            </div>
-                        </div>
-                    </section>
-                </main>
-                <style data-emotion="css 1kqkdbl">
-                    .css-1kqkdbl {
-                        background-color: var(--theme-ui-colors-black);
-                        color: var(--theme-ui-colors-gray1);
-                    }
-                </style>
-                <style data-emotion="css q41tqn">
-                    .css-q41tqn {
-                        box-sizing: border-box;
-                        margin: 0;
-                        min-width: 0;
-                        background-color: var(--theme-ui-colors-black);
-                        color: var(--theme-ui-colors-gray1);
-                    }
-                </style>
-
+                    <!--<div class="css-14wfhca">-->
+                    <style data-emotion="css kdjx97">
+                        .css-kdjx97 {
+                            margin-left: 0;
+                            margin-right: 0;
+                            text-align: left;
+                        }
+                    </style>
+                    <!--  <div class="css-kdjx97">-->
+                    <style data-emotion="css l35s7n">
+                        .css-l35s7n {
+                            max-width: 40ch;
+                            margin-top: 0;
+                            margin-bottom: 0;
+                            font-size: 2rem;
+                        }
+                    </style>
+                    <!-- <h2 class="css-l35s7n">
+                         You get to review some of the best opportunities there are in the growth
+                         markets.-->
+                    <style data-emotion="css bcs3p5">
+                        .css-bcs3p5 {
+                            margin-left: 4px;
+                            font-size: 16px;
+                            color: var(--theme-ui-colors-gray6_slate3);
+                        }
+                    </style>
+                    <!-- <sup class="css-bcs3p5"> </sup>
+                 </h2>-->
+                    <style data-emotion="css 1megf85">
+                        .css-1megf85 {
+                            max-width: 55ch;
+                            margin-bottom: 0;
+                        }
+                    </style>
+                    <p class="css-1megf85"></p>
             </div>
         </div>
-        <div aria-atomic="true" aria-live="assertive" id="gatsby-announcer"
-             style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0"></div>
+        <style data-emotion="css 15hy1ed">
+            .css-15hy1ed {
+                margin-top: 0;
+                margin-bottom: 0;
+                margin-left: -8px;
+                margin-right: -8px;
+                padding-top: 32px;
+                padding-bottom: 32px;
+                padding-left: 0;
+                display: block;
+                list-style-type: none;
+            }
+
+            @media screen and (min-width: 40em) {
+                .css-15hy1ed {
+                    display: block;
+                }
+            }
+
+            @media screen and (min-width: 52em) {
+                .css-15hy1ed {
+                    display: -webkit-box;
+                    display: -webkit-flex;
+                    display: -ms-flexbox;
+                    display: flex;
+                }
+            }
+        </style>
+        <style data-emotion="css kdtjv2">
+            .css-kdtjv2 {
+                box-sizing: border-box;
+                margin: 0;
+                min-width: 0;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                margin-top: 0;
+                margin-bottom: 0;
+                margin-left: -8px;
+                margin-right: -8px;
+                padding-top: 32px;
+                padding-bottom: 32px;
+                padding-left: 0;
+                display: block;
+                list-style-type: none;
+            }
+
+            @media screen and (min-width: 40em) {
+                .css-kdtjv2 {
+                    display: block;
+                }
+            }
+
+            @media screen and (min-width: 52em) {
+                .css-kdtjv2 {
+                    display: -webkit-box;
+                    display: -webkit-flex;
+                    display: -ms-flexbox;
+                    display: flex;
+                }
+            }
+        </style>
+        <!-- <ul class="css-kdtjv2">-->
+        <style data-emotion="css 1wbz4f2">
+            .css-1wbz4f2 {
+                padding-top: 0;
+                padding-left: 8px;
+                padding-right: 8px;
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+            }
+
+            @media screen and (min-width: 40em) {
+                .css-1wbz4f2 {
+                    padding-top: 0;
+                }
+            }
+
+            @media screen and (min-width: 52em) {
+                .css-1wbz4f2 {
+                    padding-top: 0;
+                }
+            }
+        </style>
+        <style data-emotion="css 6pa516">
+            .css-6pa516 {
+                box-sizing: border-box;
+                margin: 0;
+                min-width: 0;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                padding-top: 0;
+                padding-left: 8px;
+                padding-right: 8px;
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+            }
+
+            @media screen and (min-width: 40em) {
+                .css-6pa516 {
+                    padding-top: 0;
+                }
+            }
+
+            @media screen and (min-width: 52em) {
+                .css-6pa516 {
+                    padding-top: 0;
+                }
+            }
+        </style>
+        <!--<li class="css-6pa516">-->
+        <style data-emotion="css teu41e">
+            .css-teu41e {
+                width: 100%;
+                border-radius: 6px;
+                padding: 32px;
+                display: block;
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -webkit-text-decoration: none;
+                text-decoration: none;
+                background-color: var(--theme-ui-colors-card);
+                box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.25);
+                -webkit-transition: box-shadow 200ms;
+                transition: box-shadow 200ms;
+                color: inherit;
+            }
+
+            .css-teu41e:hover, .css-teu41e:focus {
+                box-shadow: 0 2px 32px rgba(0, 0, 0, 0.25);
+            }
+        </style>
+        <style data-emotion="css dd0scb">
+            .css-dd0scb {
+                box-sizing: border-box;
+                margin: 0;
+                min-width: 0;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                width: 100%;
+                border-radius: 6px;
+                padding: 32px;
+                display: block;
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -webkit-text-decoration: none;
+                text-decoration: none;
+                background-color: var(--theme-ui-colors-card);
+                box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.25);
+                -webkit-transition: box-shadow 200ms;
+                transition: box-shadow 200ms;
+                color: inherit;
+            }
+
+            .css-dd0scb:hover, .css-dd0scb:focus {
+                box-shadow: 0 2px 32px rgba(0, 0, 0, 0.25);
+            }
+        </style>
+        <!--    <a class="css-dd0scb" href="/partnership-with-shareholders">-->
+        <style data-emotion="css 1yi783e">
+            .css-1yi783e {
+                margin-top: 0;
+                font-size: 1.25rem;
+                color: var(--theme-ui-colors-primary);
+            }
+
+            a:hover .css-1yi783e, a:focus .css-1yi783e {
+                -webkit-text-decoration: underline;
+                text-decoration: underline;
+            }
+        </style>
+
+        <!-- <h2 class="css-1yi783e">Partnership with Shareholders → </h2>-->
+        <style data-emotion="css xkw52e">
+            .css-xkw52e {
+                height: auto;
+                margin-top: 0;
+                margin-bottom: 0;
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+            }
+        </style>
+        <!--<div class="css-xkw52e">Choose the right transaction for your stakeholders,
+            including secondary auctions and tender offers
+        </div>-->
+        </a>
+        </li>
+        <style data-emotion="css p07627">
+            .css-p07627 {
+                padding-top: 16px;
+                padding-left: 8px;
+                padding-right: 8px;
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+            }
+
+            @media screen and (min-width: 40em) {
+                .css-p07627 {
+                    padding-top: 16px;
+                }
+            }
+
+            @media screen and (min-width: 52em) {
+                .css-p07627 {
+                    padding-top: 0;
+                }
+            }
+        </style>
+        <style data-emotion="css xmps7d">
+            .css-xmps7d {
+                box-sizing: border-box;
+                margin: 0;
+                min-width: 0;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                padding-top: 16px;
+                padding-left: 8px;
+                padding-right: 8px;
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+            }
+
+            @media screen and (min-width: 40em) {
+                .css-xmps7d {
+                    padding-top: 16px;
+                }
+            }
+
+            @media screen and (min-width: 52em) {
+                .css-xmps7d {
+                    padding-top: 0;
+                }
+            }
+        </style>
+        <!-- <li class="css-xmps7d">
+             <a class="css-dd0scb" href="/partnership-with-investor">
+                 <h2 class="css-1yi783e">Partnership with Investors →</h2>
+                 <div class="css-xkw52e">Access equity in emerging, innovative businesses and
+                     other private market opportunities with issuer-sourced disclosure
+                 </div>
+             </a>
+         </li>-->
+        </ul>
+        <style data-emotion="css 141zcg0">
+            .css-141zcg0 {
+                margin-top: 0;
+                margin-bottom: 0;
+                padding-bottom: 32px;
+                position: relative;
+                line-height: 1.125;
+                color: var(--theme-ui-colors-gray5_slate4);
+            }
+        </style>
+        <!-- <p class="css-141zcg0">-->
+        <style data-emotion="css 1pzcnyu">
+            .css-1pzcnyu {
+                font-size: 12px;
+            }
+        </style>
+        <small class="css-1pzcnyu">
+            <style data-emotion="css 1scjva6">
+                .css-1scjva6 {
+                    font-size: 10px;
+                    position: absolute;
+                    left: -0.65rem;
+                }
+            </style>
+            <!--    <sup class="css-1scjva6"></sup>-->
+
+        </small>
+        </p>
+    </div>
+    </section>
+    <style data-emotion="css 1v9ly1m">
+        .css-1v9ly1m {
+            background-color: var(--theme-ui-colors-white_0b1218);
+            padding-bottom: 32px;
+            padding-top: 0;
+        }
+    </style>
+    <!--  <section class="css-1v9ly1m" >-->
+    <div class="css-1i5bnyy">
+        <style data-emotion="css 17otlgt">
+            .css-17otlgt {
+                padding-top: 0;
+                margin: 0;
+            }
+        </style>
+        <figure class="css-17otlgt">
+            <style data-emotion="css zbzmk0">
+                .css-zbzmk0 {
+                    aspect-ratio: 16/9;
+                    border-radius: 6px;
+                    box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.25);
+                    width: 100%;
+                    background-color: var(--theme-ui-colors-black);
+                }
+            </style>
+
+            <style data-emotion="css 1grd7op">
+                .css-1grd7op {
+                    margin-top: 16px;
+                    padding-left: 16px;
+                    padding-right: 16px;
+                    text-align: center;
+                }
+            </style>
+
+        </figure>
+    </div>
+    </section>
+
+    <style data-emotion="css 1bmb8fh">
+        .css-1bmb8fh {
+            padding-top: 64px;
+            padding-bottom: 64px;
+            background-color: var(--theme-ui-colors-white_0b1218);
+            background-image: none;
+            -webkit-background-position: -675px -490px;
+            background-position: -675px -490px;
+            background-repeat: no-repeat;
+            -webkit-background-size: 2551.35px 1146.35px;
+            background-size: 2551.35px 1146.35px;
+        }
+
+        @media screen and (min-width: 52em) {
+            .css-1bmb8fh {
+                padding-top: 96px;
+            }
+        }
+
+        @media screen and (min-width: 64em) {
+            .css-1bmb8fh {
+                background-image: url(data:);
+            }
+        }
+    </style>
+    <style data-emotion="css ruxopc">
+        .css-ruxopc {
+            box-sizing: border-box;
+            margin: 0;
+            min-width: 0;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            padding-top: 64px;
+            padding-bottom: 64px;
+            background-color: var(--theme-ui-colors-white_0b1218);
+            background-image: none;
+            -webkit-background-position: -675px -490px;
+            background-position: -675px -490px;
+            background-repeat: no-repeat;
+            -webkit-background-size: 2551.35px 1146.35px;
+            background-size: 2551.35px 1146.35px;
+        }
+
+        @media screen and (min-width: 52em) {
+            .css-ruxopc {
+                padding-top: 96px;
+            }
+        }
+
+        @media screen and (min-width: 64em) {
+            .css-ruxopc {
+                background-image: url(data:);
+            }
+        }
+    </style>
+    <!-- <div class="css-ruxopc">-->
+    <style data-emotion="css 3rk6c8">
+        .css-3rk6c8 {
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            -webkit-box-pack: space-around;
+            -ms-flex-pack: space-around;
+            -webkit-justify-content: space-around;
+            justify-content: space-around;
+            background-color: var(--theme-ui-colors-quoteUnderlay);
+        }
+    </style>
+    <style data-emotion="css 1d09vla">
+        .css-1d09vla {
+            box-sizing: border-box;
+            margin: 0;
+            min-width: 0;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            -webkit-box-pack: space-around;
+            -ms-flex-pack: space-around;
+            -webkit-justify-content: space-around;
+            justify-content: space-around;
+            background-color: var(--theme-ui-colors-quoteUnderlay);
+        }
+    </style>
+    <!--<div class="css-1d09vla">-->
+    <style data-emotion="css 14lspg0">
+        .css-14lspg0 {
+            max-width: 72.5ch;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+    </style>
+    <style data-emotion="css pm5qkr">
+        .css-pm5qkr {
+            box-sizing: border-box;
+            margin: 0;
+            min-width: 0;
+            max-width: 72.5ch;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+    </style>
+    <!-- <div class="css-pm5qkr">-->
+    <style data-emotion="css cmz8o1">
+        .css-cmz8o1 {
+            margin-top: 0;
+            margin-left: 0;
+            margin-right: 0;
+            font-size: 20px;
+            text-indent: -0.65rem;
+            color: var(--theme-ui-colors-text);
+        }
+    </style>
+    <!-- <blockquote class="css-cmz8o1">-->
+    <style data-emotion="css 1xye8pm">
+        .css-1xye8pm {
+            color: var(--theme-ui-colors-gray6_slate3);
+        }
+    </style>
+    <!-- <span class="css-1xye8pm">-->
+    <!-- <h2>Our Clients Know</h2>“</span>
+                         TopShelf Equity is one of the largest and most experienced global private equity
+                         investors.
+                         Our specialists work to identify companies with the potential to become public
+                         before they go public, allowing our fund partners to capitalize on their
+                         considerable investment in pre-IPO companies. We recognize tech businesses that are
+                         poised for explosive growth, and we help our private equity fund partners capitalize
+                         on that growth by investing in companies before they become publicly traded.<span
+                             class="css-1xye8pm">”</span>-->
+    <style data-emotion="css ye6h0f">
+        .css-ye6h0f {
+            margin-left: 4px;
+            font-size: 14px;
+            color: var(--theme-ui-colors-gray6_slate3);
+        }
+    </style>
+    <sup class="css-ye6h0f"> </sup>
+    </blockquote>
+    <style data-emotion="css 1roxmox">
+        .css-1roxmox {
+            margin-bottom: 32px;
+            -webkit-flex-direction: column-reverse;
+            -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+            -webkit-align-items: flex-start;
+            -webkit-box-align: flex-start;
+            -ms-flex-align: flex-start;
+            align-items: flex-start;
+        }
+
+        @media screen and (min-width: 40em) {
+            .css-1roxmox {
+                -webkit-flex-direction: row;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+        }
+    </style>
+    <style data-emotion="css nwcos9">
+        .css-nwcos9 {
+            box-sizing: border-box;
+            margin: 0;
+            min-width: 0;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            margin-bottom: 32px;
+            -webkit-flex-direction: column-reverse;
+            -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+            -webkit-align-items: flex-start;
+            -webkit-box-align: flex-start;
+            -ms-flex-align: flex-start;
+            align-items: flex-start;
+        }
+
+        @media screen and (min-width: 40em) {
+            .css-nwcos9 {
+                -webkit-flex-direction: row;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+        }
+    </style>
+    <!--  <div class="css-nwcos9">-->
+    <style data-emotion="css fs02ts">
+        .css-fs02ts {
+            width: 48px;
+            height: 48px;
+            display: block;
+            -webkit-flex: 48px 0 0;
+            -ms-flex: 48px 0 0;
+            flex: 48px 0 0;
+        }
+    </style>
+    <!--<div class="css-fs02ts">-->
+    <style data-emotion="css 31l4ka">
+        .css-31l4ka {
+            max-width: 100%;
+            display: block;
+            color: var(--theme-ui-colors-goldmanSachsLogoPrimary);
+        }
+    </style>
+
+    <!--<rect class="css-3nmyh8" height="72" width="72" x="0.4" y="0.4"></rect>-->
+    <style data-emotion="css 1s5azb3">
+        .css-1s5azb3 {
+            color: var(--theme-ui-colors-goldmanSachsLogoSecondary);
+        }
+    </style>
+    <!--<g class="css-1s5azb3">-->
+    <style data-emotion="css 1jejitu">
+        .css-1jejitu {
+            fill: var(--theme-ui-colors-goldmanSachsLogoSecondary);
+        }
+    </style>
+
+    </g>
+    </svg>
+    </div>
+    <style data-emotion="css c3ilnb">
+        .css-c3ilnb {
+            margin-bottom: 16px;
+            padding-left: 0;
+        }
+
+        @media screen and (min-width: 40em) {
+            .css-c3ilnb {
+                margin-bottom: 0;
+                padding-left: 16px;
+            }
+        }
+    </style>
+    <!-- <div class="css-c3ilnb">-->
+    <style data-emotion="css 122g915">
+        .css-122g915 {
+            margin-top: 0;
+            margin-bottom: 0;
+            font-weight: 550;
+            font-size: 16px;
+            line-height: 1.25;
+            color: var(--theme-ui-colors-gray6_c1cdda);
+        }
+
+        @media screen and (min-width: 40em) {
+            .css-122g915 {
+                font-size: 20px;
+            }
+        }
+    </style>
+
+    <style data-emotion="css vr1k08">
+        .css-vr1k08 {
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: 14px;
+            line-height: 1.25;
+            color: var(--theme-ui-colors-gray6_c1cdda);
+        }
+
+        @media screen and (min-width: 40em) {
+            .css-vr1k08 {
+                font-size: 16px;
+            }
+        }
+    </style>
+
+    </div>
+    </div>
+    <style data-emotion="css a98mxk">
+        .css-a98mxk {
+            margin-top: 0;
+            margin-bottom: 0;
+            position: relative;
+            line-height: 1.125;
+            color: var(--theme-ui-colors-gray5_slate4);
+        }
+    </style>
+    <!-- <p class="css-a98mxk">
+     <small class="css-1pzcnyu">
+        <sup class="css-1scjva6"> </sup>
+        <br class="css-wtgqz2"/>
+     </small>
+     </p>-->
+    </div>
+    </div>
     </div>
 
 
-    </body>
+    <style data-emotion="css n6zm4p">
+        .css-n6zm4p {
+            padding-top: 32px;
+            padding-bottom: 32px;
+            color: var(--theme-ui-colors-white);
+            background-image: var(--gradient);
+        }
+
+        @media print {
+            .css-n6zm4p {
+                display: none;
+            }
+        }
+    </style>
+    <!--<section class="css-n6zm4p" id="learn-more">
+        <style data-emotion="css q19hc6">
+            .css-q19hc6 {
+                max-width: var(--maxContentWidth);
+                margin-left: auto;
+                margin-right: auto;
+                padding: 32px;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+            }
+        </style>
+        <style data-emotion="css 1ncd8mq">
+            .css-1ncd8mq {
+                box-sizing: border-box;
+                margin: 0;
+                min-width: 0;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                max-width: var(--maxContentWidth);
+                margin-left: auto;
+                margin-right: auto;
+                padding: 32px;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+            }
+        </style>
+        <div class="css-1ncd8mq">
+            <style data-emotion="css ig836v">
+                .css-ig836v {
+                    width: 60ch;
+                    border-radius: 6px;
+                    padding: 32px;
+                    -webkit-flex-direction: column;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    background-color: rgba(255, 255, 255, 0.0625);
+                    box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.5);
+                }
+            </style>
+            <style data-emotion="css rzpqnk">
+                .css-rzpqnk {
+                    box-sizing: border-box;
+                    margin: 0;
+                    min-width: 0;
+                    display: -webkit-box;
+                    display: -webkit-flex;
+                    display: -ms-flexbox;
+                    display: flex;
+                    width: 60ch;
+                    border-radius: 6px;
+                    padding: 32px;
+                    -webkit-flex-direction: column;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    background-color: rgba(255, 255, 255, 0.0625);
+                    box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.5);
+                }
+            </style>
+            <div class="css-rzpqnk">
+                <style data-emotion="css rjg36p">
+                    .css-rjg36p {
+                        margin-top: 0;
+                        text-align: center;
+                    }
+                </style>
+
+
+                <h2 class="css-rjg36p">Learn more about TopShelf Equity Partners</h2>
+                <style data-emotion="css vsbrt4">
+                    .css-vsbrt4 {
+                        border-color: var(--theme-ui-colors-black);
+                        color: var(--theme-ui-colors-white);
+                        background-color: var(--theme-ui-colors-black);
+                    }
+                </style>
+                <style data-emotion="css 1fzvdbl">
+                    .css-1fzvdbl {
+                        display: -webkit-inline-box;
+                        display: -webkit-inline-flex;
+                        display: -ms-inline-flexbox;
+                        display: inline-flex;
+                        -webkit-align-items: center;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        white-space: nowrap;
+                        cursor: pointer;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        -ms-appearance: none;
+                        appearance: none;
+                        height: 40px;
+                        font-weight: 500;
+                        font-size: inherit;
+                        font-family: inherit;
+                        color: var(--theme-ui-colors-background);
+                        background-color: var(--theme-ui-colors-primary);
+                        -webkit-text-decoration: none;
+                        text-decoration: none;
+                        stroke: currentcolor;
+                        -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                        -webkit-justify-content: center;
+                        justify-content: center;
+                        -webkit-flex-shrink: 0;
+                        -ms-flex-negative: 0;
+                        flex-shrink: 0;
+                        margin: 0;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                        padding-left: 16px;
+                        padding-right: 16px;
+                        border-width: 1px;
+                        border-style: solid;
+                        border-color: var(--theme-ui-colors-primary);
+                        -webkit-transition: border-color 200ms, color 200ms, background-color 200ms,;
+                        transition: border-color 200ms, color 200ms, background-color 200ms,;
+                        border-radius: 3px;
+                        border-color: var(--theme-ui-colors-black);
+                        color: var(--theme-ui-colors-white);
+                        background-color: var(--theme-ui-colors-black);
+                    }
+
+                    .css-1fzvdbl:focus {
+                        outline: none;
+                        box-shadow: 0 0 0 1px white, 0 0 0 3px #035697;
+                    }
+                </style>
+                <style data-emotion="css 1u538i1">
+                    .css-1u538i1 {
+                        box-sizing: border-box;
+                        margin: 0;
+                        min-width: 0;
+                        display: -webkit-inline-box;
+                        display: -webkit-inline-flex;
+                        display: -ms-inline-flexbox;
+                        display: inline-flex;
+                        -webkit-align-items: center;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        white-space: nowrap;
+                        cursor: pointer;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        -ms-appearance: none;
+                        appearance: none;
+                        height: 40px;
+                        font-weight: 500;
+                        font-size: inherit;
+                        font-family: inherit;
+                        color: var(--theme-ui-colors-background);
+                        background-color: var(--theme-ui-colors-primary);
+                        -webkit-text-decoration: none;
+                        text-decoration: none;
+                        stroke: currentcolor;
+                        -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                        -webkit-justify-content: center;
+                        justify-content: center;
+                        -webkit-flex-shrink: 0;
+                        -ms-flex-negative: 0;
+                        flex-shrink: 0;
+                        margin: 0;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                        padding-left: 16px;
+                        padding-right: 16px;
+                        border-width: 1px;
+                        border-style: solid;
+                        border-color: var(--theme-ui-colors-primary);
+                        -webkit-transition: border-color 200ms, color 200ms, background-color 200ms,;
+                        transition: border-color 200ms, color 200ms, background-color 200ms,;
+                        border-radius: 3px;
+                        border-color: var(--theme-ui-colors-black);
+                        color: var(--theme-ui-colors-white);
+                        background-color: var(--theme-ui-colors-black);
+                    }
+
+                    .css-1u538i1:focus {
+                        outline: none;
+                        box-shadow: 0 0 0 1px white, 0 0 0 3px #035697;
+                    }
+                </style>
+                <a class="css-1u538i1" href="/request-information">Request information</a>
+            </div>
+        </div>
+    </section>-->
+</main>
+<style data-emotion="css 1kqkdbl">
+    .css-1kqkdbl {
+        background-color: var(--theme-ui-colors-black);
+        color: var(--theme-ui-colors-gray1);
+    }
+</style>
+<style data-emotion="css q41tqn">
+    .css-q41tqn {
+        box-sizing: border-box;
+        margin: 0;
+        min-width: 0;
+        background-color: var(--theme-ui-colors-black);
+        color: var(--theme-ui-colors-gray1);
+    }
+</style>
+
+</div>
+</div>
+<div aria-atomic="true" aria-live="assertive" id="gatsby-announcer"
+     style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0"></div>
+</div>
+
+
+</body>
 
 
 </main>
